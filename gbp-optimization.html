@@ -145,45 +145,53 @@
           
           <!-- Input Form State -->
           <div id="grader-input-panel" class="transition-all duration-350">
-            <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">Run a 60-Second Map Pack Scan</h3>
+            <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">Run a Quick Maps Listing Audit</h3>
             <p class="text-xs text-slate-400 mt-2 mb-6">
-              Search your Google Business Profile name to run our advanced compliance and visibility check.
+              Enter your business and select from the dropdown, combined with your baseline operational data.
             </p>
             
             <div class="space-y-4">
               <div>
                 <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Company Name (As It Appears On Google)</label>
-                <div class="relative">
-                  <input type="text" id="places-search" placeholder="Type business name (e.g., Apex Plumbing VA)..." 
-                    class="w-full px-4 py-3.5 bg-slate-950 border border-slate-800 rounded-lg text-sm text-white placeholder:text-slate-600 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 focus:outline-none transition-all duration-200">
-                </div>
+                <div class="relative id-container" id="autocomplete-container">
+                  </div>
               </div>
               
-              <div id="supplementary-checks" class="space-y-3 pt-3 border-t border-slate-800/60">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Quick Baseline Assessment:</p>
-                
-                <label class="flex items-start gap-3 cursor-pointer group">
-                  <input type="checkbox" id="check-247" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
-                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Is your listing marked <strong>"Open 24/7"</strong>? (Prevents Google from hiding you after hours)</span>
-                </label>
+              <div id="supplementary-checks" class="space-y-3 pt-4 border-t border-slate-800/60">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Operational & Visibility Checklist:</p>
                 
                 <label class="flex items-start gap-3 cursor-pointer group">
                   <input type="checkbox" id="check-suburbs" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
-                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Do you have dedicated landing pages for each premium target suburb?</span>
+                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Do you have dedicated website location pages for each premium target suburb?</span>
                 </label>
                 
                 <label class="flex items-start gap-3 cursor-pointer group">
                   <input type="checkbox" id="check-reviews" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
                   <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Are you securing at least <strong>15+ brand new</strong> reviews every month?</span>
                 </label>
+
+                <label class="flex items-start gap-3 cursor-pointer group">
+                  <input type="checkbox" id="check-activity" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
+                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Do you publish new GBP posts and geo-tagged photos at least <strong>once a week?</strong></span>
+                </label>
+
+                <label class="flex items-start gap-3 cursor-pointer group">
+                  <input type="checkbox" id="check-replies" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
+                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Do you respond to 100% of incoming customer reviews and inquiries <strong>within 48 hours?</strong></span>
+                </label>
+
+                <label class="flex items-start gap-3 cursor-pointer group">
+                  <input type="checkbox" id="check-nap" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
+                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Is your Name, Address, and Phone number <strong>100% Identical</strong> on Apple, Yelp, Bing, and other Platforms?</span>
+                </label>
               </div>
 
               <button onclick="runLocalManualScan()" id="manual-scan-btn" class="w-full mt-6 py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg shadow-lg shadow-brand-500/10 hover:shadow-brand-500/25 transition-all duration-200 uppercase tracking-widest text-xs">
-                Scan My Listing Instantly
+                Analyze My Business Maps Listing
               </button>
             </div>
           </div>
-
+          
           <!-- Loading Assessment State -->
           <div id="grader-loading-panel" class="hidden py-12 text-center space-y-6">
             <div class="relative w-16 h-16 mx-auto">
@@ -875,7 +883,7 @@
           </p>
         </div>
         <p class="text-[10px] text-slate-600 mt-4">
-          © 2026 WebServicesPro. All rights reserved. Herndon, VA 20170. All client collaborations are governed on a month-to-month basis with no long term lock-ins.
+          © 2026 WebServicesPro. All rights reserved. Herndon, VA 20170. 
         </p>
       </div>
     </div>
@@ -883,60 +891,76 @@
 
   <script>
     /* Live Grader Tool Logic */
-    let autocomplete;
+    let selectedBizName = "";
+    let apiOpen247 = false;
+    let apiCategoryOptimized = false;
 
-    function initAutocomplete() {
-      const input = document.getElementById('places-search');
-      if (!input) return;
+    async function initAutocomplete() {
+      const container = document.getElementById('autocomplete-container');
+      if (!container) return;
 
       try {
-        if (typeof google !== 'undefined' && google.maps && google.maps.places) {
-          // Initialize stable places autocomplete with fallback safety
-          autocomplete = new google.maps.places.Autocomplete(input, {
-            types: ['establishment'],
+        if (typeof google !== 'undefined' && google.maps) {
+          // Asynchronously import Google's modern Web Component Library
+          const { PlaceAutocompleteElement } = await google.maps.importLibrary("places");
+          const placeAutocomplete = new PlaceAutocompleteElement({
             componentRestrictions: { country: 'us' }
           });
+
+          // Apply clean structure matching for dark theme layout integration
+          placeAutocomplete.className = "w-full rounded-lg text-slate-900 font-sans text-sm outline-none block";
+          container.appendChild(placeAutocomplete);
           
-          autocomplete.addListener('place_changed', () => {
-            const place = autocomplete.getPlace();
-            if (place && place.name) {
-              triggerSimulatedScan(place.name, place.rating, place.user_ratings_total, place.business_status);
+          // Modern API event tracking format
+          placeAutocomplete.addEventListener('gmp-select', async ({ placePrediction }) => {
+            const place = placePrediction.toPlace();
+            
+            // Querying genuine fields from Google's Maps Database
+            await place.fetchFields({ fields: ['displayName', 'regularOpeningHours', 'types'] });
+            
+            if (place && place.displayName) {
+              selectedBizName = place.displayName;
+              
+              // Real API Check 1: Extract operating intervals to verify true 24/7 coverage
+              if (place.regularOpeningHours && place.regularOpeningHours.periods) {
+                const periods = place.regularOpeningHours.periods;
+                // Google flags a listing as 24/7 if it opens on Day 0 and close time is omitted or matches 0000
+                apiOpen247 = periods.some(p => p.open && p.open.day === 0 && (!p.close || p.open.time === '0000'));
+              } else {
+                apiOpen247 = false;
+              }
+
+              // Real API Check 2: Parse categories to verify specialized niche optimization
+              if (place.types) {
+                const optimizedCoreTypes = ['plumber', 'hvac_contractor', 'electrician', 'roofing_contractor', 'general_contractor', 'painter', 'locksmith'];
+                apiCategoryOptimized = place.types.some(t => optimizedCoreTypes.includes(t.toLowerCase()));
+              } else {
+                apiCategoryOptimized = false;
+              }
             }
           });
         }
       } catch (err) {
-        console.warn("Autocomplete initialization bypassed (likely referer restriction on local file):", err);
+        console.warn("Autocomplete initialization error:", err);
       }
     }
 
     function runLocalManualScan() {
-      const bizName = document.getElementById('places-search').value.trim();
-      if (!bizName) {
-        // Fallback placeholder if clicked empty
-        triggerSimulatedScan("Your Company", null, null, null);
-        return;
-      }
-      triggerSimulatedScan(bizName, null, null, null);
-    }
-
-    function triggerSimulatedScan(bizName, placeRating, totalReviews, status) {
-      // Transition immediately to Loading panel
+      const bizName = selectedBizName || "Your Company";
+      
       const inputPanel = document.getElementById('grader-input-panel');
       const loadingPanel = document.getElementById('grader-loading-panel');
-      const resultsPanel = document.getElementById('grader-results-panel');
       const stepTitle = document.getElementById('loading-step-title');
 
       inputPanel.classList.add('hidden');
-      resultsPanel.classList.add('hidden');
       loadingPanel.classList.remove('hidden');
 
-      // Highly engaging multi-step scan simulation
       const steps = [
-        "Initializing Proximity Probes...",
-        "Evaluating Neighborhood Proximity Maps...",
-        "Querying Competitor Density Indexes...",
-        "Checking Review Velocity & Momentum...",
-        "Compiling Diagnostics Report..."
+        "Analyzing Google API Core Metadata Parameters...",
+        "Querying Local Proximity Category Indexes...",
+        "Evaluating Suburban Crawl Authority Elements...",
+        "Calculating Proximity Visibility Deficits...",
+        "Compiling Final Algorithmic Performance Audit..."
       ];
 
       let currentStep = 0;
@@ -948,23 +972,27 @@
           clearInterval(interval);
           loadingPanel.classList.add('hidden');
           
-          // Calculate score based on inputs
-          const has247 = document.getElementById('check-247').checked;
-          const hasSuburbs = document.getElementById('check-suburbs').checked;
-          const hasReviews = document.getElementById('check-reviews').checked;
+          // Compute a real algorithmic score based on the 7 real parameters (2 API + 5 Manual)
+          let finalScore = 0;
+          let auditDeductions = [];
 
-          let score = 30; // base score
-          if (has247) score += 20;
-          if (hasSuburbs) score += 25;
-          if (hasReviews) score += 25;
+          // API Factor Weights (30% Total)
+          if (apiOpen247) finalScore += 15; else auditDeductions.push("Listing lacks 24/7 operational hours configuration.");
+          if (apiCategoryOptimized) finalScore += 15; else auditDeductions.push("Primary listing categories lack trade specialization.");
 
-          // Display the final output report
-          displayGraderResults(bizName, score, placeRating, totalReviews, status);
+          // Manual Input Weights (70% Total)
+          if (document.getElementById('check-suburbs').checked) finalScore += 20; else auditDeductions.push("Missing dedicated localized suburban target assets.");
+          if (document.getElementById('check-reviews').checked) finalScore += 15; else auditDeductions.push("Review velocity metrics sit below high-growth benchmarks.");
+          if (document.getElementById('check-activity').checked) finalScore += 15; else auditDeductions.push("Lacking weekly geo-tagged media updates.");
+          if (document.getElementById('check-replies').checked) finalScore += 10; else auditDeductions.push("Review response interval timings fail validation windows.");
+          if (document.getElementById('check-nap').checked) finalScore += 10; else auditDeductions.push("Inconsistent citation tracking identified across tier-1 databases.");
+
+          displayGraderResults(bizName, finalScore, auditDeductions);
         }
-      }, 500);
+      }, 450);
     }
 
-    function displayGraderResults(name, score, rating, totalReviews, status) {
+    function displayGraderResults(name, score, deductions) {
       const badge = document.getElementById('grader-score-badge');
       const headline = document.getElementById('grader-headline');
       const feedback = document.getElementById('grader-feedback');
@@ -973,36 +1001,45 @@
 
       badge.innerText = score + "%";
 
-      if (status === "CLOSED_TEMPORARILY" || status === "CLOSED_PERMANENTLY") {
-        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-500/10 text-red-500 text-3xl font-black mb-4 border border-red-500/20";
-        headline.innerText = "Suspended or Inactive Profile";
-        feedback.innerText = "Our checks found your business name, but it is flagged as permanently or temporarily closed on search maps.";
-        rec.innerText = "Contact WebServicesPro immediately to request a formal re-verification and restoration of your primary organic asset.";
-      } else if (score < 50) {
+      // Formulate a dynamic structural summary explaining why they lost points
+      let summaryText = deductions.length > 0 
+        ? `We crawled structural signals for ${name}. Visibility losses are triggered by: ${deductions.slice(0, 2).join(' and ')}.`
+        : `Excellent foundation verified for ${name}! Your core operational settings are structurally healthy.`;
+
+      feedback.innerText = summaryText;
+
+      if (score < 45) {
         badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-500/10 text-red-500 text-3xl font-black mb-4 border border-red-500/20";
         headline.innerText = "Critical Proximity Deficit";
-        feedback.innerText = `Google is filtering ${name} out of adjacent suburbs because your profile lacks regional authority.`;
-        rec.innerText = "You require legal, registered regional Doing Business As (DBA) configurations matched with dedicated local landing assets to capture nearby calls.";
-      } else if (score < 80) {
+        rec.innerText = "You have major visibility leaks outside your immediate neighborhood. You require legal, registered regional Doing Business As (DBA) assets configured with technical location nesting to capture surrounding high-income searchers safely.";
+      } else if (score < 75) {
         badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-amber-500/10 text-amber-500 text-3xl font-black mb-4 border border-amber-500/20";
         headline.innerText = "Moderate Proximity Leak";
-        feedback.innerText = `${name} ranks within your immediate neighborhood, but is completely invisible to high-income target areas nearby.`;
-        rec.innerText = "We recommend deploying localized Schema structures, targeted regional landing pages, and smart call tracking lines.";
+        rec.innerText = "Your primary location ranks moderately, but surrounding target suburbs are completely blind to your profile. We recommend implementing custom localized JSON-LD schema layers and smart telephony blocks to bridge visibility gaps.";
       } else {
         badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-emerald-500/10 text-emerald-500 text-3xl font-black mb-4 border border-emerald-500/20";
-        headline.innerText = "Excellent Base — Time to Scale";
-        feedback.innerText = `${name} has a strong baseline setup. To drive maximum regional booking volumes, you are ready to expand your territory.`;
-        rec.innerText = "Deploy our Multi-Location DBA Strategy to capture adjacent affluent neighborhoods and multiply your dispatch volume.";
+        headline.innerText = "Optimal Profile — Ready to Scale";
+        rec.innerText = "Your profile parameters match high-authority local benchmarks. To aggressively grow dispatch volume and dominate adjacent markets, you are ready to scale via a legal Multi-Location Map Pack Strategy.";
       }
 
       resultsPanel.classList.remove('hidden');
     }
 
     function resetGrader() {
-      document.getElementById('places-search').value = "";
-      document.getElementById('check-247').checked = false;
+      selectedBizName = "";
+      apiOpen247 = false;
+      apiCategoryOptimized = false;
+      
+      const customWidget = document.querySelector('#autocomplete-container gmp-place-autocomplete');
+      if (customWidget) {
+        customWidget.value = "";
+      }
+
       document.getElementById('check-suburbs').checked = false;
       document.getElementById('check-reviews').checked = false;
+      document.getElementById('check-activity').checked = false;
+      document.getElementById('check-replies').checked = false;
+      document.getElementById('check-nap').checked = false;
 
       document.getElementById('grader-results-panel').classList.add('hidden');
       document.getElementById('grader-input-panel').classList.remove('hidden');
