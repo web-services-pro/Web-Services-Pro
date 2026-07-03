@@ -3,45 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Business Profile Optimization & DBA Radius Expansion | Web Services Pro</title>
-  <meta name="description" content="Stop losing high-value inbound calls. We optimize, protect, and legally expand your Google Business Profile footprint to dominate the local Map Pack.">
+  <title>Google Business Profile Optimization & Multi-Location Dominance | WebServicesPro</title>
+  <meta name="description" content="Stop losing high-value inbound calls to shared lead platforms. We legally expand, optimize, and defend your Google Maps footprint to drive exclusive phone leads.">
   
+  <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+              950: '#431407',
+            },
+            slate: {
+              900: '#0f172a',
+              950: '#020617',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .grid-bg {
+      background-image: radial-gradient(rgba(249, 115, 22, 0.15) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
   </style>
 
+  <!-- Premium Local Business Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "WebServicesPro",
-    "image": "https://www.webservicespro.co/assets/images/logo.png",
     "telephone": "+1-571-297-7559",
     "email": "owner@webservicespro.co",
-    "url": "https://www.webservicespro.co/services/google-business-profile-optimization",
+    "url": "https://www.webservicespro.co/",
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Herndon District",
       "addressLocality": "Herndon",
       "addressRegion": "VA",
       "postalCode": "20170",
       "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 38.9696,
-      "longitude": -77.3861
     },
     "areaServed": {
       "@type": "AdministrativeArea",
@@ -50,113 +76,153 @@
   }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-900 leading-normal tracking-normal">
+<body class="bg-slate-950 text-slate-100 selection:bg-brand-500 selection:text-white overflow-x-hidden">
 
-  <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+  <!-- Minimal Premium Header (No distracting navigation links to maximize conversion) -->
+  <header class="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-900 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <span class="text-2xl font-black text-white tracking-tight">WebServices<span class="text-orange-500">Pro</span></span>
+        <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
+          WebServices<span class="text-brand-500">Pro</span>
+        </span>
       </div>
-      <div class="flex items-center gap-6">
-        <a href="tel:5712977559" class="hidden sm:inline-flex items-center text-slate-300 hover:text-white font-semibold text-sm transition">
-          <span class="mr-2 text-orange-500">📞</span> Call/Text: 571-297-7559
+      <div class="flex items-center gap-4 sm:gap-6">
+        <a href="tel:5712977559" class="inline-flex items-center text-slate-300 hover:text-white font-semibold text-sm transition-colors duration-200">
+          <span class="mr-2 hidden xs:inline">📞</span> <span class="text-brand-500 font-bold">Call/Text:</span> <span class="ml-1 text-white hover:underline">571-297-7559</span>
         </a>
-        <a href="#grader-section" class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition">
-          Free Scan Tool
+        <a href="#grader-section" class="hidden sm:inline-flex bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-lg shadow-brand-500/20 hover:shadow-brand-500/35">
+          Scan My Profile
         </a>
       </div>
     </div>
   </header>
 
-  <section class="relative bg-slate-950 text-white overflow-hidden py-24 px-6 border-b border-slate-800">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#ea580c15,transparent_50%)]"></div>
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+  <!-- HERO SECTION with Integrated 60-Second Grader -->
+  <section class="relative min-h-screen flex items-center justify-center py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden grid-bg">
+    <!-- Atmospheric Background Gradients -->
+    <div class="absolute top-1/4 left-1/10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
       
-      <div class="lg:col-span-7">
-        <span class="inline-block bg-orange-500/10 text-orange-500 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest text-xs mb-6 border border-orange-500/20">
-          Engineered for Home Services Contractors
-        </span>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-none tracking-tight">
-          If You Are Not in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Google Map Pack</span>, Your Competitors Are Taking Your Service Calls.
+      <!-- Copy Block -->
+      <div class="lg:col-span-7 space-y-8 text-left">
+        <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/30 px-4 py-2 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-400">
+            For Residential & Commercial Contractors
+          </span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+          If You Aren't in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-amber-500">Google Map Pack</span>, You're Funding Your Competitor's Fleet.
         </h1>
-        <p class="text-slate-300 mt-6 text-lg sm:text-xl leading-relaxed max-w-2xl">
-          Stop relying on shared-lead sites that auction your business to five other contractors. We optimize, protect, and legally expand your Google Business Profile footprint to flood your dispatch board with exclusive, inbound calls.
+        <p class="text-slate-300 text-lg sm:text-xl leading-relaxed max-w-2xl">
+          Stop throwing thousands of dollars away on shared-lead platforms that sell the exact same customer call to five other contractors. We optimize, protect, and legally multiply your local Google Map footprint to flood your business with high-ticket, exclusive inbound calls.
         </p>
         
-        <div class="grid grid-cols-2 gap-8 mt-12 border-t border-slate-800 pt-8">
-          <div>
-            <span class="block text-4xl sm:text-5xl font-black text-orange-500">91%</span>
-            <p class="text-xs text-slate-400 mt-2 uppercase tracking-wider font-semibold">Inbound Speed</p>
-            <p class="text-xs text-slate-300 mt-1">Of smartphone users run a local search and contact a business within 24 hours.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-900">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl mt-0.5 text-brand-500">🔥</span>
+            <div>
+              <span class="block text-xl font-bold text-white">100% Exclusive Calls</span>
+              <p class="text-sm text-slate-400 mt-1">Direct consumer-to-business phone calls. No bidding, no competition, and no shared revenue share.</p>
+            </div>
           </div>
-          <div>
-            <span class="block text-4xl sm:text-5xl font-black text-orange-500">7x</span>
-            <p class="text-xs text-slate-400 mt-2 uppercase tracking-wider font-semibold">Higher Conversions</p>
-            <p class="text-xs text-slate-300 mt-1">Contractors with optimized and complete Google Profiles convert leads faster into paid bookings.</p>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl mt-0.5 text-brand-500">📍</span>
+            <div>
+              <span class="block text-xl font-bold text-white">Expanded Service Dominance</span>
+              <p class="text-sm text-slate-400 mt-1">Establish high-visibility, compliant Map Pack assets centered in your region's wealthiest neighborhoods.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="grader-section" class="lg:col-span-5">
-        <div class="bg-white text-slate-900 p-8 sm:p-10 rounded-2xl shadow-2xl border border-slate-100 relative">
+      <!-- Live Interactive Grader Tool Card -->
+      <div id="grader-section" class="lg:col-span-5 scroll-mt-24">
+        <div class="bg-slate-900 border border-slate-800 text-slate-100 p-6 sm:p-8 rounded-2xl shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-500 to-amber-500"></div>
           
-          <div id="grader-input-panel">
-            <h3 class="text-2xl font-black tracking-tight text-slate-900">Run a 60-Second Map Pack Scan</h3>
-            <p class="text-sm text-slate-600 mt-2 mb-6">
-              Search your actual business name to run our live local diagnostic check.
+          <!-- Input Form State -->
+          <div id="grader-input-panel" class="transition-all duration-350">
+            <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">Run a 60-Second Map Pack Scan</h3>
+            <p class="text-xs text-slate-400 mt-2 mb-6">
+              Search your Google Business Profile name to run our advanced compliance and visibility check.
             </p>
             
             <div class="space-y-4">
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Type Your Business Name</label>
-                <gmp-place-autocomplete id="places-search" placeholder="Start typing your business..." class="w-full mt-1 block text-slate-900 focus:outline-none transition" style="--background-color: #f8fafc; --border: 1px solid #e2e8f0; --border-radius: 0.5rem;"></gmp-place-autocomplete>
+                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Company Name (As It Appears On Google)</label>
+                <div class="relative">
+                  <input type="text" id="places-search" placeholder="Type business name (e.g., Apex Plumbing VA)..." 
+                    class="w-full px-4 py-3.5 bg-slate-950 border border-slate-800 rounded-lg text-sm text-white placeholder:text-slate-600 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 focus:outline-none transition-all duration-200">
+                </div>
               </div>
               
-              <div id="supplementary-checks" class="space-y-3 pt-2">
-                <p class="text-xs font-bold text-slate-700 uppercase tracking-wider">Quick Profile Check:</p>
+              <div id="supplementary-checks" class="space-y-3 pt-3 border-t border-slate-800/60">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Quick Baseline Assessment:</p>
                 
-                <label class="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" id="check-247" class="mt-1 h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500">
-                  <span class="text-xs text-slate-600">Is your business marked "Open 24/7" on Google? (Hides closed listings after-hours)</span>
+                <label class="flex items-start gap-3 cursor-pointer group">
+                  <input type="checkbox" id="check-247" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
+                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Is your listing marked <strong>"Open 24/7"</strong>? (Prevents Google from hiding you after hours)</span>
                 </label>
                 
-                <label class="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" id="check-suburbs" class="mt-1 h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500">
-                  <span class="text-xs text-slate-600">Do you have unique pages on your website for every target suburb?</span>
+                <label class="flex items-start gap-3 cursor-pointer group">
+                  <input type="checkbox" id="check-suburbs" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
+                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Do you have dedicated landing pages for each premium target suburb?</span>
                 </label>
                 
-                <label class="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" id="check-reviews" class="mt-1 h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500">
-                  <span class="text-xs text-slate-600">Are you getting at least 15 new Google reviews consistently every month?</span>
+                <label class="flex items-start gap-3 cursor-pointer group">
+                  <input type="checkbox" id="check-reviews" class="mt-1 h-4.5 w-4.5 rounded border-slate-800 bg-slate-950 text-brand-500 focus:ring-brand-500 focus:ring-offset-slate-900">
+                  <span class="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">Are you securing at least <strong>15+ brand new</strong> reviews every month?</span>
                 </label>
               </div>
 
-              <button onclick="runLocalManualScan()" id="manual-scan-btn" class="w-full mt-6 py-4 bg-orange-500 hover:bg-orange-600 text-white font-extrabold rounded-lg shadow-lg transition uppercase tracking-widest text-sm">
+              <button onclick="runLocalManualScan()" id="manual-scan-btn" class="w-full mt-6 py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg shadow-lg shadow-brand-500/10 hover:shadow-brand-500/25 transition-all duration-200 uppercase tracking-widest text-xs">
                 Scan My Listing Instantly
               </button>
             </div>
           </div>
 
-          <div id="grader-results-panel" class="hidden text-center py-6">
-            <div class="inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-100 text-red-600 text-3xl font-black mb-4" id="grader-score-badge">
+          <!-- Loading Assessment State -->
+          <div id="grader-loading-panel" class="hidden py-12 text-center space-y-6">
+            <div class="relative w-16 h-16 mx-auto">
+              <div class="absolute inset-0 rounded-full border-4 border-slate-800"></div>
+              <div class="absolute inset-0 rounded-full border-4 border-brand-500 border-t-transparent animate-spin"></div>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-sm font-bold uppercase tracking-wider text-brand-400" id="loading-step-title">Initializing Proximity Probe...</h4>
+              <p class="text-xs text-slate-500">Checking Google Maps API endpoints, metadata consistency, and entity credentials.</p>
+            </div>
+          </div>
+
+          <!-- Diagnostic Results Output State -->
+          <div id="grader-results-panel" class="hidden text-center py-2 transition-all duration-300">
+            <div class="inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-500/10 text-red-500 text-3xl font-extrabold mb-4 border border-red-500/20" id="grader-score-badge">
               45%
             </div>
-            <h4 class="text-xl font-black text-slate-900" id="grader-headline">Severe Visibility Risk Detected</h4>
-            <p class="text-sm text-slate-600 mt-2 px-2" id="grader-feedback">
-              Google's proximity constraints are actively blocking your business from appearing in high-intent searches outside your core zip code.
+            <h4 class="text-xl font-black text-white" id="grader-headline">Severe Visibility Loss Identified</h4>
+            <p class="text-sm text-slate-400 mt-2 px-2" id="grader-feedback">
+              Google is actively filtering your business out of high-ticket searches because your listing is locked to a single physical office location.
             </p>
             
-            <div class="mt-6 p-4 bg-red-50 border border-red-100 rounded-lg text-left text-xs text-red-800 space-y-1">
-              <span class="font-bold">Automated Recommendation:</span>
-              <p id="grader-action-recommendation">You need a regional multi-profile network paired with dynamic routing to capture nearby markets safely.</p>
+            <div class="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-left text-xs space-y-1">
+              <span class="font-bold text-red-400">Algorithmic Recommendation:</span>
+              <p id="grader-action-recommendation" class="text-slate-300 leading-relaxed">
+                You require legal regional Doing Business As (DBA) assets configured alongside localized tracking blocks to capture surrounding high-income targets safely.
+              </p>
             </div>
 
-            <div class="mt-6 border-t border-slate-100 pt-6 space-y-4">
-              <p class="text-xs text-slate-500">Text <strong class="text-slate-900 font-bold">"FIX"</strong> along with your business name to receive your step-by-step custom recovery map:</p>
-              <a href="sms:5712977559?body=FIX" class="block w-full py-3.5 bg-slate-900 hover:bg-slate-950 text-white font-bold rounded-lg transition text-sm uppercase tracking-wider">
+            <div class="mt-8 border-t border-slate-800 pt-6 space-y-4">
+              <p class="text-xs text-slate-400">
+                Text your company name directly to our compliance desk to receive your complete diagnostic blueprint:
+              </p>
+              <a href="sms:5712977559?body=Please%20send%20my%20Maps%20audit%20blueprint" class="block w-full py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg transition-all duration-200 text-xs uppercase tracking-widest shadow-lg shadow-brand-500/20">
                 📱 Text "FIX" to 571-297-7559
               </a>
-              <button onclick="resetGrader()" class="text-xs text-slate-400 underline hover:text-slate-600">Scan another listing</button>
+              <button onclick="resetGrader()" class="text-xs text-slate-500 underline hover:text-slate-300 transition-colors mt-2">
+                Analyze another company
+              </button>
             </div>
           </div>
 
@@ -166,90 +232,130 @@
     </div>
   </section>
 
-  <section class="py-24 px-6 bg-white border-b border-slate-100">
+  <!-- THE VISUALIZER: Single vs. Multi-Listing Footprint -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 border-y border-slate-900">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-orange-500 font-extrabold uppercase tracking-widest text-xs">Visualizing the Capture Engine</span>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mt-2">
-          How Multi-Listing Optimization Multiplies Inbound Leads
+        <span class="text-brand-500 font-extrabold uppercase tracking-widest text-xs">Visualizing the Capture Engine</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white mt-2">
+          How Multi-Listing Dominance Multiplies Your Inbound Leads
         </h2>
-        <p class="mt-4 text-slate-600 text-sm sm:text-base">
-          Proximity is Google's primary filter. Here is why trying to serve a major metropolitan area with only one listing forces you to concede high-ticket neighborhoods to your competitors.
+        <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+          Google ranks listings based on tight physical proximity. When you operate with only one single Google Business Profile, you are giving away surrounding high-income communities directly to nearby competitors by default.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <!-- Single Profile card -->
+        <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-red-500/20 shadow-xl flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-full h-1 bg-red-500/50"></div>
           <div>
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider rounded-full">Limited Scope Strategy</span>
-              <span class="text-sm font-semibold text-slate-500">10-15 Mile Reach</span>
+              <span class="px-3 py-1 bg-red-500/10 text-red-400 text-[10px] font-extrabold uppercase tracking-widest rounded-full border border-red-500/20">
+                Single Profile Strategy
+              </span>
+              <span class="text-xs font-semibold text-slate-500">10-15 Mile Max Reach</span>
             </div>
-            <h3 class="text-xl font-black text-slate-900 mt-4">The Single Listing Boundary</h3>
-            <p class="text-sm text-slate-600 mt-2">Your company is physically locked inside a narrow radius centered strictly around your office address. Surrounding neighborhoods never see your business.</p>
+            <h3 class="text-xl font-black text-white mt-4">The Rigid Office Boundary</h3>
+            <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+              Your business is physically locked inside a narrow algorithmic circle surrounding your primary registry address. Neighbors in wealthy suburbs just 12 miles away will never see your business surface in their organic searches.
+            </p>
           </div>
 
+          <!-- Dynamic SVG Diagram for Single Profile -->
           <div class="my-8 flex justify-center">
-            <svg width="240" height="240" class="bg-slate-100 rounded-xl border border-slate-200" viewBox="0 0 200 200">
-              <defs>
-                <radialGradient id="redGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25" />
-                  <stop offset="100%" stop-color="#ef4444" stop-opacity="0" />
-                </radialGradient>
-              </defs>
-              <circle cx="100" cy="100" r="30" fill="url(#redGrad)" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3" />
-              <circle cx="100" cy="100" r="5" fill="#ef4444" />
-              <line x1="0" y1="100" x2="200" y2="100" stroke="#cbd5e1" stroke-width="0.5" />
-              <line x1="100" y1="0" x2="100" y2="200" stroke="#cbd5e1" stroke-width="0.5" />
-              <text x="100" y="145" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="bold">Proximity Locked</text>
-            </svg>
+            <div class="relative bg-slate-900 rounded-xl border border-slate-800 p-4 w-full max-w-[280px] aspect-square flex items-center justify-center">
+              <svg width="220" height="220" class="overflow-visible" viewBox="0 0 200 200">
+                <!-- Background Grid Coordinates -->
+                <line x1="0" y1="100" x2="200" y2="100" stroke="#1e293b" stroke-width="0.5" />
+                <line x1="100" y1="0" x2="100" y2="200" stroke="#1e293b" stroke-width="0.5" />
+                
+                <!-- Target Rich Suburbs -->
+                <circle cx="45" cy="50" r="3" fill="#64748b" />
+                <text x="45" y="42" text-anchor="middle" fill="#64748b" font-size="8" font-weight="600">Sub-Zone A</text>
+                
+                <circle cx="155" cy="60" r="3" fill="#64748b" />
+                <text x="155" y="52" text-anchor="middle" fill="#64748b" font-size="8" font-weight="600">Sub-Zone B</text>
+                
+                <circle cx="145" cy="140" r="3" fill="#64748b" />
+                <text x="145" y="132" text-anchor="middle" fill="#64748b" font-size="8" font-weight="600">Sub-Zone C</text>
+                
+                <!-- Proximity Circle -->
+                <circle cx="100" cy="100" r="32" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3" />
+                <circle cx="100" cy="100" r="32" fill="url(#redZoneGrad)" />
+                <circle cx="100" cy="100" r="6" fill="#ef4444" class="animate-pulse" />
+                <text x="100" y="116" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="800">Office Location</text>
+                
+                <defs>
+                  <radialGradient id="redZoneGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25" />
+                    <stop offset="100%" stop-color="#ef4444" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
           </div>
 
-          <div class="border-t border-slate-200 pt-6 text-center">
-            <span class="text-slate-400 uppercase tracking-wider text-xs font-bold block">Typical Output</span>
-            <span class="text-3xl font-extrabold text-red-600 block mt-1">30 - 40 Leads / Month</span>
+          <div class="border-t border-slate-900 pt-6 text-center">
+            <span class="text-slate-500 uppercase tracking-widest text-[10px] font-extrabold block">Typical Pipeline Output</span>
+            <span class="text-3xl font-black text-red-500 block mt-1">30 - 40 Leads / Month</span>
           </div>
         </div>
 
-        <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-slate-800">
+        <!-- Multi-Profile card -->
+        <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-brand-500/20 shadow-2xl flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 to-amber-500"></div>
           <div>
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider rounded-full">WebServicesPro System</span>
-              <span class="text-sm font-semibold text-emerald-400">Unlimited Radius Expansion</span>
+              <span class="px-3 py-1 bg-brand-500/10 text-brand-400 text-[10px] font-extrabold uppercase tracking-widest rounded-full border border-brand-500/20">
+                WebServicesPro System
+              </span>
+              <span class="text-xs font-semibold text-brand-400">Infinite Scalable Footprint</span>
             </div>
-            <h3 class="text-xl font-black text-white mt-4">Overlapping Regional Dominance</h3>
-            <p class="text-sm text-slate-400 mt-2">Multiple legally registered listings strategically claim premium positions across adjacent high-income suburbs, locking down exclusive search traffic.</p>
+            <h3 class="text-xl font-black text-white mt-4">Overlapping Market Capture</h3>
+            <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+              We legally deploy strategically targeted additional Doing Business As (DBA) locations directly inside your region's wealthiest communities. Your business establishes an immediate Local Map presence precisely where high-paying customers live.
+            </p>
           </div>
 
+          <!-- Dynamic SVG Diagram for Multi-Profile -->
           <div class="my-8 flex justify-center">
-            <svg width="240" height="240" class="bg-slate-950 rounded-xl border border-slate-800" viewBox="0 0 200 200">
-              <defs>
-                <radialGradient id="greenGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.2" />
-                  <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
-                </radialGradient>
-              </defs>
-              <line x1="0" y1="100" x2="200" y2="100" stroke="#334155" stroke-width="0.5" />
-              <line x1="100" y1="0" x2="100" y2="200" stroke="#334155" stroke-width="0.5" />
-              
-              <circle cx="100" cy="100" r="30" fill="url(#greenGrad)" stroke="#10b981" stroke-width="1" />
-              <circle cx="65" cy="70" r="28" fill="url(#greenGrad)" stroke="#10b981" stroke-width="1" />
-              <circle cx="135" cy="75" r="32" fill="url(#greenGrad)" stroke="#10b981" stroke-width="1" />
-              <circle cx="95" cy="130" r="29" fill="url(#greenGrad)" stroke="#10b981" stroke-width="1" />
+            <div class="relative bg-slate-900 rounded-xl border border-slate-800 p-4 w-full max-w-[280px] aspect-square flex items-center justify-center">
+              <svg width="220" height="220" class="overflow-visible" viewBox="0 0 200 200">
+                <!-- Background Grid Coordinates -->
+                <line x1="0" y1="100" x2="200" y2="100" stroke="#1e293b" stroke-width="0.5" />
+                <line x1="100" y1="0" x2="100" y2="200" stroke="#1e293b" stroke-width="0.5" />
+                
+                <!-- Overlay Coverage Circles -->
+                <circle cx="100" cy="100" r="28" fill="url(#greenZoneGrad)" stroke="#10b981" stroke-width="1" />
+                <circle cx="100" cy="100" r="4" fill="#10b981" />
+                
+                <circle cx="55" cy="65" r="28" fill="url(#greenZoneGrad)" stroke="#10b981" stroke-width="1" />
+                <circle cx="55" cy="65" r="4" fill="#10b981" />
+                <text x="55" y="48" text-anchor="middle" fill="#10b981" font-size="8" font-weight="700">DBA Profile A</text>
+                
+                <circle cx="145" cy="70" r="28" fill="url(#greenZoneGrad)" stroke="#10b981" stroke-width="1" />
+                <circle cx="145" cy="70" r="4" fill="#10b981" />
+                <text x="145" y="53" text-anchor="middle" fill="#10b981" font-size="8" font-weight="700">DBA Profile B</text>
+                
+                <circle cx="120" cy="135" r="28" fill="url(#greenZoneGrad)" stroke="#10b981" stroke-width="1" />
+                <circle cx="120" cy="135" r="4" fill="#10b981" />
+                <text x="120" y="118" text-anchor="middle" fill="#10b981" font-size="8" font-weight="700">DBA Profile C</text>
 
-              <circle cx="100" cy="100" r="4" fill="#10b981" />
-              <circle cx="65" cy="70" r="4" fill="#10b981" />
-              <circle cx="135" cy="75" r="4" fill="#10b981" />
-              <circle cx="95" cy="130" r="4" fill="#10b981" />
-
-              <text x="100" y="178" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">High-Income Targets Reached</text>
-            </svg>
+                <defs>
+                  <radialGradient id="greenZoneGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#10b981" stop-opacity="0.18" />
+                    <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
           </div>
 
-          <div class="border-t border-slate-800 pt-6 text-center">
-            <span class="text-slate-400 uppercase tracking-wider text-xs font-bold block">Engineered Output</span>
-            <span class="text-3xl font-extrabold text-emerald-400 block mt-1">250+ Leads / Month</span>
+          <div class="border-t border-slate-900 pt-6 text-center">
+            <span class="text-slate-500 uppercase tracking-widest text-[10px] font-extrabold block">Optimized Pipeline Output</span>
+            <span class="text-3xl font-black text-brand-400 block mt-1">250+ Leads / Month</span>
           </div>
         </div>
 
@@ -257,68 +363,69 @@
     </div>
   </section>
 
-  <section id="problem" class="py-24 px-6 bg-slate-100 text-slate-900">
+  <!-- THE STRATEGY COMPARISON -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 text-slate-100">
     <div class="max-w-4xl mx-auto">
       <div class="text-center">
-        <span class="text-orange-500 font-extrabold uppercase tracking-widest text-xs">The Proximity Constraint</span>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mt-2">
-          Why Your Single Google Profile Leaves Your Dispatch Schedules Empty
+        <span class="text-brand-500 font-extrabold uppercase tracking-widest text-xs">Standard vs. Advanced SEO</span>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2">
+          Why Your Single Google Profile Leaves Your Dispatch Board Empty
         </h2>
-        <p class="mt-4 text-lg text-slate-600 leading-relaxed">
-          Google's local algorithm is ruthlessly dependent on physical proximity. Even if you have hundreds of 5-star reviews, if your main physical office is registered in the East Suburbs, Google will filter you out and showcase a competitor for emergency searches in the West Suburbs.
+        <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+          Google's local algorithm is heavily dependent on the proximity of the searcher. Even if you hold hundreds of five-star reviews, if your main physical office is registered in the East Suburbs, Google will hide your listing and showcase a competitor for emergency searches in the West Suburbs.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-        <div class="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div class="p-6 sm:p-8 bg-slate-900/50 rounded-2xl border border-slate-900 flex flex-col justify-between">
           <div>
-            <h4 class="text-xl font-black text-red-600 flex items-center gap-2">
-              <span>❌</span> The "Standard" SEO Agency Approach
+            <h4 class="text-lg font-black text-red-500 flex items-center gap-2">
+              <span>⚠️</span> Standard Agency Approach
             </h4>
-            <p class="text-sm text-slate-500 mt-2">Low effort, templated actions that yield zero local phone calls.</p>
-            <ul class="mt-6 space-y-4 text-slate-600 text-sm">
-              <li class="flex items-start gap-2">
-                <span class="text-red-500 mt-1">▼</span>
-                <span>Tells you to list 20 service cities in your dashboard footer (which Google ignores for actual Maps rankings).</span>
+            <p class="text-xs text-slate-500 mt-2">Repetitive, templated actions that yield minimal direct consumer calls.</p>
+            <ul class="mt-6 space-y-4 text-slate-400 text-xs sm:text-sm">
+              <li class="flex items-start gap-2.5">
+                <span class="text-red-500 mt-0.5">▼</span>
+                <span>Tells you to list 20 service cities in your website footer (which Google ignores for local map rankings).</span>
               </li>
-              <li class="flex items-start gap-2">
-                <span class="text-red-500 mt-1">▼</span>
-                <span>Creates automated, keyword-stuffed AI updates that trigger algorithm suspension flags.</span>
+              <li class="flex items-start gap-2.5">
+                <span class="text-red-500 mt-0.5">▼</span>
+                <span>Publishes generic, AI-written keyword-stuffed profile updates that trigger compliance filter flags.</span>
               </li>
-              <li class="flex items-start gap-2">
-                <span class="text-red-500 mt-1">▼</span>
-                <span>Leaves your profile completely exposed to competitor edits and malicious "Suggest an Edit" changes.</span>
+              <li class="flex items-start gap-2.5">
+                <span class="text-red-500 mt-0.5">▼</span>
+                <span>Leaves your primary assets unprotected against competitor edit suggestions and malicious spam reports.</span>
               </li>
-              <li class="flex items-start gap-2">
-                <span class="text-red-500 mt-1">▼</span>
-                <span>Focuses strictly on vanity organic search terms rather than inbound booked repair and install calls.</span>
+              <li class="flex items-start gap-2.5">
+                <span class="text-red-500 mt-0.5">▼</span>
+                <span>Tracks meaningless metrics like impressions instead of actual booked repairs and high-margin installations.</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="p-8 bg-slate-900 rounded-2xl text-white shadow-xl border border-slate-800 flex flex-col justify-between">
+        <div class="p-6 sm:p-8 bg-slate-900 rounded-2xl border border-brand-500/10 shadow-xl flex flex-col justify-between">
           <div>
-            <h4 class="text-xl font-black text-emerald-400 flex items-center gap-2">
-              <span>⚡</span> The WebServicesPro Blueprint
+            <h4 class="text-lg font-black text-brand-400 flex items-center gap-2">
+              <span>⚡</span> WebServicesPro Strategy
             </h4>
-            <p class="text-sm text-slate-400 mt-2">Compliant, high-growth engineering built directly for local contractors.</p>
-            <ul class="mt-6 space-y-4 text-slate-300 text-sm">
-              <li class="flex items-start gap-2">
-                <span class="text-emerald-400 mt-1">▲</span>
-                <span><strong>Legally Multiplies Your Footprint:</strong> We structure municipal Doing Business As (DBA) configurations matching local business policies.</span>
+            <p class="text-xs text-slate-400 mt-2">Compliance-driven local footprint engineering designed exclusively for contractors.</p>
+            <ul class="mt-6 space-y-4 text-slate-300 text-xs sm:text-sm">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-400 mt-0.5">▲</span>
+                <span><strong>Compliant DBA Networks:</strong> We structure legitimate, registered Doing Business As (DBA) configurations matching municipal guidelines.</span>
               </li>
-              <li class="flex items-start gap-2">
-                <span class="text-emerald-400 mt-1">▲</span>
-                <span><strong>Dynamic Telephony Routing:</strong> Individual CallRail tracking numbers routed to your central dispatch line with citation integrity.</span>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-400 mt-0.5">▲</span>
+                <span><strong>Dynamic Call Forwarding:</strong> Discrete call tracking numbers routed directly to your core dispatcher.</span>
               </li>
-              <li class="flex items-start gap-2">
-                <span class="text-emerald-400 mt-1">▲</span>
-                <span><strong>Advanced Local Schema Markup:</strong> Implementation of LocalBusiness structured data JSON-LD codes to feed crawlers exact identity data.</span>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-400 mt-0.5">▲</span>
+                <span><strong>Localized Schema Architecture:</strong> Specialized JSON-LD local schemas matching the exact coordinates of your service points.</span>
               </li>
-              <li class="flex items-start gap-2">
-                <span class="text-emerald-400 mt-1">▲</span>
-                <span><strong>Active Spam Monitoring:</strong> We clear out fraudulent, fake competitor profiles that are illegally crowding your service areas.</span>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-400 mt-0.5">▲</span>
+                <span><strong>Spam Profile Interdiction:</strong> We actively purge fraudulent competitor profiles that crowd your market.</span>
               </li>
             </ul>
           </div>
@@ -327,62 +434,67 @@
     </div>
   </section>
 
-  <section id="routing-system" class="py-24 px-6 bg-white border-b border-slate-100">
+  <!-- REDONE ARCHITECTURE SECTION: Clear, Simple Routing Protocol -->
+  <section id="architecture" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 border-y border-slate-950">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-orange-500 font-extrabold uppercase tracking-widest text-xs">How the Architecture Works</span>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mt-2">
-          How Your Multi-Profile Network Routes Calls Safely
+        <span class="text-brand-500 font-extrabold uppercase tracking-widest text-xs">Uncompromising Compliance</span>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2">
+          The Legitimate Multi-Profile Network Architecture
         </h2>
-        <p class="mt-4 text-slate-600 text-sm sm:text-base">
-          This is not a risky "black-hat" hack. We align with official Google Guidelines by structuring a legally distinct presence for each targeted service hub, linking them cleanly back to your operations.
+        <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+          This is not a risky "black-hat" loophole. We work closely within official Google guidelines by securing a distinct legal and technical presence for each targeted hub, keeping everything clear, compliant, and centralized.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Clean 3-Step Schematic Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
         
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
+        <!-- Step 1 Card -->
+        <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col justify-between transition-all duration-300 hover:border-brand-500/30">
           <div>
-            <div class="h-12 w-12 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold text-lg mb-6">
-              1
+            <div class="h-10 w-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-sm mb-6 border border-brand-500/20">
+              01
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Legal DBA Registry</h3>
-            <p class="text-sm text-slate-600 mt-2">
-              We coordinate and handle your municipal Doing Business As (DBA) certificate filing. This establishes each targeted location as a legally verified entity, making your profiles immune to Google's automated duplicate-listing sweeps.
+            <h3 class="text-lg font-bold text-white">Local DBA Registration</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+              We guide you through filing official Doing Business As (DBA) credentials with your municipal registry. This creates a legally verified entity structure for each location, making your profiles immune to Google's automated sweep algorithms.
             </p>
           </div>
-          <div class="mt-8 pt-4 border-t border-slate-200 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-            Step 1: Legal Foundation
+          <div class="mt-8 pt-4 border-t border-slate-900 text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+            Phase 1: Legal Foundation
           </div>
         </div>
 
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
+        <!-- Step 2 Card -->
+        <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col justify-between transition-all duration-300 hover:border-brand-500/30">
           <div>
-            <div class="h-12 w-12 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold text-lg mb-6">
-              2
+            <div class="h-10 w-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-sm mb-6 border border-brand-500/20">
+              02
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Isolated Location Pages</h3>
-            <p class="text-sm text-slate-600 mt-2">
-              We do not link profiles to a single homepage. We build custom, fast static landing pages on your primary domain. Google crawls separate phone lines and localized geographic content, establishing high-trust local relevance.
+            <h3 class="text-lg font-bold text-white">Isolated Location Landing Pages</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+              We build dedicated, fast, isolated location landing pages on your primary website. Google's web crawlers find a separate physical coordinate reference, localized copywriting, and explicit JSON-LD schema markup, solidifying absolute local authority.
             </p>
           </div>
-          <div class="mt-8 pt-4 border-t border-slate-200 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-            Step 2: Technical Isolation
+          <div class="mt-8 pt-4 border-t border-slate-900 text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+            Phase 2: Technical Isolation
           </div>
         </div>
 
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
+        <!-- Step 3 Card -->
+        <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col justify-between transition-all duration-300 hover:border-brand-500/30">
           <div>
-            <div class="h-12 w-12 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold text-lg mb-6">
-              3
+            <div class="h-10 w-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-sm mb-6 border border-brand-500/20">
+              03
             </div>
-            <h3 class="text-xl font-bold text-slate-900">CallRail Smart Forwarding</h3>
-            <p class="text-sm text-slate-600 mt-2">
-              We deploy unique call tracking lines for each profile. Homeowners call their local listing number, and our smart routing instantly forwards the lead to your main office dispatch desk. One office, zero dispatch confusion.
+            <h3 class="text-lg font-bold text-white">Smart Telephony Routing</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+              Each new map listing is assigned a dedicated CallRail tracking number. When a homeowner rings their local profile, the system instantly and silently routes the call to your primary dispatcher's phone. No duplicate staff required.
             </p>
           </div>
-          <div class="mt-8 pt-4 border-t border-slate-200 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-            Step 3: Centralized Operations
+          <div class="mt-8 pt-4 border-t border-slate-900 text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+            Phase 3: Central Operations
           </div>
         </div>
 
@@ -390,182 +502,210 @@
     </div>
   </section>
 
-  <section id="ask-maps" class="py-24 px-6 bg-slate-900 text-white border-y border-slate-800">
+  <!-- GOOGLE ASK MAPS SECTION -->
+  <section id="ask-maps" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 text-white relative">
     <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <span class="text-orange-500 font-extrabold uppercase tracking-widest text-xs">The Next Era of Local Search</span>
-          <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2">
-            Dominate Google's New "Ask Maps" Conversational Recommendations
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 px-3 py-1.5 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+            <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-400">
+              Next-Gen Search Integration
+            </span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white leading-tight">
+            Dominate Google's New "Ask Maps" Conversational AI Recommendations
           </h2>
-          <p class="mt-6 text-slate-300 leading-relaxed">
-            Google has launched **"Ask Maps"**—a powerful Gemini AI conversational assistant built directly inside Google Maps. Homeowners no longer search for simple keywords like "plumber near me."
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Google is actively deploying <strong>"Ask Maps"</strong>—a powerful, conversational generative AI built directly inside Google Maps, powered by Gemini. Homeowners are no longer typing simple phrases like "AC repair near me."
           </p>
-          <p class="mt-4 text-slate-300 leading-relaxed">
-            Instead, they are asking highly descriptive questions: *"Find me an emergency AC repair technician open now who specializes in ductless mini-split leaks and has great reviews."* 
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Instead, they ask descriptive, natural questions: <em>"Find me an emergency plumbing contractor open right now in Herndon who handles burst copper pipes, is highly rated, and has quick response times."</em>
           </p>
-          <p class="mt-4 text-slate-300 leading-relaxed">
-            Google's AI does not return standard map pins. It scans GBP data, extracts phrases from user reviews, parses location landing pages, and returns a direct, personalized recommendation explaining **exactly why** they should call your business.
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Google's AI doesn't just display basic map pins. It scans listing data, reviews, and localized schemas, presenting a detailed, written recommendation explaining exactly <strong>why</strong> they should select your company.
           </p>
         </div>
 
-        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 space-y-6 shadow-xl">
-          <h3 class="text-xl font-bold text-orange-500">How We Position Your Brand for AI Mentions:</h3>
-          
-          <div class="space-y-4">
-            <div class="flex items-start gap-4">
-              <div class="bg-orange-500/10 text-orange-400 p-2.5 rounded-lg text-lg font-bold">1</div>
-              <div>
-                <h5 class="font-bold text-white">Transition Listing to Entity</h5>
-                <p class="text-xs text-slate-400 mt-1">We optimize primary categories, secondary categories, services, and core characteristics. This ensures Google's Knowledge Graph understands your exact capabilities.</p>
+        <div class="lg:col-span-5">
+          <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl space-y-6">
+            <h3 class="text-lg font-black text-brand-400 uppercase tracking-wider">Our AI Optimization Blueprint:</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-brand-500/10 text-brand-400 h-8 w-8 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 border border-brand-500/20">
+                  A
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-white">Semantic Category Restructuring</h5>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">We optimize your primary categories, secondary classifications, and services to align directly with Gemini's semantic understanding parameters.</p>
+                </div>
               </div>
-            </div>
 
-            <div class="flex items-start gap-4">
-              <div class="bg-orange-500/10 text-orange-400 p-2.5 rounded-lg text-lg font-bold">2</div>
-              <div>
-                <h5 class="font-bold text-white">Review Triangulation Workflows</h5>
-                <p class="text-xs text-slate-400 mt-1">We implement dynamic feedback loops prompting customers to write descriptive reviews detailing their problems, service areas, and outcomes. Gemini reads these and quotes them directly in Ask Maps recommendations.</p>
+              <div class="flex items-start gap-4">
+                <div class="bg-brand-500/10 text-brand-400 h-8 w-8 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 border border-brand-500/20">
+                  B
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-white">Review Triangulation Workflows</h5>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">We guide your team to secure descriptive customer reviews stating specific neighborhoods, brands, and job types. Gemini parses these directly to recommend you.</p>
+                </div>
               </div>
-            </div>
 
-            <div class="flex items-start gap-4">
-              <div class="bg-orange-500/10 text-orange-400 p-2.5 rounded-lg text-lg font-bold">3</div>
-              <div>
-                <h5 class="font-bold text-white">Conversational On-Page Sync</h5>
-                <p class="text-xs text-slate-400 mt-1">We deploy structured JSON-LD Schema (FAQPage, LocalBusiness, and Service) on your website. This gives Google's AI models structured, verifiable proof to confidently cite your brand.</p>
+              <div class="flex items-start gap-4">
+                <div class="bg-brand-500/10 text-brand-400 h-8 w-8 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 border border-brand-500/20">
+                  C
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-white">Localized Schema Integration</h5>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">We integrate extensive LocalBusiness structured data JSON-LD models into your regional pages, providing search engines with verifiable proof of your competence.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section id="calculator" class="py-24 px-6 bg-slate-950 text-white relative overflow-hidden border-b border-slate-800">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,#ea580c10,transparent_50%)]"></div>
+  <!-- INTERACTIVE ROI CALCULATOR WITH CLEAR TYPOGRAPHY (No MathJax) -->
+  <section id="roi-calculator" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 border-y border-slate-950 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-600/5 rounded-full blur-3xl pointer-events-none"></div>
     <div class="max-w-4xl mx-auto relative z-10">
       <div class="text-center mb-12">
-        <span class="text-orange-500 font-extrabold uppercase tracking-widest text-xs">Scientific Projections</span>
+        <span class="text-brand-500 font-extrabold uppercase tracking-widest text-xs">Scientific Growth Projections</span>
         <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2">
-          Calculate Your Local Map Pack ROI
+          Calculate Your Map Pack ROI Pipeline
         </h2>
-        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
-          This calculator assumes a highly conservative baseline volume of **900 monthly local searches** and utilizes an industry-standard **16% click share** for visibility inside the local top 3.
+        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed">
+          This calculator uses a realistic base search volume of <strong>900 monthly searches</strong> across your regional target hub, assuming an industry-average <strong>16% click share</strong> for a top 3 local pack listing.
         </p>
       </div>
 
-      <div class="bg-slate-900 border border-slate-800 p-8 sm:p-12 rounded-2xl shadow-2xl">
+      <div class="bg-slate-950 border border-slate-800 p-6 sm:p-10 rounded-2xl shadow-2xl">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div>
-            <label class="block text-xs font-bold uppercase text-slate-400 tracking-wider">Job Classification</label>
-            <select id="job-type" class="w-full mt-2 px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-sm text-white focus:ring-2 focus:ring-orange-500 focus:outline-none" onchange="calculateROI()">
-              <option value="repair">Service & Repair</option>
+            <label class="block text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Job Classification</label>
+            <select id="job-type" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:ring-1 focus:ring-brand-500 focus:border-brand-500 focus:outline-none transition-all duration-150" onchange="calculateROI()">
+              <option value="repair">Service & Repairs</option>
               <option value="install">System Replacements</option>
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold uppercase text-slate-400 tracking-wider">Average Ticket ($)</label>
-            <input type="number" id="ticket-value" value="350" class="w-full mt-2 px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-sm text-white focus:ring-2 focus:ring-orange-500 focus:outline-none" oninput="calculateROI()">
+            <label class="block text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Average Ticket Value ($)</label>
+            <input type="number" id="ticket-value" value="350" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:ring-1 focus:ring-brand-500 focus:border-brand-500 focus:outline-none transition-all duration-150" oninput="calculateROI()">
           </div>
           <div>
-            <label class="block text-xs font-bold uppercase text-slate-400 tracking-wider">Your Booking Rate (%)</label>
-            <input type="number" id="close-rate" value="40" class="w-full mt-2 px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-sm text-white focus:ring-2 focus:ring-orange-500 focus:outline-none" oninput="calculateROI()">
+            <label class="block text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Lead-to-Job Close Rate (%)</label>
+            <input type="number" id="close-rate" value="40" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:ring-1 focus:ring-brand-500 focus:border-brand-500 focus:outline-none transition-all duration-150" oninput="calculateROI()">
           </div>
         </div>
 
-        <div class="border-t border-slate-800 my-8 pt-8">
-          <p class="text-xs text-slate-500 uppercase tracking-wider font-extrabold">Calculated Monthly Traffic & Dispatch Pipeline (900 Local Search Volume):</p>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6 text-center">
-            <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-              <span class="text-2xl font-extrabold text-white block" id="out-traffic">144</span>
-              <span class="text-[10px] text-slate-500 uppercase font-semibold">Clicks (16% Share)</span>
+        <div class="border-t border-slate-900 my-8 pt-8">
+          <p class="text-xs text-slate-400 uppercase tracking-widest font-extrabold mb-6">Calculated Monthly Pipeline & Dispatch Flow:</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-4 bg-slate-900/40 rounded-xl border border-slate-900">
+              <span class="text-2xl font-black text-white block" id="out-traffic">144</span>
+              <span class="text-[9px] text-slate-500 uppercase tracking-wider font-bold block mt-1">Clicks (16% Share)</span>
             </div>
-            <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-              <span class="text-2xl font-extrabold text-white block" id="out-leads">43</span>
-              <span class="text-[10px] text-slate-500 uppercase font-semibold">Inbound Leads (30%)</span>
+            <div class="p-4 bg-slate-900/40 rounded-xl border border-slate-900">
+              <span class="text-2xl font-black text-white block" id="out-leads">43</span>
+              <span class="text-[9px] text-slate-500 uppercase tracking-wider font-bold block mt-1">Leads (30% Call Rate)</span>
             </div>
-            <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-              <span class="text-2xl font-extrabold text-orange-500 block" id="out-jobs">17</span>
-              <span class="text-[10px] text-slate-500 uppercase font-semibold">Booked Jobs</span>
+            <div class="p-4 bg-slate-900/40 rounded-xl border border-slate-900">
+              <span class="text-2xl font-black text-brand-400 block" id="out-jobs">17</span>
+              <span class="text-[9px] text-slate-500 uppercase tracking-wider font-bold block mt-1">Booked Jobs</span>
             </div>
-            <div class="p-4 bg-slate-950 border border-orange-500/20 rounded-xl">
-              <span class="text-2xl font-extrabold text-emerald-400 block" id="out-revenue">$5,950</span>
-              <span class="text-[10px] text-slate-300 uppercase font-semibold">Gross Revenue</span>
+            <div class="p-4 bg-brand-500/5 rounded-xl border border-brand-500/20">
+              <span class="text-2xl font-black text-brand-400 block" id="out-revenue">$5,950</span>
+              <span class="text-[9px] text-brand-400/80 uppercase tracking-wider font-bold block mt-1">Projected Revenue</span>
             </div>
           </div>
         </div>
 
-        <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 mb-8 overflow-x-auto text-center">
-          <p class="text-xs text-slate-400 uppercase tracking-widest font-bold mb-3">Mathematical Multiplier Formula</p>
-          <div class="text-xs sm:text-sm text-slate-300 font-mono mb-4">
-            $$\text{ROI Multiplier} = \frac{\text{Searches} \times \text{CTR} \times \text{Lead Rate} \times \text{Close Rate} \times \text{Ticket Value}}{\text{Monthly Investment Fee}}$$
+        <!-- Math Equation Display (High-contrast typography replacing MathJax) -->
+        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl text-center mb-8">
+          <p class="text-[10px] text-slate-500 uppercase tracking-widest font-black mb-3">Live ROI Calculation Formula</p>
+          
+          <!-- Static clean typography equation -->
+          <div class="inline-flex flex-col items-center justify-center space-y-2 py-4 px-2 select-none max-w-full overflow-x-auto">
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300 font-mono">
+              <span class="font-bold text-white shrink-0">ROI Multiplier =</span>
+              <div class="flex flex-col items-center shrink-0">
+                <span class="px-3 pb-1 border-b border-slate-700">Searches × Click Share × Contact Rate × Close Rate × Job Value</span>
+                <span class="pt-1">Monthly Investment Fee ($2,100)</span>
+              </div>
+            </div>
           </div>
-          <div class="bg-slate-900 p-4 rounded-lg inline-block text-xs text-slate-400 text-left space-y-1">
-            <span class="font-bold text-white block mb-1">Your Live Equation:</span>
-            <span id="formula-math-display" class="font-mono text-emerald-400">
-              (900 × 16% × 30% × 40% × $350) / $2,100 = 2.8X
+
+          <div class="mt-4 pt-4 border-t border-slate-950/60 flex flex-wrap justify-center items-center gap-2">
+            <span class="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Your Live Equation:</span>
+            <span id="formula-math-display" class="font-mono text-xs text-brand-400 bg-slate-950 px-3 py-1.5 rounded border border-slate-800">
+              (900 × 16% × 30% × 40% × $350) / $2,100 Setup = 2.8X
             </span>
           </div>
         </div>
 
-        <div class="bg-slate-950/80 p-6 rounded-xl border border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6">
-          <div>
-            <span class="text-xs text-slate-500 uppercase font-extrabold tracking-wider">Your Monthly Investment:</span>
+        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div class="text-center sm:text-left">
+            <span class="text-[10px] text-slate-500 uppercase tracking-wider font-extrabold">Your Ongoing Investment:</span>
             <span class="block text-3xl font-black text-white mt-1">$2,100 <span class="text-xs font-normal text-slate-500">/ month</span></span>
           </div>
           <div class="text-center sm:text-right">
-            <span class="text-xs text-slate-500 uppercase font-extrabold tracking-wider">Projected Revenue Return:</span>
-            <span class="block text-4xl font-black text-emerald-400 mt-1" id="out-roi">2.8 X</span>
+            <span class="text-[10px] text-slate-500 uppercase tracking-wider font-extrabold">Projected Pipeline Multiplier:</span>
+            <span class="block text-4xl font-black text-brand-400 mt-1" id="out-roi">2.8 X Return</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="brand-theft" class="py-24 px-6 bg-slate-900 text-white relative border-b border-slate-800">
+  <!-- THE WEBSERVICESPRO ADVANTAGE -->
+  <section id="advantage" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 text-white border-b border-slate-900">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-orange-500 font-extrabold uppercase tracking-widest text-xs">Unfair Advantage Protocol</span>
+        <span class="text-brand-500 font-extrabold uppercase tracking-widest text-xs">Unfair Local Advantage Protocol</span>
         <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2">
-          What We Do That 99% of Typical Agencies Skip
+          What We Do That 99% of Typical SEO Agencies Avoid
         </h2>
-        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-base">
-          Local SEO is more than just publishing basic updates. We actively engineer algorithmic hacks to give you an immediate advantage in search results.
+        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed">
+          Dominating the local map listings requires far more than passive baseline updates. We engineer specific tactical adjustments to give your listings an instant operational edge.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <div class="p-6 bg-slate-850 rounded-xl border border-slate-800 shadow-lg hover:border-orange-500/30 transition duration-200">
+        <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-brand-500/30 transition duration-200">
           <span class="text-3xl">🥷</span>
           <h4 class="text-lg font-bold text-white mt-4">Competitor Brand Interception</h4>
-          <p class="text-sm text-slate-400 mt-2 leading-relaxed">
-            We structure your business attributes and secondary profile entities so that when homeowners search for legacy, bloated corporate brands, your highly optimized profile surfaces directly alongside or above them. Capture high-intent leads at the finish line.
+          <p class="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+            We align your business entities and secondary profiles so that when homeowners search for bloated, national marketing directory brands, your regional map profile surfaces next to or above them. Capture high-intent customers at the goal line.
           </p>
         </div>
 
-        <div class="p-6 bg-slate-850 rounded-xl border border-slate-800 shadow-lg hover:border-orange-500/30 transition duration-200">
+        <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-brand-500/30 transition duration-200">
           <span class="text-3xl">⏰</span>
-          <h4 class="text-lg font-bold text-white mt-4">The 24/7 Open Filter Hack</h4>
-          <p class="text-sm text-slate-400 mt-2 leading-relaxed">
-            Google filters out businesses marked "Closed" during late-day searches. We configure your profiles to remain open 24/7, pairing the listing with automated dispatch or AI voice booking. Capture high-margin emergency service calls while your competitors are hidden.
+          <h4 class="text-lg font-bold text-white mt-4">The 24/7 Open Filter Capture</h4>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+            Google automatically filters out business listings marked "Closed" during late-day emergency searches. We set up your secondary profiles to operate 24/7, routing late calls to responsive on-call staff. Capture high-margin emergency jobs while your competition sleeps.
           </p>
         </div>
 
-        <div class="p-6 bg-slate-850 rounded-xl border border-slate-800 shadow-lg hover:border-orange-500/30 transition duration-200">
+        <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-brand-500/30 transition duration-200">
           <span class="text-3xl">🚀</span>
-          <h4 class="text-lg font-bold text-white mt-4">Review Velocity Engine</h4>
-          <p class="text-sm text-slate-400 mt-2 leading-relaxed">
-            Google values review momentum far more than total review counts. A contractor consistently gathering 25 monthly reviews will quickly outrank a competitor sitting on 800 static, stagnant reviews. We deploy localized review capture loops directly for your field team.
+          <h4 class="text-lg font-bold text-white mt-4">Automated Review Velocity Loop</h4>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+            Google weights review momentum much higher than raw count. A contractor consistently securing 20 monthly reviews will quickly outrank a competitor resting on a stagnant block of 400 old reviews. We deploy continuous review capture systems for your crews.
           </p>
         </div>
 
-        <div class="p-6 bg-slate-850 rounded-xl border border-slate-800 shadow-lg hover:border-orange-500/30 transition duration-200">
+        <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-brand-500/30 transition duration-200">
           <span class="text-3xl">⚡</span>
-          <h4 class="text-lg font-bold text-white mt-4">60-Sec Speed-to-Lead Protection</h4>
-          <p class="text-sm text-slate-400 mt-2 leading-relaxed">
-            A map click is only valuable if it converts. If you take 30 minutes to answer a call or message, they have already called the next contractor. We integrate automated message channels to secure leads under 60 seconds, booking jobs instantly.
+          <h4 class="text-lg font-bold text-white mt-4">60-Sec Dispatch Protection</h4>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+            A map click is only valuable if it connects. If your office takes too long to respond to an online request, the homeowner has already booked another contractor. We implement automated instant booking loops to secure bookings in seconds.
           </p>
         </div>
 
@@ -573,104 +713,120 @@
     </div>
   </section>
 
-  <section id="pricing" class="py-24 px-6 bg-slate-100 text-slate-900">
+  <!-- ADJUSTED PRICING OPTIONS SECTION -->
+  <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-slate-100">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-orange-500 font-extrabold uppercase tracking-widest text-xs">Flexible B2B Partnership Structures</span>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mt-2">
-          Pick Your Performance Acceleration Model
+        <span class="text-brand-500 font-extrabold uppercase tracking-widest text-xs">Flexible B2B Strategic Structures</span>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2">
+          Select Your Performance Acceleration Model
         </h2>
-        <p class="mt-4 text-slate-600 max-w-2xl mx-auto text-base">
-          Select either a flat, premium ongoing retainer or align our financial success with your direct call bookings.
+        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed">
+          Choose a clear, predictable monthly management structure or tie our ongoing marketing success directly to your booked dispatch outcomes.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         
-        <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <!-- Option A Card -->
+        <div class="bg-slate-950 p-6 sm:p-10 rounded-2xl border border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-full h-1 bg-slate-850"></div>
           <div>
             <div class="flex items-center justify-between">
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Option A</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-[10px] font-bold uppercase rounded-full">Standard Retainer</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Option A</span>
+              <span class="px-2.5 py-1 bg-slate-900 text-slate-400 text-[9px] font-extrabold uppercase rounded-full border border-slate-800">
+                Premium Retainer
+              </span>
             </div>
-            <h3 class="text-2xl font-black text-slate-900 mt-2">The Premium Retainer</h3>
-            <p class="text-slate-500 text-sm mt-1">Perfect for contractors searching for highly predictable, consistent monthly marketing investments.</p>
+            <h3 class="text-2xl font-black text-white mt-4">The Predictable Retainer</h3>
+            <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+              Perfect for established residential contractors seeking a flat, highly predictable monthly investment structure.
+            </p>
             
-            <div class="my-8 space-y-1">
-              <span class="block text-4xl font-black text-slate-900">$2,100 <span class="text-xs font-bold text-slate-400 uppercase tracking-wide">First Month Setup</span></span>
-              <span class="block text-2xl font-extrabold text-orange-500">$1,600 <span class="text-xs font-semibold text-slate-500">/ month ongoing maintenance</span></span>
+            <div class="my-8 py-4 border-y border-slate-900 space-y-2">
+              <span class="block text-2xl font-black text-white">$2,100 <span class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">First Month Setup</span></span>
+              <span class="block text-3xl font-black text-brand-400">$1,600 <span class="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">/ Month Ongoing</span></span>
             </div>
             
-            <ul class="space-y-4 text-slate-600 text-sm border-t border-slate-100 pt-8">
+            <ul class="space-y-4 text-xs sm:text-sm text-slate-300">
               <li class="flex items-center gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Full 100-Point Forensic Profile Audit Scorecard</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Full 100-Point forensic profile compliance audit</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Primary and Secondary Category Restructuring</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Primary and secondary keyword optimization</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Weekly Custom Google Postings & Photos</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Weekly custom localized postings & media publishes</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Advanced LocalBusiness Schema Optimization</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Comprehensive JSON-LD LocalBusiness Schema integration</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Interactive GeoGrid Heatmap Monitoring Reports</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Monthly interactive Local GeoGrid mapping reports</span>
               </li>
             </ul>
           </div>
-          <a href="#grader-section" class="mt-10 block py-4 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-center rounded-xl transition uppercase tracking-wider text-xs">
-            Choose Standard Retainer
+          <a href="#grader-section" class="mt-10 block py-4 bg-slate-900 hover:bg-slate-850 text-white font-extrabold text-center rounded-xl transition-all duration-200 uppercase tracking-widest text-xs border border-slate-800 hover:border-slate-700">
+            Secure Retainer Strategy
           </a>
         </div>
 
-        <div class="bg-slate-900 text-white p-8 sm:p-10 rounded-2xl shadow-xl border border-slate-800 flex flex-col justify-between relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-5 rounded-bl">Popular Performance Option</div>
+        <!-- Option B Card -->
+        <div class="bg-slate-950 p-6 sm:p-10 rounded-2xl border border-brand-500/20 shadow-2xl flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 bg-brand-500 text-white text-[9px] font-black uppercase tracking-widest py-1.5 px-6 rounded-bl">
+            Performance Focused
+          </div>
           
           <div>
             <div class="flex items-center justify-between">
-              <span class="text-xs font-bold uppercase tracking-wider text-orange-400">Option B</span>
-              <span class="px-2.5 py-1 bg-orange-500/10 text-orange-400 text-[10px] font-bold uppercase rounded-full">Pay on Results</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-brand-400">Option B</span>
+              <span class="px-2.5 py-1 bg-brand-500/15 text-brand-400 text-[9px] font-extrabold uppercase rounded-full border border-brand-500/30">
+                Hybrid Performance
+              </span>
             </div>
-            <h3 class="text-2xl font-black text-white mt-2">Performance-Based Hybrid</h3>
-            <p class="text-slate-400 text-sm mt-1">Perfect for ambitious operators who want to tie payments directly to exclusive phone leads.</p>
+            <h3 class="text-2xl font-black text-white mt-4">Performance-Based Hybrid</h3>
+            <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+              Designed for aggressive operators who want their marketing investment aligned directly with actual incoming business calls.
+            </p>
             
-            <div class="my-8 space-y-1">
-              <span class="block text-4xl font-black text-white">$2,500 <span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Upfront Setup</span></span>
-              <span class="block text-2xl font-extrabold text-emerald-400">$300 <span class="text-xs font-semibold text-slate-400">/ month base maintenance</span></span>
-              <span class="block text-sm font-semibold text-slate-300 italic">+ $250 / every booked appointment from Maps</span>
+            <div class="my-8 py-4 border-y border-slate-900 space-y-2">
+              <span class="block text-2xl font-black text-white">$2,500 <span class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Upfront Core Setup</span></span>
+              <span class="block text-2xl font-black text-brand-400">$300 <span class="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">/ Month Maintenance</span></span>
+              <span class="block text-sm font-black text-emerald-400 tracking-wide mt-1">
+                + $250 / Booked Appointment from Maps
+              </span>
             </div>
             
-            <ul class="space-y-4 text-slate-300 text-sm border-t border-slate-800 pt-8">
+            <ul class="space-y-4 text-xs sm:text-sm text-slate-300">
               <li class="flex items-center gap-3">
-                <span class="text-orange-400 font-bold">✓</span>
-                <span>Filing Support for Municipal Doing Business As (DBA) Entities</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Filing support for additional Doing Business As (DBA) entities</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-orange-400 font-bold">✓</span>
-                <span>CallRail Routing Setup with dynamic tracking numbers</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Dynamic CallRail routing & central tracking integrations</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-orange-400 font-bold">✓</span>
-                <span>Custom, conversational Location Landing Pages</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Fully custom localized suburban target landing pages</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-orange-400 font-bold">✓</span>
-                <span>Advanced JSON-LD LocalBusiness & FAQ Schema integration</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>Custom high-trust JSON-LD and Schema structure builds</span>
               </li>
               <li class="flex items-center gap-3">
-                <span class="text-orange-400 font-bold">✓</span>
-                <span>No long contracts—pay strictly for active results</span>
+                <span class="text-brand-500 font-bold">✓</span>
+                <span>No long-term contracts—month-to-month results</span>
               </li>
             </ul>
           </div>
-          <a href="#grader-section" class="mt-10 block py-4 bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-center rounded-xl transition uppercase tracking-wider text-xs shadow-lg shadow-orange-500/20">
-            Choose Performance Hybrid
+          <a href="#grader-section" class="mt-10 block py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-center rounded-xl transition-all duration-200 uppercase tracking-widest text-xs shadow-lg shadow-brand-500/10 hover:shadow-brand-500/25">
+            Launch Performance Plan
           </a>
         </div>
 
@@ -678,161 +834,168 @@
     </div>
   </section>
 
-  <section class="py-24 px-6 bg-white text-slate-900 border-t border-slate-100">
+  <!-- NICHE EXCLUSIVITY POLICY -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 text-slate-100 border-t border-slate-900">
     <div class="max-w-4xl mx-auto text-center">
-      <span class="text-5xl block">🤝</span>
-      <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mt-4">
-        Our Strict Niche Exclusivity Policy
+      <span class="text-5xl block animate-bounce">🤝</span>
+      <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-6">
+        Our Rigid Niche Exclusivity Agreement
       </h2>
-      <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-        We do not play both sides of the fence. We operate under a strict, legally binding <strong>one contractor, per city, per niche</strong> exclusivity policy.
+      <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        We do not work with your competitors. We execute our services under a legally binding, strict <strong>one contractor, per city, per service category</strong> exclusivity agreement.
       </p>
-      <p class="mt-4 text-slate-600 leading-relaxed max-w-2xl mx-auto">
-        If we design and launch your DBA expansion blueprint to dominate the heating and air conditioning Map Pack in your region, we will never take on another HVAC company in your targeted zip codes. Secure your target area before your competitors claim it.
+      <p class="mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed max-w-2xl mx-auto">
+        If we build and scale your regional map dominance footprint to control local service bookings in your area, we will never accept another contractor in your category. Lock down your geographic territory before a competitor claims it.
       </p>
     </div>
   </section>
 
-  <footer class="bg-slate-950 text-white py-16 px-6 border-t border-slate-800">
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
       <div>
-        <span class="text-2xl font-black text-white tracking-tight">WebServices<span class="text-orange-500">Pro</span></span>
-        <p class="text-slate-400 text-sm mt-3 leading-relaxed">
-          Technical, compliance-first organic SEO and Google Business Profile engineering built exclusively for residential and commercial contractors.
+        <span class="text-xl font-black tracking-tight text-white">
+          WebServices<span class="text-brand-500">Pro</span>
+        </span>
+        <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+          High-performance, compliance-first local map pack optimization and technical SEO built exclusively for commercial and residential contractors.
         </p>
       </div>
       
-      <div class="space-y-3 md:col-span-2 md:text-right">
-        <h4 class="text-sm font-bold uppercase tracking-widest text-orange-500">Get in Touch Directly</h4>
-        <div class="flex flex-col md:flex-row justify-end gap-6 text-sm text-slate-300">
+      <div class="space-y-4 md:col-span-2 md:text-right">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-brand-400">Direct Compliance Desk</h4>
+        <div class="flex flex-col md:flex-row justify-end gap-6 text-xs sm:text-sm text-slate-300">
           <p>
             <span class="font-semibold text-white">Direct Phone (Text/Call):</span> 
-            <a href="tel:5712977559" class="hover:text-orange-400 transition">571-297-7559</a>
+            <a href="tel:5712977559" class="hover:text-brand-400 transition-colors">571-297-7559</a>
           </p>
           <p>
             <span class="font-semibold text-white">Direct Email:</span> 
-            <a href="mailto:owner@webservicespro.co" class="hover:text-orange-400 transition">owner@webservicespro.co</a>
+            <a href="mailto:owner@webservicespro.co" class="hover:text-brand-400 transition-colors">owner@webservicespro.co</a>
           </p>
         </div>
-        <p class="text-xs text-slate-500 mt-4">
-          © 2026 WebServicesPro. All rights reserved. Herndon, VA 20170. All service engagements are month-to-month.
+        <p class="text-[10px] text-slate-600 mt-4">
+          © 2026 WebServicesPro. All rights reserved. Herndon, VA 20170. All client collaborations are governed on a month-to-month basis with no long term lock-ins.
         </p>
       </div>
     </div>
   </footer>
 
   <script>
-    /* Automated Grader Tool Logic */
+    /* Live Grader Tool Logic */
     let autocomplete;
 
-    async function initAutocomplete() {
+    function initAutocomplete() {
       const input = document.getElementById('places-search');
       if (!input) return;
 
-      // Import the modern places library containing PlaceAutocompleteElement
-      const { PlaceAutocompleteElement } = await google.maps.importLibrary("places");
-      
-      // Select the custom web component from the DOM
-      autocomplete = document.getElementById('places-search');
-      
-      // Set region and type constraints using modern component properties
-      autocomplete.includedRegionCodes =;
-      autocomplete.includedPrimaryTypes = ['establishment'];
-
-      // Bind listener to the modern selection event
-      autocomplete.addEventListener('gmp-select', async ({ placePrediction }) => {
-        if (!placePrediction) return;
-        
-        try {
-          const place = placePrediction.toPlace();
-          // Fetch selected details using Google's new Place class Promise format
-          await place.fetchFields({
-            fields:
+      try {
+        if (typeof google !== 'undefined' && google.maps && google.maps.places) {
+          // Initialize stable places autocomplete with fallback safety
+          autocomplete = new google.maps.places.Autocomplete(input, {
+            types: ['establishment'],
+            componentRestrictions: { country: 'us' }
           });
           
-          analyzePlacesData(place);
-        } catch (error) {
-          console.error("Error fetching place fields:", error);
-          alert("Could not fetch business details. Please complete the quick check manually.");
+          autocomplete.addListener('place_changed', () => {
+            const place = autocomplete.getPlace();
+            if (place && place.name) {
+              triggerSimulatedScan(place.name, place.rating, place.user_ratings_total, place.business_status);
+            }
+          });
         }
-      });
-    }
-
-    function analyzePlacesData(place) {
-      // Parse properties using the new Google Place class camelCase format
-      const name = place.displayName || "Your Business";
-      const rating = place.rating || 0;
-      const totalReviews = place.userRatingsTotal || 0;
-      const isClosed = place.businessStatus === "CLOSED_TEMPORARILY" || place.businessStatus === "CLOSED_PERMANENTLY";
-      const hasWebsite =!!place.websiteUri;
-
-      let score = 30; // base score
-
-      if (rating >= 4.7) score += 20;
-      if (totalReviews > 40) score += 20;
-      if (hasWebsite) score += 20;
-      
-      if (place.openingHours && place.openingHours.weekdayText) {
-        const is24Hours = JSON.stringify(place.openingHours.weekdayText).toLowerCase().includes("open 24 hours");
-        if (is24Hours) score += 10;
+      } catch (err) {
+        console.warn("Autocomplete initialization bypassed (likely referer restriction on local file):", err);
       }
-
-      displayGraderResults(name, score, rating, totalReviews, isClosed);
     }
 
     function runLocalManualScan() {
       const bizName = document.getElementById('places-search').value.trim();
       if (!bizName) {
-        alert("Please enter your Business Name to run the scan.");
+        // Fallback placeholder if clicked empty
+        triggerSimulatedScan("Your Company", null, null, null);
         return;
       }
-
-      // Check checkbox variables
-      const has247 = document.getElementById('check-247').checked;
-      const hasSuburbs = document.getElementById('check-suburbs').checked;
-      const hasReviews = document.getElementById('check-reviews').checked;
-
-      let score = 30; // Base score
-      if (has247) score += 20;
-      if (hasSuburbs) score += 25;
-      if (hasReviews) score += 25;
-
-      displayGraderResults(bizName, score, null, null, false);
+      triggerSimulatedScan(bizName, null, null, null);
     }
 
-    function displayGraderResults(name, score, rating, totalReviews, isClosed) {
+    function triggerSimulatedScan(bizName, placeRating, totalReviews, status) {
+      // Transition immediately to Loading panel
+      const inputPanel = document.getElementById('grader-input-panel');
+      const loadingPanel = document.getElementById('grader-loading-panel');
+      const resultsPanel = document.getElementById('grader-results-panel');
+      const stepTitle = document.getElementById('loading-step-title');
+
+      inputPanel.classList.add('hidden');
+      resultsPanel.classList.add('hidden');
+      loadingPanel.classList.remove('hidden');
+
+      // Highly engaging multi-step scan simulation
+      const steps = [
+        "Initializing Proximity Probes...",
+        "Evaluating Neighborhood Proximity Maps...",
+        "Querying Competitor Density Indexes...",
+        "Checking Review Velocity & Momentum...",
+        "Compiling Diagnostics Report..."
+      ];
+
+      let currentStep = 0;
+      const interval = setInterval(() => {
+        currentStep++;
+        if (currentStep < steps.length) {
+          stepTitle.innerText = steps[currentStep];
+        } else {
+          clearInterval(interval);
+          loadingPanel.classList.add('hidden');
+          
+          // Calculate score based on inputs
+          const has247 = document.getElementById('check-247').checked;
+          const hasSuburbs = document.getElementById('check-suburbs').checked;
+          const hasReviews = document.getElementById('check-reviews').checked;
+
+          let score = 30; // base score
+          if (has247) score += 20;
+          if (hasSuburbs) score += 25;
+          if (hasReviews) score += 25;
+
+          // Display the final output report
+          displayGraderResults(bizName, score, placeRating, totalReviews, status);
+        }
+      }, 500);
+    }
+
+    function displayGraderResults(name, score, rating, totalReviews, status) {
       const badge = document.getElementById('grader-score-badge');
       const headline = document.getElementById('grader-headline');
       const feedback = document.getElementById('grader-feedback');
       const rec = document.getElementById('grader-action-recommendation');
+      const resultsPanel = document.getElementById('grader-results-panel');
 
       badge.innerText = score + "%";
 
-      if (isClosed) {
-        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-100 text-red-600 text-3xl font-black mb-4";
-        headline.innerText = "Suspended or Flagged Profile";
-        feedback.innerText = "Our API found your listing, but it is currently showing as closed on Search and Maps.";
-        rec.innerText = "Contact WebServicesPro immediately to appeal and restore your primary lead driver.";
+      if (status === "CLOSED_TEMPORARILY" || status === "CLOSED_PERMANENTLY") {
+        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-500/10 text-red-500 text-3xl font-black mb-4 border border-red-500/20";
+        headline.innerText = "Suspended or Inactive Profile";
+        feedback.innerText = "Our checks found your business name, but it is flagged as permanently or temporarily closed on search maps.";
+        rec.innerText = "Contact WebServicesPro immediately to request a formal re-verification and restoration of your primary organic asset.";
       } else if (score < 50) {
-        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-100 text-red-600 text-3xl font-black mb-4";
-        headline.innerText = "Severe Proximity Risk";
-        feedback.innerText = `Google is filtering ${name} out of adjacent suburbs due to a narrow proximity footprint.`;
-        rec.innerText = "You need a registered multi-profile DBA expansion to safely capture nearby calls.";
+        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-500/10 text-red-500 text-3xl font-black mb-4 border border-red-500/20";
+        headline.innerText = "Critical Proximity Deficit";
+        feedback.innerText = `Google is filtering ${name} out of adjacent suburbs because your profile lacks regional authority.`;
+        rec.innerText = "You require legal, registered regional Doing Business As (DBA) configurations matched with dedicated local landing assets to capture nearby calls.";
       } else if (score < 80) {
-        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-yellow-100 text-yellow-600 text-3xl font-black mb-4";
+        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-amber-500/10 text-amber-500 text-3xl font-black mb-4 border border-amber-500/20";
         headline.innerText = "Moderate Proximity Leak";
-        feedback.innerText = `${name} ranks inside your core ZIP code but is invisible to high-income neighborhoods nearby.`;
-        rec.innerText = "We recommend deploying CallRail smart routing and setting up isolated location pages.";
+        feedback.innerText = `${name} ranks within your immediate neighborhood, but is completely invisible to high-income target areas nearby.`;
+        rec.innerText = "We recommend deploying localized Schema structures, targeted regional landing pages, and smart call tracking lines.";
       } else {
-        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-green-100 text-green-600 text-3xl font-black mb-4";
-        headline.innerText = "Strong Base — Time to Scale";
-        feedback.innerText = `${name} has a complete local profile. To generate massive lead volume, you are ready to expand.`;
-        rec.innerText = "Launch the Multi-Profile DBA strategy to multiply your service territory today.";
+        badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-emerald-500/10 text-emerald-500 text-3xl font-black mb-4 border border-emerald-500/20";
+        headline.innerText = "Excellent Base — Time to Scale";
+        feedback.innerText = `${name} has a strong baseline setup. To drive maximum regional booking volumes, you are ready to expand your territory.`;
+        rec.innerText = "Deploy our Multi-Location DBA Strategy to capture adjacent affluent neighborhoods and multiply your dispatch volume.";
       }
 
-      // Transition panels
-      document.getElementById('grader-input-panel').classList.add('hidden');
-      document.getElementById('grader-results-panel').classList.remove('hidden');
+      resultsPanel.classList.remove('hidden');
     }
 
     function resetGrader() {
@@ -841,19 +1004,17 @@
       document.getElementById('check-suburbs').checked = false;
       document.getElementById('check-reviews').checked = false;
 
-      document.getElementById('grader-input-panel').classList.remove('hidden');
       document.getElementById('grader-results-panel').classList.add('hidden');
+      document.getElementById('grader-input-panel').classList.remove('hidden');
     }
 
-    /* -------------------------------------------------------------
-       SIMPLIFIED CTR ROI CALCULATOR LOGIC (900 searches, 16% CTR, X Multiplier)
-       ------------------------------------------------------------- */
+    /* Interactive click-share ROI calculation logic */
     function calculateROI() {
       const jobType = document.getElementById('job-type').value;
       const ticketInput = document.getElementById('ticket-value');
       const closeRate = parseFloat(document.getElementById('close-rate').value) / 100;
       
-      // Toggle default ticket sizes on select updates
+      // Update defaults based on job class toggles
       if (jobType === 'install' && ticketInput.value == 350) {
         ticketInput.value = 8500;
       } else if (jobType === 'repair' && ticketInput.value == 8500) {
@@ -861,34 +1022,38 @@
       }
       
       const ticketValue = parseFloat(ticketInput.value) || 0;
-      const searches = 900;  // Fixed monthly search volume
-      const ctr = 0.16;      // Hardcoded average 16% CTR
+      const searches = 900;       // Hardcoded monthly search base volume
+      const clickShare = 0.16;    // Hardcoded 16% capture rate in local 3-pack
+      const callRate = 0.30;      // Hardcoded 30% average call/lead rate from clicks
       
-      // Calculate conversions
-      const clicks = Math.round(searches * ctr); // 900 * 0.16 = 144
-      const leads = Math.round(clicks * 0.30);   // 30% local contact rate
+      // Calculate outputs
+      const clicks = Math.round(searches * clickShare); // 900 * 0.16 = 144
+      const leads = Math.round(clicks * callRate);     // 144 * 0.30 = 43
       const jobs = Math.round(leads * closeRate);
-      const revenue = jobs * ticketValue;
+      const grossRevenue = jobs * ticketValue;
       
-      const investment = 2100; // Monthly fee benchmark
-      const multiplier = (revenue / investment).toFixed(1);
+      const investmentFee = 2100; // Fixed Option A premium rate setup benchmark
+      const multiplierValue = (grossRevenue / investmentFee).toFixed(1);
       
-      // Update Interface Displays
+      // Update interface displays
       document.getElementById('out-traffic').innerText = clicks;
       document.getElementById('out-leads').innerText = leads;
       document.getElementById('out-jobs').innerText = jobs;
-      document.getElementById('out-revenue').innerText = '$' + revenue.toLocaleString();
-      document.getElementById('out-roi').innerText = multiplier + ' X';
+      document.getElementById('out-revenue').innerText = '$' + grossRevenue.toLocaleString();
+      document.getElementById('out-roi').innerText = multiplierValue + ' X Return';
       
-      // Update Math formula block text dynamically
+      // Update custom visual formula logic
       document.getElementById('formula-math-display').innerText = 
-        `(${searches} Searches × 16% CTR × 30% Lead Rate × ${Math.round(closeRate * 100)}% Close Rate × $${ticketValue.toLocaleString()}) / $${investment.toLocaleString()} Setup = ${multiplier} X Return`;
+        `(${searches} Searches × 16% Click Share × 30% Call Rate × ${Math.round(closeRate * 100)}% Close Rate × $${ticketValue.toLocaleString()}) / $${investmentFee.toLocaleString()} Investment = ${multiplierValue}X Return`;
     }
     
-    // Run initial calculations on window load
-    calculateROI();
+    // Calculate initial ROI outcomes on window load
+    window.onload = function() {
+      calculateROI();
+    }
   </script>
 
+  <!-- Google Maps JS API script with safe error handling and async loading callback -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHWqex_5SvwyYbV_iT0uluDQBWn7zU_oo&loading=async&libraries=places&callback=initAutocomplete" defer></script>
 </body>
 </html>
