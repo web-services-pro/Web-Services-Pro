@@ -217,17 +217,17 @@
             <div class="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-left text-xs space-y-1">
               <span class="font-bold text-red-400">Algorithmic Recommendation:</span>
               <p id="grader-action-recommendation" class="text-slate-300 leading-relaxed">
-                You require legal regional Doing Business As (DBA) assets configured alongside localized tracking blocks to capture surrounding high-income targets safely.
+                You require more regional "Doing Business As (DBA)" assets configured alongside localized target areas to capture surrounding high-income inbound quality leads safely.
               </p>
             </div>
 
             <div class="mt-8 border-t border-slate-800 pt-6 space-y-4">
               <p class="text-xs text-slate-400">
-                Text your company name directly to our compliance desk to receive your complete diagnostic blueprint:
+                Submit your profile analysis straight to our desk to secure your regional blueprint:
               </p>
-              <a href="sms:5712977559?body=Please%20send%20my%20Maps%20audit%20blueprint" class="block w-full py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg transition-all duration-200 text-xs uppercase tracking-widest shadow-lg shadow-brand-500/20">
-                📱 Text "FIX" to 571-297-7559
-              </a>
+              <button onclick="openIntakeModal()" class="block w-full py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg transition-all text-xs uppercase tracking-widest shadow-lg shadow-brand-500/20">
+                Secure My Territory Exclusivity Blueprint
+              </button>
               <button onclick="resetGrader()" class="text-xs text-slate-500 underline hover:text-slate-300 transition-colors mt-2">
                 Analyze another company
               </button>
@@ -1088,7 +1088,172 @@
     window.onload = function() {
       calculateROI();
     }
+
+    /* Intake Form Modal Architecture & Lead Processing Pipeline */
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbytG4IjNw_-N23pf-eQtGiZ7smEZH1k4qh3Vrc0uKA-AeU5Xxl5To1dM3S5Of094Bs/exec";
+
+    function openIntakeModal() {
+      const modal = document.getElementById('lead-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Stop background scrolling
+
+      // Low-friction auto-population mapping helper
+      const form = document.getElementById('webservices-intake-form');
+      if (selectedBizName && form) {
+        form.elements['company_name'].value = selectedBizName;
+      }
+    }
+
+    function closeIntakeModal() {
+      const modal = document.getElementById('lead-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = ''; // Restore background scrolling
+    }
+
+    function selectPricingPlan(planName) {
+      // 1. Pre-select choice drop-down index option inside the modal structure fields
+      const form = document.getElementById('webservices-intake-form');
+      if (form) {
+        form.elements['selected_plan'].value = planName;
+      }
+      
+      // 2. Clear out any prior helper notice alert elements
+      const noticeEl = document.getElementById('plan-eligibility-notice');
+      if (noticeEl) noticeEl.classList.add('hidden');
+
+      // 3. Launch modal
+      openIntakeModal();
+    }
+
+    // Capture submission actions matching your exact script flow
+    document.addEventListener("DOMContentLoaded", () => {
+      const intakeForm = document.getElementById('webservices-intake-form');
+      const statusText = document.getElementById('form-status');
+      const submitBtn = document.getElementById('intake-submit-btn');
+
+      if (intakeForm) {
+        intakeForm.addEventListener('submit', function(event) {
+          event.preventDefault(); // Stop raw refreshes
+          
+          submitBtn.innerText = "Processing Application...";
+          submitBtn.disabled = true;
+
+          const formData = {
+            company_name: intakeForm.elements['company_name'].value,
+            location: intakeForm.elements['location'].value,
+            owner_name: intakeForm.elements['owner_name'].value,
+            selected_plan: intakeForm.elements['selected_plan'].value,
+            user_phone: intakeForm.elements['user_phone'].value,
+            user_email: intakeForm.elements['user_email'].value,
+            message: intakeForm.elements['message'].value
+          };
+
+          fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === "success") {
+              statusText.style.display = "block";
+              statusText.style.background = "#f0fdf4";
+              statusText.style.color = "#166534";
+              statusText.style.border = "1px solid #bbf7d0";
+              statusText.innerText = "✓ Application sent successfully! Your territory block is pending review. Check your inbox shortly.";
+              intakeForm.reset();
+              
+              // Smooth exit transition window
+              setTimeout(() => {
+                closeIntakeModal();
+                statusText.style.display = "none";
+              }, 2500);
+            } else {
+              throw new Error(data.error || "Internal processing failure.");
+            }
+          })
+          .catch((error) => {
+            console.error('Lead sync failure:', error);
+            statusText.style.display = "block";
+            statusText.style.background = "#fef2f2";
+            statusText.style.color = "#991b1b";
+            statusText.style.border = "1px solid #fca5a5";
+            statusText.innerText = "✕ Submission error. Please try again or reach out to our desk directly via email.";
+          })
+          .finally(() => {
+            submitBtn.innerText = "Submit Secure Application";
+            submitBtn.disabled = false;
+          });
+        });
+      }
+    });
   </script>
+
+  <div id="lead-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm overflow-y-auto">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-lg shadow-2xl relative overflow-hidden my-auto max-h-[90vh] flex flex-col">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 to-amber-500"></div>
+      
+      <div class="p-6 border-b border-slate-800/60 flex items-center justify-between shrink-0">
+        <div>
+          <h3 class="text-xl font-black text-white tracking-tight">Lock In Your Territory Exclusivity</h3>
+          <p class="text-xs text-slate-400 mt-1">Complete your intake form. We will verify your region boundaries immediately.</p>
+        </div>
+        <button onclick="closeIntakeModal()" class="text-slate-500 hover:text-white transition-colors text-2xl p-1 font-bold">&times;</button>
+      </div>
+
+      <form id="webservices-intake-form" class="p-6 space-y-4 overflow-y-auto flex-1 text-left">
+        <div id="form-status" class="hidden p-3 rounded-lg text-xs font-bold transition-all duration-150"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Company Name</label>
+            <input type="text" name="company_name" required placeholder="e.g. Apex Plumbing" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Location (City, State)</label>
+            <input type="text" name="location" required placeholder="e.g. Herndon, VA" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Owner / Manager Name</label>
+            <input type="text" name="owner_name" required placeholder="e.g. John Doe" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Selected Strategy Model</label>
+            <select name="selected_plan" required class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+              <option value="Predictable Retainer">Option A: Predictable Retainer ($1,600/mo)</option>
+              <option value="Hybrid Performance">Option B: Hybrid Performance-Based</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Direct Cell Phone</label>
+            <input type="tel" name="user_phone" required placeholder="e.g. 571-297-7559" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Direct Business Email</label>
+            <input type="email" name="user_email" required placeholder="e.g. owner@company.com" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Additional Details / Message (Optional)</label>
+          <textarea name="message" rows="3" placeholder="Tell us about any questions or concerns..." class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all resize-none"></textarea>
+        </div>
+
+        <button type="submit" id="intake-submit-btn" class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg shadow-lg shadow-brand-500/10 transition-all uppercase tracking-widest text-xs">
+          Submit Secure Application
+        </button>
+      </form>
+    </div>
+  </div>
 
   <!-- Google Maps JS API script with safe error handling and async loading callback -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHWqex_5SvwyYbV_iT0uluDQBWn7zU_oo&loading=async&libraries=places&callback=initAutocomplete" defer></script>
