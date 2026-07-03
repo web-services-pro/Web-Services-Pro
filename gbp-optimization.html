@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Business Profile Optimization & Multi-Location Dominance | WebServicesPro</title>
+  <title>Google Business Profile Optimization & Multi-Location Dominance | Web Services Pro</title>
   <meta name="description" content="Stop losing high-value inbound calls to shared lead platforms. We legally expand, optimize, and defend your Google Maps footprint to drive exclusive phone leads.">
   
   <!-- Tailwind CSS Play CDN -->
@@ -843,21 +843,21 @@
   </section>
 
   <!-- NICHE EXCLUSIVITY POLICY -->
-  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 text-slate-100 border-t border-slate-900">
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white text-slate-900 border-t border-slate-100">
     <div class="max-w-4xl mx-auto text-center">
       <span class="text-5xl block animate-bounce">🤝</span>
-      <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-6">
+      <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 mt-6">
         Our Rigid Niche Exclusivity Agreement
       </h2>
-      <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
-        We do not work with your competitors. We execute our services under a legally binding, strict <strong>one contractor, per city, per service category</strong> exclusivity agreement.
+      <p class="mt-6 text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto">
+        We do not work with your competitors. We execute our services under a legally binding, strict <span class="text-brand-600 font-extrabold">one contractor, per city, per service category</span> exclusivity agreement.
       </p>
-      <p class="mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed max-w-2xl mx-auto">
+      <p class="mt-4 text-xs sm:text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
         If we build and scale your regional map dominance footprint to control local service bookings in your area, we will never accept another contractor in your category. Lock down your geographic territory before a competitor claims it.
       </p>
     </div>
   </section>
-
+  
   <!-- FOOTER -->
   <footer class="bg-slate-950 text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
@@ -871,7 +871,7 @@
       </div>
       
       <div class="space-y-4 md:col-span-2 md:text-right">
-        <h4 class="text-xs font-bold uppercase tracking-widest text-brand-400">Direct Compliance Desk</h4>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-brand-400">Contact Us Directly</h4>
         <div class="flex flex-col md:flex-row justify-end gap-6 text-xs sm:text-sm text-slate-300">
           <p>
             <span class="font-semibold text-white">Direct Phone (Text/Call):</span> 
@@ -977,15 +977,15 @@
           let auditDeductions = [];
 
           // API Factor Weights (30% Total)
-          if (apiOpen247) finalScore += 15; else auditDeductions.push("Listing lacks 24/7 operational hours configuration.");
-          if (apiCategoryOptimized) finalScore += 15; else auditDeductions.push("Primary listing categories lack trade specialization.");
+          if (apiOpen247) finalScore += 15; else auditDeductions.push("your page says you are closed at night (so Google hides you during emergency night calls)");
+          if (apiCategoryOptimized) finalScore += 15; else auditDeductions.push("your main Google business type isn't set up to target high-ticket contractor jobs");
 
           // Manual Input Weights (70% Total)
-          if (document.getElementById('check-suburbs').checked) finalScore += 20; else auditDeductions.push("Missing dedicated localized suburban target assets.");
-          if (document.getElementById('check-reviews').checked) finalScore += 15; else auditDeductions.push("Review velocity metrics sit below high-growth benchmarks.");
-          if (document.getElementById('check-activity').checked) finalScore += 15; else auditDeductions.push("Lacking weekly geo-tagged media updates.");
-          if (document.getElementById('check-replies').checked) finalScore += 10; else auditDeductions.push("Review response interval timings fail validation windows.");
-          if (document.getElementById('check-nap').checked) finalScore += 10; else auditDeductions.push("Inconsistent citation tracking identified across tier-1 databases.");
+          if (document.getElementById('check-suburbs').checked) finalScore += 20; else auditDeductions.push("you don't have separate pages on your website for nearby wealthy towns");
+          if (document.getElementById('check-reviews').checked) finalScore += 15; else auditDeductions.push("you aren't getting enough fresh reviews every month to beat local competitors");
+          if (document.getElementById('check-activity').checked) finalScore += 15; else auditDeductions.push("you haven't posted new photos or job updates to your Google page this week");
+          if (document.getElementById('check-replies').checked) finalScore += 10; else auditDeductions.push("you aren't replying to your customer reviews fast enough");
+          if (document.getElementById('check-nap').checked) finalScore += 10; else auditDeductions.push("your business name or phone number is spelled differently on other directory websites");
 
           displayGraderResults(bizName, finalScore, auditDeductions);
         }
@@ -1001,25 +1001,25 @@
 
       badge.innerText = score + "%";
 
-      // Formulate a dynamic structural summary explaining why they lost points
+      // Simple, direct summary explanation
       let summaryText = deductions.length > 0 
-        ? `We crawled structural signals for ${name}. Visibility losses are triggered by: ${deductions.slice(0, 2).join(' and ')}.`
-        : `Excellent foundation verified for ${name}! Your core operational settings are structurally healthy.`;
+        ? `We checked your Google listing for ${name}. You are losing local jobs right now because: ${deductions.slice(0, 2).join(' and ')}.`
+        : `Great job! Your Google listing for ${name} is fully optimized to secure local incoming calls.`;
 
       feedback.innerText = summaryText;
 
       if (score < 45) {
         badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-red-500/10 text-red-500 text-3xl font-black mb-4 border border-red-500/20";
-        headline.innerText = "Critical Proximity Deficit";
-        rec.innerText = "You have major visibility leaks outside your immediate neighborhood. You require legal, registered regional Doing Business As (DBA) assets configured with technical location nesting to capture surrounding high-income searchers safely.";
+        headline.innerText = "Trapped in a Tiny Local Zone";
+        rec.innerText = "Google is completely hiding your business from wealthy neighborhoods just a few miles away. To fix this, you need to legally set up extra verified business locations in those premium target towns so your phone actually rings when those homeowners search for a contractor.";
       } else if (score < 75) {
         badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-amber-500/10 text-amber-500 text-3xl font-black mb-4 border border-amber-500/20";
-        headline.innerText = "Moderate Proximity Leak";
-        rec.innerText = "Your primary location ranks moderately, but surrounding target suburbs are completely blind to your profile. We recommend implementing custom localized JSON-LD schema layers and smart telephony blocks to bridge visibility gaps.";
+        headline.innerText = "Leaking Nearby Leads";
+        rec.innerText = "Your business shows up fine right around your main office, but you are completely invisible to high-income neighborhoods nearby. We recommend building specific neighborhood landing pages on your website and using smart tracking lines to capture those missing service calls.";
       } else {
         badge.className = "inline-flex items-center justify-center h-24 w-24 rounded-full bg-emerald-500/10 text-emerald-500 text-3xl font-black mb-4 border border-emerald-500/20";
-        headline.innerText = "Optimal Profile — Ready to Scale";
-        rec.innerText = "Your profile parameters match high-authority local benchmarks. To aggressively grow dispatch volume and dominate adjacent markets, you are ready to scale via a legal Multi-Location Map Pack Strategy.";
+        headline.innerText = "Perfect Setup — Time to Scale";
+        rec.innerText = "Your current listing is dialed in perfectly! To aggressively double your job bookings and take over all surrounding zip codes, you are ready to deploy our multi-location map strategy and outrun your local competitors.";
       }
 
       resultsPanel.classList.remove('hidden');
