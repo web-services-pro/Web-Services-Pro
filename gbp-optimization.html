@@ -8,35 +8,32 @@
   
   <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
+            // Legacy gbp-optimization map styles (Prevents breaking main body classes)
             brand: {
-              50: '#fff7ed',
-              100: '#ffedd5',
-              200: '#fed7aa',
-              300: '#fdba74',
-              400: '#fb923c',
-              500: '#f97316',
-              600: '#ea580c',
-              700: '#c2410c',
-              800: '#9a3412',
-              900: '#7c2d12',
-              950: '#431407',
+              50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74',
+              400: '#fb923c', 500: '#ff6b00', 600: '#e05e00', 700: '#c2410c',
+              800: '#9a3412', 900: '#7c2d12', 950: '#431407',
             },
             slate: {
               900: '#0f172a',
               950: '#020617',
-            }
+            },
+            // Reputation-management page style extensions
+            darkBg: '#0b0f19',
+            darkCard: '#111827',
+            brandOrange: '#ff6b00',
+            brandOrangeHover: '#e05e00',
           }
         }
       }
     }
   </script>
-
+  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,9 +80,9 @@
   <header class="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-900 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
-          WebServices<span class="text-brand-500">Pro</span>
-        </span>
+        <div class="flex items-center">
+            <img src="Web-Services-Pro-Logo-Black.png" alt="Web Services Pro Logo" class="h-14 w-auto object-contain">
+        </div>
       </div>
       <div class="flex items-center gap-4 sm:gap-6">
         <a href="tel:5712977559" class="inline-flex items-center text-slate-300 hover:text-white font-semibold text-sm transition-colors duration-200">
