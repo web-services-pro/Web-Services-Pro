@@ -190,25 +190,27 @@
 
             <div class="mt-12">
                 <h4 class="text-center text-sm font-bold tracking-wider text-slate-400 uppercase mb-8">
-                    See Examples of Your Future Video Assets
+                    See Examples of Your Future Video Assets (Share to Local Homeowners on FB, IG, YT, TikTok, etc)
                 </h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-darkBg border border-slate-800 rounded-2xl overflow-hidden shadow-2xl aspect-[16/9] flex flex-col justify-center items-center p-6 relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-80 z-10"></div>
-                        <div class="w-16 h-16 rounded-full bg-brandOrange/20 group-hover:bg-brandOrange/30 text-brandOrange flex items-center justify-center transition border border-brandOrange/40 mb-4 z-20 cursor-pointer">
-                            <i class="fa-solid fa-play text-xl ml-1"></i>
-                        </div>
-                        <span class="text-white font-bold text-center z-20">Example 1: Dynamic Review Motion Graphic</span>
-                        <p class="text-xs text-slate-400 mt-1 z-20">Optimized for TikTok / Reels / Shorts formats</p>
+                    <div class="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-darkBg">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/_MhWo9NN-vo" 
+                                title="Reputation Video Example 1" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
                     
-                    <div class="bg-darkBg border border-slate-800 rounded-2xl overflow-hidden shadow-2xl aspect-[16/9] flex flex-col justify-center items-center p-6 relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-80 z-10"></div>
-                        <div class="w-16 h-16 rounded-full bg-brandOrange/20 group-hover:bg-brandOrange/30 text-brandOrange flex items-center justify-center transition border border-brandOrange/40 mb-4 z-20 cursor-pointer">
-                            <i class="fa-solid fa-play text-xl ml-1"></i>
-                        </div>
-                        <span class="text-white font-bold text-center z-20">Example 2: Job Site Before/After + 5-Star Overlay</span>
-                        <p class="text-xs text-slate-400 mt-1 z-20">Optimized for Facebook & Social Ads feeds</p>
+                    <div class="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-darkBg">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/JdmpGBs4CvM" 
+                                title="Reputation Video Example 2" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -272,7 +274,7 @@
                     <p class="mt-2 text-sm text-slate-400">Fill out your business data below. We'll run a review check and contact you within 1 business day.</p>
                 </div>
 
-                <form action="YOUR_APPS_SCRIPT_WEB_APP_URL" method="POST" class="space-y-6">
+                <form id="reputationLeadForm" class="space-y-6">
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
@@ -339,9 +341,159 @@
         </div>
     </section>
 
-    <footer class="py-8 border-t border-slate-800 text-center text-xs text-slate-600">
-        <p>&copy; 2026 Web Services Pro. All rights reserved. Built for contractor growth.</p>
-    </footer>
+    <footer class="bg-darkCard/80 border-t border-slate-800 pt-16 pb-8 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
+                
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white tracking-tight">
+                        Web Services <span class="text-brandOrange">Pro</span>
+                    </h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        We serve local businesses — particularly residential and commercial contractors — by primarily generating confirmed booked appointments from motivated clients ready to pay for their most profitable services.
+                    </p>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        We are also able to provide complementary services such as AI-Powered Automation, 24/7 AI Receptionists and Sales Agents, Database Reactivation, Video Marketing, Voice & Web Chatbots, Reputation Management, and GBP and Website Optimization for Local SEO.
+                    </p>
+                </div>
 
+                <div class="md:pl-8">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">
+                        What We Do
+                    </h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li>
+                            <a href="#pricing" class="hover:text-brandOrange transition duration-150 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right text-[10px] text-brandOrange/50"></i> Reputation Management
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-brandOrange transition duration-150 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right text-[10px] text-brandOrange/50"></i> GBP & Local SEO Optimization
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-brandOrange transition duration-150 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right text-[10px] text-brandOrange/50"></i> AI-Powered Automation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-brandOrange transition duration-150 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right text-[10px] text-brandOrange/50"></i> 24/7 AI Receptionists & Sales Agents
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-brandOrange transition duration-150 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right text-[10px] text-brandOrange/50"></i> Database Reactivation Campaigns
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-brandOrange transition duration-150 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right text-[10px] text-brandOrange/50"></i> Video & Social Marketing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-brandOrange transition duration-150 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chevron-right text-[10px] text-brandOrange/50"></i> Voice & Web Chatbots
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">
+                        Contact Us Today
+                    </h4>
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <p class="flex items-start gap-2.5">
+                            <span class="text-slate-500 font-medium shrink-0 w-20">Location:</span>
+                            <span class="text-slate-300">Herndon, VA 20170</span>
+                        </p>
+                        <p class="flex items-start gap-2.5">
+                            <span class="text-slate-500 font-medium shrink-0 w-20">Phone/SMS:</span>
+                            <a href="sms:7036629320" class="text-brandOrange hover:underline font-semibold">(703) 662-9320</a>
+                        </p>
+                        <p class="flex items-start gap-2.5">
+                            <span class="text-slate-500 font-medium shrink-0 w-20">Email:</span>
+                            <a href="mailto:owner@webservicespro.co" class="text-slate-300 hover:text-brandOrange transition">owner@webservicespro.co</a>
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800/60 mt-4">
+                        <div class="flex items-center gap-4">
+                            <a href="https://www.facebook.com/seowebservicespro" target="_blank" rel="noopener noreferrer" 
+                               class="w-9 h-9 rounded-lg bg-darkBg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-brandOrange hover:border-brandOrange/40 transition duration-200 text-base" title="Follow on Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/get-leads-and-booked-appointments/" target="_blank" rel="noopener noreferrer" 
+                               class="w-9 h-9 rounded-lg bg-darkBg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-brandOrange hover:border-brandOrange/40 transition duration-200 text-base" title="Connect on LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@webservicespro" target="_blank" rel="noopener noreferrer" 
+                               class="w-9 h-9 rounded-lg bg-darkBg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-brandOrange hover:border-brandOrange/40 transition duration-200 text-base" title="Subscribe on YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+                <p>&copy; 2026 Web Services Pro. All rights reserved. Automate Your Lead Gen With AI</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('reputationLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop page from refreshing
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = "PROCESSING APPLICATION...";
+            submitBtn.disabled = true;
+
+            // Assemble matching JSON dataset keys mapped exactly to your Apps Script
+            const payload = {
+                company_name: document.getElementById('companyName').value,
+                owner_name: document.getElementById('ownerName').value,
+                location: document.getElementById('location').value,
+                website: document.getElementById('website').value,
+                user_email: document.getElementById('email').value,
+                user_phone: document.getElementById('phone').value,
+                selected_plan: document.getElementById('serviceTier').value,
+                message: document.getElementById('notes').value
+            };
+
+            // REPLACE THIS WITH YOUR DEPLOYED LIVE WEB APP MACRO URL
+            const webAppUrl = "https://script.google.com/macros/s/AKfycbwwGnGgQlTGFQiavhsrm9GBn7JJzKyFByVduoxwbsfy9dGjW8s3ar61aYBOM5TnLlQSjg/exec";
+
+            fetch(webAppUrl, {
+                method: 'POST',
+                mode: 'no-cors', // Clears pre-flight handling loops safely
+                headers: {
+                    'Content-Type': 'text/plain'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                alert("Thank you! Your growth application has been submitted successfully. We will connect with you within 1 business day.");
+                document.getElementById('reputationLeadForm').reset();
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            })
+            .catch(err => {
+                console.error("Submission error:", err);
+                alert("There was an error routing your form. Please contact us directly via text/call.");
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
 </body>
 </html>
