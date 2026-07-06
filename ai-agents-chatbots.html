@@ -38,17 +38,75 @@
 <body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-brandOrange selection:text-white">
 
     <header class="border-b border-slate-800 bg-darkBg/90 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center">
-                <a href="index.html">
-                    <img src="Web-Services-Pro-Logo-Black.png" alt="Web Services Pro Logo" class="h-14 w-auto object-contain">
-                </a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="Web-Services-Pro-Logo-Black.png" alt="Web Services Pro Logo" class="h-14 w-auto object-contain">
+                    </a>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-brandOrange transition">Home</a>
+                    <a href="about-us.html" class="text-sm font-semibold text-slate-300 hover:text-brandOrange transition">About Us</a>
+                    
+                    <div class="relative group">
+                        <button class="flex items-center gap-1.5 text-sm font-semibold text-slate-300 hover:text-brandOrange transition focus:outline-none py-4">
+                            Services <i class="fa-solid fa-chevron-down text-[10px] tracking-none group-hover:rotate-180 transition-transform duration-200 mt-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-darkCard border border-slate-800 rounded-2xl p-2.5 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 space-y-1">
+                            <a href="ai-agents-chatbots.html" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:bg-brandOrange/10 hover:text-white transition">🤖 AI Voice & Chat Agents</a>
+                            <a href="gbp-optimization.html" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:bg-brandOrange/10 hover:text-white transition">📍 GBP Maps Optimization</a>
+                            <a href="reputation-management.html" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:bg-brandOrange/10 hover:text-white transition">⭐ Reputation Management</a>
+                            <a href="database-reactivation.html" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:bg-brandOrange/10 hover:text-white transition">🗄️ Database Reactivation</a>
+                            <a href="video-marketing.html" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:bg-brandOrange/10 hover:text-white transition">🎥 Video Marketing Ads</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-brandOrange transition">Contact</a>
+                </nav>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="tel:5712977559" class="text-sm font-semibold text-slate-300 hover:text-white transition">
+                        Call/Text: <span class="text-brandOrange font-bold">(571) 297-7559</span>
+                    </a>
+                    <a href="#ai-intake" class="bg-brandOrange hover:bg-brandOrangeHover text-white px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide shadow-lg shadow-brandOrange/20 transition duration-200 uppercase">
+                        Get My AI Agent
+                    </a>
+                </div>
+
+                <div class="flex lg:hidden items-center space-x-4">
+                    <a href="tel:5712977559" class="text-xs font-bold text-brandOrange bg-brandOrange/5 border border-brandOrange/10 px-3 py-1.5 rounded-lg">
+                        (571) 297-7559
+                    </a>
+                    <button id="mobile-menu-toggle" type="button" class="text-slate-400 hover:text-white focus:outline-none text-xl p-1" aria-label="Toggle navigation menu">
+                        <i id="menu-icon" class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
             </div>
-            <div class="flex items-center space-x-6">
-                <a href="tel:5712977559" class="hidden sm:block text-sm font-semibold text-slate-300 hover:text-white transition">
-                    Call/Text: <span class="text-brandOrange">(571) 297-7559</span>
-                </a>
-                <a href="#ai-intake" class="bg-brandOrange hover:bg-brandOrangeHover text-white px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide shadow-lg shadow-brandOrange/20 transition duration-200 uppercase">
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800/80 bg-darkBg px-4 pt-4 pb-6 space-y-4 shadow-2xl">
+            <div class="flex flex-col space-y-2">
+                <a href="index.html" class="text-sm font-bold text-slate-300 hover:text-brandOrange transition py-1.5 border-b border-slate-900">Home</a>
+                <a href="about-us.html" class="text-sm font-bold text-slate-300 hover:text-brandOrange transition py-1.5 border-b border-slate-900">About Us</a>
+                
+                <div class="py-2 space-y-1.5 border-b border-slate-900">
+                    <span class="block text-[10px] font-black uppercase text-slate-500 tracking-wider mb-1">Our Core Focus Areas</span>
+                    <a href="ai-agents-chatbots.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">🤖 AI Voice & Chat Agents</a>
+                    <a href="gbp-optimization.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">📍 GBP Maps Optimization</a>
+                    <a href="reputation-management.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">⭐ Reputation Management</a>
+                    <a href="database-reactivation.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">🗄️ Database Reactivation</a>
+                    <a href="video-marketing.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">🎥 Video Marketing Ads</a>
+                </div>
+
+                <a href="contact.html" class="text-sm font-bold text-slate-300 hover:text-brandOrange transition py-1.5">Contact</a>
+            </div>
+            
+            <div class="pt-2">
+                <a href="#ai-intake" class="block w-full bg-brandOrange hover:bg-brandOrangeHover text-white py-3 rounded-xl text-center font-black text-xs uppercase tracking-wider transition shadow-lg shadow-brandOrange/25">
                     Get My AI Agent
                 </a>
             </div>
@@ -1099,6 +1157,28 @@
                 submitBtn.disabled = false;
             });
         });
+    </script>
+	<script>
+        (function() {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (toggleBtn && mobileMenu && menuIcon) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-xmark');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('fa-xmark');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            }
+        })();
     </script>
 
 </body>
