@@ -25,6 +25,18 @@
  	     "name": "Web Services Pro",
   	    "legalName": "Web Services Pro",
   	    "url": "https://webservicespro.co",
+		"identifier": [
+ 		 {
+		    "@type": "PropertyValue",
+		    "propertyID": "Google Knowledge Graph ID",
+		    "value": "/g/11c5z_n059"                           // Topic: Internet Marketing Service
+		  },
+		  {
+ 		   "@type": "PropertyValue",
+ 		   "propertyID": "Google Knowledge Graph ID",
+ 		   "value": "/g/120hzj6v"                             // Topic: Marketing Agency
+		  }
+		],
     	  "foundingDate": "2022",
 	      "logo": {
     	    "@type": "ImageObject",
@@ -50,22 +62,37 @@
       	"sameAs": [
         	"https://www.facebook.com/appointmentsforcontractors/",
    	     	"https://www.linkedin.com/in/get-leads-and-booked-appointments/",
-    	    "https://www.youtube.com/@webservicespro"
+    	    "https://www.youtube.com/@webservicespro",
+			"https://www.wikidata.org/wiki/Q9592701"
       	],
       	"founder": {
         	"@type": "Person",
-   	     "@id": "https://webservicespro.co/#basel-hakim",
+   	     	"@id": "https://webservicespro.co/#basel-hakim",
     	    "name": "Basel Hakim",
         	"jobTitle": "Founder & Owner",
         	"sameAs": [
-          	"https://www.linkedin.com/in/get-leads-and-booked-appointments/"
-        	]
+          		"https://www.linkedin.com/in/get-leads-and-booked-appointments/",
+				https://www.wikidata.org/wiki/Q56279965
+        	],
+			"identifier": {
+     		 "@type": "PropertyValue",
+    		  "propertyID": "Google Knowledge Graph ID",
+   		 	  "value": "/g/11jg8n294g"
+   			 }
       	},
       	"knowsAbout": [
         	{
           	"@type": "Thing",
           	"name": "Lead Generation",
-          	"sameAs": "https://en.wikipedia.org/wiki/Lead_generation"
+          	"sameAs": [
+				"https://en.wikipedia.org/wiki/Lead_generation",
+				"https://www.wikidata.org/wiki/Q7094093"
+			],
+			"identifier": {
+ 				 "@type": "PropertyValue",
+ 				 "propertyID": "Google Knowledge Graph ID",
+ 				 "value": "/g/11j8qr8r2x"
+				}
         	},
         	{
           	"@type": "Thing",
@@ -73,15 +100,39 @@
           	"sameAs": [
             	"https://en.wikipedia.org/wiki/Local_search_engine_optimization",
             	"https://www.wikidata.org/wiki/Q30324357"
-          	]
+          	],
+			"identifier": {
+ 				 "@type": "PropertyValue",
+ 				 "propertyID": "Google Knowledge Graph ID",
+ 				 "value": "/g/11dymty4xq"
+				}
         	},
         	{
           	"@type": "Thing",
           	"name": "Conversational AI",
           	"sameAs": [
             	"https://en.wikipedia.org/wiki/Chatbot",
-   	         "https://www.wikidata.org/wiki/Q113947470"
-    	      ]
+   	         "https://www.wikidata.org/wiki/Q870780",
+			 "https://www.wikidata.org/wiki/Q11660",
+			 "https://www.wikidata.org/wiki/Q16346"
+    	      ],
+			"identifier": [
+			  {
+			    "@type": "PropertyValue",
+			    "propertyID": "Google Knowledge Graph ID",
+			    "value": "/m/01305y"
+			  },
+			  {
+			    "@type": "PropertyValue",
+ 			   "propertyID": "Google Knowledge Graph ID",
+ 			   "value": "/m/03qcz9g"
+ 			 },
+ 			 {
+			    "@type": "PropertyValue",
+			    "propertyID": "Google Knowledge Graph ID",
+			    "value": "/m/0brhx"
+			  }
+			]
         	},
         	{
 	          "@type": "Thing",
@@ -89,12 +140,25 @@
         	  "sameAs": [
             	"https://en.wikipedia.org/wiki/Reputation_management",
   	          	"https://www.wikidata.org/wiki/Q478594"
-    	      ]
+    	      ],
+			"identifier": {
+ 				 "@type": "PropertyValue",
+ 				 "propertyID": "Google Knowledge Graph ID",
+ 				 "value": "/m/03xggz"
+				}
         	},
         	{
           	"@type": "Thing",
    	       "name": "Marketing Automation",
-    	      "sameAs": "https://en.wikipedia.org/wiki/Marketing_automation"
+    	      "sameAs": [
+				"https://en.wikipedia.org/wiki/Marketing_automation",
+				"https://www.wikidata.org/wiki/Q17103526"
+			],
+			"identifier": {
+ 				 "@type": "PropertyValue",
+ 				 "propertyID": "Google Knowledge Graph ID",
+ 				 "value": "/m/02z3kxx"
+				}
         	}
       	],
       	"areaServed": {
@@ -134,23 +198,73 @@
               	"@type": "Service",
               	"name": "Pay-Per-Estimate Confirmed Appointments",
               	"description": "DFY Delivery of 100% exclusive, pre-vetted sales appointments for high-ticket contracting jobs.",
-              	"serviceType": "Lead Generation"
+              	"serviceType": "Online Lead Generation",
+				"identifier": {
+					  "@type": "PropertyValue",
+					  "propertyID": "Google Knowledge Graph ID",
+					  "value": "/g/11j8qr8r2x"
+					}
             	}
           	},
           	{
             	"@type": "Offer",
-   	         "itemOffered": {
+   	         	"itemOffered": {
     	          "@type": "Service",
         	      "name": "24/7 AI Voice & Chat Receptionists",
-            	  "description": "Custom conversational sales agents built to handle incoming calls and text follow-ups automatically."
+            	  "description": "Custom conversational sales agents built to handle incoming calls and text follow-ups automatically.",
+				  "identifier": {
+					  "@type": "PropertyValue",
+					  "propertyID": "Google Knowledge Graph ID",
+					  "value": "/m/01305y"
+					}
             	}
           	},
           	{
             	"@type": "Offer",
-  	          "itemOffered": {
+  	          	"itemOffered": {
     	          "@type": "Service",
         	      "name": "AI Database Reactivation",
-            	  "description": "Reviving old lead lists and stale quotes into booked appointments on a pure performance baseline."
+            	  "description": "Reviving old lead lists and stale quotes into new booked appointments on a pure performance basis.",
+				  "serviceType": "Online Lead Generation",
+				}
+          	},
+			{
+            	"@type": "Offer",
+  	          	"itemOffered": {
+    	          "@type": "Service",
+        	      "name": "Video Advertising",
+            	  "description": "Marketing for a business using video as the medium, to generate inbound leads and develop local brand recognition.",
+				  "identifier": {
+					  "@type": "PropertyValue",
+					  "propertyID": "Google Knowledge Graph ID",
+					  "value": "/m/09v0_sj"
+					}
+            	}
+          	},
+			{
+            	"@type": "Offer",
+  	          	"itemOffered": {
+    	          "@type": "Service",
+        	      "name": "Social Video Marketing",
+            	  "description": "Publishing a business's marketing videos across social media platforms, for brand recognition and engagement.",
+				  "identifier": {
+					  "@type": "PropertyValue",
+					  "propertyID": "Google Knowledge Graph ID",
+					  "value": "/g/120mhxym"
+					}
+            	}
+          	},
+			{
+            	"@type": "Offer",
+  	          	"itemOffered": {
+    	          "@type": "Service",
+        	      "name": "Reputation Management and Marketing",
+            	  "description": "influencing, controlling, enhancing, or concealing of an business's online reputation.",
+				  "identifier": {
+					  "@type": "PropertyValue",
+					  "propertyID": "Google Knowledge Graph ID",
+					  "value": "/m/03xggz"
+					}
             	}
           	},
           	{
@@ -158,7 +272,13 @@
     	        "itemOffered": {
         	      "@type": "Service",
             	  "name": "Google Business Profile Maps Optimization",
-              	"description": "Multi-location SEO dominance and footprint expansion built exclusively for contractor service suburbs."
+              	"description": "Multi-location SEO dominance and footprint expansion built exclusively for contractor service suburbs.",
+				"serviceType": "Local SEO",
+				"identifier": {
+					  "@type": "PropertyValue",
+					  "propertyID": "Google Knowledge Graph ID",
+					  "value": "/g/11dymty4xq"
+					}
             	}
           	}
         	]
@@ -523,8 +643,8 @@
                 100% Exclusive Confirmed Estimates For Contractors
             </span>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight text-balance">
-                Stop Chasing Shared Leads.<br>
-                <span class="text-brandOrange">Pay for Exclusive Confirmed Appointments.</span>
+                Stop Chasing Shared Leads<br>
+                <span class="text-brandOrange">Pay for Exclusive Confirmed Appointments</span>
             </h1>
             <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
                 Residential and Commercial Contractors: Let Us Deliver - Exclusive To You - A Predictable Stream Of Confirmed Booked Appointments Of Pre-Qualified and Pre-Sold Clients (not "leads") Ready To Hire You For Your Profitable Services And Convert To A Paid Invoice, Every Week and Fully Automated. 
@@ -617,7 +737,7 @@
                             </div>
                             
                             <div class="space-y-1.5">
-                                <label class="block text-xs font-medium text-slate-400" for="profit">Average NET profit per high ticket service (above $5,000)</label>
+                                <label class="block text-xs font-medium text-slate-400" for="profit">Average NET profit per high ticket service</label>
                                 <input id="profit" name="profit" type="number" value="4500" class="w-full bg-darkBg border border-slate-800 rounded-xl px-3.5 py-3 text-sm text-white placeholder-slate-700 focus:border-brandOrange focus:outline-none transition" oninput="calculate();" />
                             </div>
                             
@@ -965,7 +1085,102 @@
         </div>
     </section>
 
-    <section class="py-20 border-b border-slate-800 bg-darkBg">
+    <section class="py-24 bg-darkCard/10 border-b border-slate-800 relative overflow-hidden dot-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-brandOrange uppercase block mb-2">Omnichannel Scaling Assets</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Check Out Our Other Services That Enhance Your Results</h2>
+                <p class="mt-4 text-slate-400 text-sm sm:text-base">While our core appointment generation engine drives continuous estimates, we deploy these specialized operational systems to improve your margins, capture hidden revenue, and completely dominate your local market.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-center">
+                
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-brandOrange/40 transition duration-300 flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-12 w-12 rounded-xl bg-brandOrange/10 border border-brandOrange/20 flex items-center justify-center text-brandOrange mb-6 text-xl group-hover:scale-105 transition-transform duration-200">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-lg tracking-tight">24/7 AI Voice & Chat Sales Agents</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">Deploy advanced sales-trained AI receptionists and chat assistants built to handle calls in under 3 seconds, qualify inquiries on pricing, and auto-book estimates, 24/7 hands-off.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-900">
+                        <a href="ai-agents-chatbots.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brandOrange hover:text-white transition duration-155">
+                            <span>Explore AI Automation</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-brandOrange/40 transition duration-300 flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-12 w-12 rounded-xl bg-brandOrange/10 border border-brandOrange/20 flex items-center justify-center text-brandOrange mb-6 text-xl group-hover:scale-105 transition-transform duration-200">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-lg tracking-tight">GBP Maps Optimization</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">Legally multiply and defend your local Google Maps footprint inside your territory's wealthiest suburbs to generate exclusive inbound leads and calls and prepare for next-gen AIO search.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-900">
+                        <a href="gbp-optimization.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brandOrange hover:text-white transition duration-155">
+                            <span>Dominate Google Maps</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-brandOrange/40 transition duration-300 flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-12 w-12 rounded-xl bg-brandOrange/10 border border-brandOrange/20 flex items-center justify-center text-brandOrange mb-6 text-xl group-hover:scale-105 transition-transform duration-200">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-lg tracking-tight">Reputation Management</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">Automate 5-star review collection and replies, using smart AI prompts that nudge past clients into inserting high-intent keywords, auto-draft replies, and intercept complaints privately.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-900">
+                        <a href="reputation-management.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brandOrange hover:text-white transition duration-155">
+                            <span>Automate Review Growth</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-brandOrange/40 transition duration-300 flex flex-col justify-between group shadow-xl md:col-span-1 lg:col-start-1 lg:translate-x-[50%] xl:translate-x-0 lg:col-span-1">
+                    <div>
+                        <div class="h-12 w-12 rounded-xl bg-brandOrange/10 border border-brandOrange/20 flex items-center justify-center text-brandOrange mb-6 text-xl group-hover:scale-105 transition-transform duration-200">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-lg tracking-tight">Database Reactivation</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">Stop letting paid leads gather dust. Our AI assistant reaches out over SMS to systematically revive 9% to 21% of dormant records and unsold quotes on a pure performance basis.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-900">
+                        <a href="database-reactivation.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brandOrange hover:text-white transition duration-155">
+                            <span>Recover Hidden CRM Cash</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-brandOrange/40 transition duration-300 flex flex-col justify-between group shadow-xl md:col-span-1 lg:col-start-2 lg:translate-x-[50%] xl:translate-x-0 lg:col-span-1">
+                    <div>
+                        <div class="h-12 w-12 rounded-xl bg-brandOrange/10 border border-brandOrange/20 flex items-center justify-center text-brandOrange mb-6 text-xl group-hover:scale-105 transition-transform duration-200">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-lg tracking-tight">Video Marketing Ads</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">Turn raw jobsite smartphone footage, before/after snaps, and text reviews into high-impact, short-form lead-gen video ads syndicated across TikTok, Reels, and Shorts.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-900">
+                        <a href="video-marketing.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brandOrange hover:text-white transition duration-155">
+                            <span>Deploy Video Campaigns</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+	<section class="py-20 border-b border-slate-800 bg-darkBg">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Select Your Desired Amount of Credits</h2>
@@ -1409,6 +1624,7 @@
             }
         })();
     </script>
-
+	<script src="https://platform.aminos.ai/w/chat_plugin.js" data-bot-id="10113"></script> 
+	
 </body>
 </html>
