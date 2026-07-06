@@ -72,7 +72,7 @@
         	"jobTitle": "Founder & Owner",
         	"sameAs": [
           		"https://www.linkedin.com/in/get-leads-and-booked-appointments/",
-				https://www.wikidata.org/wiki/Q56279965
+				"https://www.wikidata.org/wiki/Q56279965"
         	],
 			"identifier": {
      		 "@type": "PropertyValue",
@@ -1198,6 +1198,9 @@
                             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> 100% Exclusive Inbound Flow</li>
                             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Don't Pay For No-Shows</li>
                             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Books Straight into Your CRM</li>
+							<li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Maximum Local Visibility Priority</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Full Campaign Build-Out Included</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> AI Sales Agent Customized Setup</li>
                         </ul>
                     </div>
                     <a href="#appointment-intake" class="block w-full py-3.5 bg-slate-800 hover:bg-slate-700 text-center font-bold text-white text-xs uppercase rounded-xl tracking-wider transition">Starter Batch 5 Credits</a>
@@ -1211,7 +1214,10 @@
                             <span class="text-5xl font-black text-white">10</span> <span class="text-sm font-bold text-brandOrange uppercase tracking-widest">Appointment Credits</span>
                         </div>
                         <ul class="space-y-3.5 text-xs sm:text-sm text-slate-200 mb-8">
-                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Maximum Local Visibility Priority</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> 100% Exclusive Inbound Flow</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Don't Pay For No-Shows</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Books Straight into Your CRM</li>
+							<li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Maximum Local Visibility Priority</li>
                             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> Full Campaign Build-Out Included</li>
                             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brandOrange"></i> AI Sales Agent Customized Setup</li>
                         </ul>
@@ -1264,7 +1270,27 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="space-y-3">
+                        <label class="block text-xs font-bold uppercase text-slate-400">Desired Appointment Credit Package <span class="text-brandOrange font-black">*</span></label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <label class="flex items-center gap-3 bg-darkBg border border-slate-800 rounded-xl p-4 cursor-pointer hover:border-brandOrange/50 transition group">
+                                <input type="radio" name="selectedPackage" value="Starter Package (5 Credits)" required class="accent-brandOrange shrink-0 w-4 h-4">
+                                <div class="text-xs sm:text-sm">
+                                    <span class="block font-bold text-white group-hover:text-brandOrange transition">Starter Package</span>
+                                    <span class="block text-slate-400 text-xs mt-0.5">5 Appointment Credits</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3 bg-darkBg border border-slate-800 rounded-xl p-4 cursor-pointer hover:border-brandOrange/50 transition group">
+                                <input type="radio" name="selectedPackage" value="Scaling Package (10 Credits)" class="accent-brandOrange shrink-0 w-4 h-4">
+                                <div class="text-xs sm:text-sm">
+                                    <span class="block font-bold text-white group-hover:text-brandOrange transition">Scaling Package</span>
+                                    <span class="block text-slate-400 text-xs mt-0.5">10 Appointment Credits</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+					
+					<div>
                         <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Current Monthly Sales Volume & Goals</label>
                         <textarea id="notes" rows="4" placeholder="Tell us how many appointments you're getting now per week, and how many your team has capacity for, and what specific services you prefer to sell..." class="w-full bg-darkBg border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandOrange transition resize-none"></textarea>
                     </div>
@@ -1576,6 +1602,7 @@
                 website: document.getElementById('website').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
+                selectedPackage: document.querySelector('input[name="selectedPackage"]:checked')?.value || 'None Selected',
                 notes: document.getElementById('notes').value
             };
 
