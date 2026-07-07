@@ -15,11 +15,8 @@
 	<link rel="canonical" href="https://webservicespro.co/contact.html" />
     <title>Contact Our Team | Web Services Pro</title>
     
-    <link rel="stylesheet" href="output.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+	
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -774,7 +771,20 @@
             }
         })();
     </script>
-	<script src="https://platform.aminos.ai/w/chat_plugin.js" data-bot-id="10113"></script>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<script>
+	window.addEventListener('DOMContentLoaded', () => {
+  	  setTimeout(() => {
+    	    const aminosChat = document.createElement('script');
+        	aminosChat.src = "https://platform.aminos.ai/w/chat_plugin.js";
+        	aminosChat.setAttribute('data-bot-id', '10113');
+        	document.body.appendChild(aminosChat);
+    	}, 3500); // 3500 milliseconds = 3.5 seconds delay
+	});
+	</script>
 	
 </body>
 </html>
