@@ -249,58 +249,8 @@
             	}
           	}
         	]
+      	}
       	},
-      	"review": [
-       	 {
-        	  "@type": "Review",
-          	"author": {
-            	"@type": "Organization",
-            	"name": "HVAC Company Client"
-          	},
-          	"reviewRating": {
-            	"@type": "Rating",
-            	"ratingValue": "5",
-            	"bestRating": "5"
-          	},
-          	"reviewBody": "Real client optimization result: Reduced missed calls from 40% down to zero, generating an additional +$47,000 per month in additional service revenue within 60 days.",
-          	"itemReviewed": {
-            	"@id": "https://webservicespro.co/ai-agents-chatbots.html#service"
-          	}
-        	},
-        	{
-          	"@type": "Review",
-          	"author": {
-            	"@type": "Organization",
-            	"name": "Plumbing Service Client"
-          	},
-          	"reviewRating": {
-           	 "@type": "Rating",
-            	"ratingValue": "5",
-            	"bestRating": "5"
-          	},
-          	"reviewBody": "Real client automation tracking result: Reduced typical dispatcher response delays from 4 hours down to under 30 seconds, yielding a 2.3X baseline lead conversion increase and lifting overall closing rates from 23% to 53%.",
-          	"itemReviewed": {
-            	"@id": "https://webservicespro.co/ai-agents-chatbots.html#service"
-          	}
-        	},
-        	{
-          	"@type": "Review",
-          	"author": {
-           	 "@type": "Organization",
-           	 "name": "Landscaper Service Client"
-          	},
-          	"reviewRating": {
-           	 "@type": "Rating",
-           	 "ratingValue": "5",
-           	 "bestRating": "5"
-          	},
-          	"reviewBody": "Real client leakage reduction outcome: Fully eliminated after-hours leak constraints, adding +28 new monthly clients and generating an extra $84,000 in monthly revenue pipelines.",
-          	"itemReviewed": {
-           	 "@id": "https://webservicespro.co/ai-agents-chatbots.html#service"
-          	}
-        	}
-      	]
-    	},
     	{
       	"@type": "FAQPage",
       	"@id": "https://webservicespro.co/ai-agents-chatbots.html#faq",
@@ -382,6 +332,7 @@
       	"name": "Web Services Pro",
       	"url": "https://webservicespro.co",
 		"priceRange": "$$$$",
+		"image": "https://webservicespro.co/Web-Services-Pro-Logo-Black.png",
       	"logo": {
         	"@type": "ImageObject",
         	"url": "https://webservicespro.co/Web-Services-Pro-Logo-Black.png"
@@ -475,7 +426,55 @@
 				"https://www.wikidata.org/wiki/Q7094093"
           	]
         	}
-      	]
+      	],
+		"aggregateRating": {
+ 		 "@type": "AggregateRating",
+		  "ratingValue": "5",
+		  "bestRating": "5",
+		  "worstRating": "1",
+		  "reviewCount": "3"
+		},
+		"review": [
+		  {
+		    "@type": "Review",
+		    "author": {
+		      "@type": "Organization",
+ 		     "name": "HVAC Company Client"
+		    },
+		    "reviewRating": {
+		      "@type": "Rating",
+		      "ratingValue": "5",
+		      "bestRating": "5"
+		    },
+		    "reviewBody": "Real client optimization result: Reduced missed calls from 40% down to zero, generating an additional +$47,000 per month in additional service revenue within 60 days."
+		  },
+		  {
+		    "@type": "Review",
+ 		   "author": {
+ 		     "@type": "Organization",
+ 		     "name": "Plumbing Service Client"
+ 		   },
+ 		   "reviewRating": {
+ 		     "@type": "Rating",
+  		    "ratingValue": "5",
+  		    "bestRating": "5"
+  		  },
+  		  "reviewBody": "Real client automation tracking result: Reduced typical dispatcher response delays from 4 hours down to under 30 seconds, yielding a 2.3X baseline lead conversion increase and lifting overall closing rates from 23% to 53%."
+  		},
+ 		 {
+ 		   "@type": "Review",
+ 		   "author": {
+ 		     "@type": "Organization",
+ 		     "name": "Landscaper Service Client"
+ 		   },
+  		  "reviewRating": {
+  		    "@type": "Rating",
+  		    "ratingValue": "5",
+  		    "bestRating": "5"
+  		  },
+  		  "reviewBody": "Real client leakage reduction outcome: Fully eliminated after-hours leak constraints, adding +28 new monthly clients and generating an extra $84,000 in monthly revenue pipelines."
+  		}
+		]
     	},
     	{
       	"@type": "WebSite",
