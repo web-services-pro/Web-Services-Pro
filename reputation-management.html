@@ -565,28 +565,22 @@
                     See Examples of Your Future Video Assets (Share to Local Homeowners on FB, IG, YT, TikTok, etc)
                 </h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-darkBg">
-                        <iframe class="w-full h-full" 
-                                src="https://www.youtube-nocookie.com/embed/_MhWo9NN-vo" 
-                                title="Reputation Video Example 1" 
-                                frameborder="0" 
-                                loading="lazy"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    
-                    <div class="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-darkBg">
-                        <iframe class="w-full h-full" 
-                                src="https://www.youtube-nocookie.com/embed/JdmpGBs4CvM" 
-                                title="Reputation Video Example 2" 
-                                frameborder="0" 
-								loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
+    
+   					 <div class="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-darkBg group hover:border-brandOrange/30 transition duration-300 flex items-center justify-center cursor-pointer relative" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/_MhWo9NN-vo?autoplay=1\'' + ' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+    				     <img src="https://img.youtube.com/vi/_MhWo9NN-vo/maxresdefault.jpg" alt="Reputation Video Example 1" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
+    				     <div class="w-16 h-16 rounded-full bg-brandOrange/90 group-hover:bg-brandOrange text-white flex items-center justify-center text-xl shadow-xl transition relative z-10">
+     				      	 <i class="fa-solid fa-play ml-1"></i>
+     				     </div>
+   					 </div>
+    
+   					 <div class="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-darkBg group hover:border-brandOrange/30 transition duration-300 flex items-center justify-center cursor-pointer relative" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/JdmpGBs4CvM?autoplay=1\'' + ' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+   					     <img src="https://img.youtube.com/vi/JdmpGBs4CvM/maxresdefault.jpg" alt="Reputation Video Example 2" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
+   					     <div class="w-16 h-16 rounded-full bg-brandOrange/90 group-hover:bg-brandOrange text-white flex items-center justify-center text-xl shadow-xl transition relative z-10">
+   					         <i class="fa-solid fa-play ml-1"></i>
+   					     </div>
+   					 </div>
+
+				</div>
             </div>
         </div>
     </section>
