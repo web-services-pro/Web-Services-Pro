@@ -12,6 +12,7 @@
 	</script>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://webservicespro.co/" />
     <title>Pay-Per-Estimate Service - We Generate Service Appointments for Home Services Contractors | Web Services Pro</title>
     <meta name="description" content="Stop throwing money away on shared leads. Secure 100% exclusive, pre-vetted appointments on a pure batch-performance basis. Zero ad spend risk.">
     
@@ -713,7 +714,7 @@
                     
                     <div class="relative group">
                         <button class="flex items-center gap-1.5 text-sm font-semibold text-slate-300 hover:text-brandOrange transition focus:outline-none py-4">
-                            Services <i class="fa-solid fa-chevron-down text-[10px] tracking-none group-hover:rotate-180 transition-transform duration-200 mt-0.5"></i>
+                            Our Solutions <i class="fa-solid fa-chevron-down text-[10px] tracking-none group-hover:rotate-180 transition-transform duration-200 mt-0.5"></i>
                         </button>
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-darkCard border border-slate-800 rounded-2xl p-2.5 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 space-y-1">
                             <a href="ai-agents-chatbots.html" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:bg-brandOrange/10 hover:text-white transition">🤖 AI Voice & Chat Agents</a>
@@ -1752,14 +1753,14 @@
                 body: JSON.stringify(payload)
             })
             .then(() => {
-                alert("Success! Your regional territory exclusivity reservation request has been processed. We will connect with your dispatch board within 1 business day.");
+                alert("Success! Your request has been processed. We will connect with you within 1 business day.");
                 document.getElementById('appointmentLeadForm').reset();
                 submitBtn.innerText = originalBtnText;
                 submitBtn.disabled = false;
             })
             .catch(err => {
                 console.error("Database tracking error:", err);
-                alert("There was an operational error tracking your layout configuration. Please contact our desk directly via text or call.");
+                alert("There was an error submitting your message. Please contact us directly via text or call.");
                 submitBtn.innerText = originalBtnText;
                 submitBtn.disabled = false;
             });
