@@ -578,7 +578,7 @@
     <section class="relative overflow-hidden py-24 lg:py-32 border-b border-slate-800 dot-grid">
         
         <video autoplay loop muted playsinline 
-               class="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none">
+               class="hidden lg:block absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none">
             <source src="images/hvac-loop.mp4" type="video/mp4">
         </video>
         
@@ -615,16 +615,12 @@
                 Why You Need An AI-Powered Sales Receptionist
             </h2>
 
-            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-darkCard group hover:border-brandOrange/30 transition duration-300">
-                <iframe class="w-full h-full" 
-                        src="https://www.youtube-nocookie.com/embed/RSHMtUf4-cA" 
-                        title="Why You Need An AI-Powered Sales Receptionist" 
-                        frameborder="0" 
-						loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                </iframe>
-            </div>
+            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-darkCard group hover:border-brandOrange/30 transition duration-300 flex items-center justify-center cursor-pointer relative" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/RSHMtUf4-cA?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+  			    <img src="https://img.youtube.com/vi/RSHMtUf4-cA/maxresdefault.jpg" alt="Why You Need An AI-Powered Sales Receptionist" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
+    			<div class="w-16 h-16 rounded-full bg-brandOrange/90 group-hover:bg-brandOrange text-white flex items-center justify-center text-xl shadow-xl transition relative z-10">
+    			    <i class="fa-solid fa-play ml-1"></i>
+    			</div>
+			</div>
 
         </div>
     </section>
@@ -786,16 +782,12 @@
                 Watch How Our Customized A.I. Sales Chatbot Interacts With and Pre-Qualifies Both Your Stale and Fresh Leads 24/7
             </h3>
 
-            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-darkCard group hover:border-brandOrange/30 transition duration-300">
-                <iframe class="w-full h-full" 
-                        src="https://www.youtube-nocookie.com/embed/EQX0V9Lmw9c" 
-                        title="AI Sales Chatbot Interaction and Pre-Qualification Demo" 
-                        frameborder="0"
-						loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                </iframe>
-            </div>
+            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-darkCard group hover:border-brandOrange/30 transition duration-300 flex items-center justify-center cursor-pointer relative" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/EQX0V9Lmw9c?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+			    <img src="https://img.youtube.com/vi/EQX0V9Lmw9c/maxresdefault.jpg" alt="AI Sales Chatbot Interaction and Pre-Qualification Demo" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
+  			    <div class="w-16 h-16 rounded-full bg-brandOrange/90 group-hover:bg-brandOrange text-white flex items-center justify-center text-xl shadow-xl transition relative z-10">
+   			    	<i class="fa-solid fa-play ml-1"></i>
+   			 	</div>
+			</div>
 
         </div>
     </section>
