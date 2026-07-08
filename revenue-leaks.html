@@ -2014,21 +2014,44 @@
         </div>
     </header>
 
-<section class="dot-grid border-b border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14">
+<section class="relative overflow-hidden border-b border-slate-800">
+  <img src="images/background.webp" alt="Contractor Image Background" aria-hidden="true" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-20">
+  <div class="absolute inset-0 bg-darkBg/85"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 text-center">
     <span class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-brandOrange mb-5">
       <span class="w-1.5 h-1.5 rounded-full bg-brandOrange"></span> Web Services Pro &mdash; Contractor Diagnostic
     </span>
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white max-w-3xl leading-[1.05]">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white max-w-3xl mx-auto leading-[1.05]">
       The revenue leaks costing contractors <span class="text-brandOrange">$100K+ a year</span>
     </h1>
-    <p class="mt-5 max-w-2xl text-base sm:text-lg text-slate-400 leading-relaxed">
+    <p class="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-slate-400 leading-relaxed">
       Every trade loses money the same six or seven ways &mdash; missed calls, dead leads, a thin Google profile, weak reviews, no proof, and a pipeline that runs hot then dry. Pick your trade below and see exactly where it's happening in your business.
     </p>
 
     <div class="mt-10 pt-8 border-t border-slate-800/80">
       <span class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-4">Select your trade</span>
-      <div class="flex flex-wrap gap-2.5" id="chips" role="group" aria-label="Select your contracting trade">
+
+      <div class="lg:hidden relative max-w-sm mx-auto mb-2">
+        <select id="tradeSelectMobile" class="w-full appearance-none bg-darkCard border border-slate-800 text-white text-sm font-semibold rounded-lg px-4 py-3.5 pr-10 focus:outline-none focus:border-brandOrange/60 transition" aria-label="Select your contracting trade">
+          <option value="" selected disabled>Choose your trade&hellip;</option>
+          <option value="roofing">🏠 Roofing &amp; Siding</option>
+          <option value="remodeling">🍳 Kitchen &amp; Bath Remodeling</option>
+          <option value="flooring">🪵 Flooring</option>
+          <option value="windows-doors">🪟 Windows &amp; Doors</option>
+          <option value="solar">☀️ Solar</option>
+          <option value="landscaping">🌳 Landscaping &amp; Arborist</option>
+          <option value="decks-fencing">🪨 Decks &amp; Fencing</option>
+          <option value="concrete">🧱 Concrete</option>
+          <option value="pools">🏊 Pools</option>
+          <option value="painting">🎨 Painting</option>
+          <option value="hvac">❄️ HVAC</option>
+          <option value="plumbing">🚰 Plumbing</option>
+          <option value="electrical">⚡ Electrical</option>
+        </select>
+        <i class="fa-solid fa-chevron-down text-xs text-slate-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+      </div>
+
+      <div class="hidden lg:flex flex-wrap justify-center gap-2.5" id="chips" role="group" aria-label="Select your contracting trade">
       <button class="chip inline-flex items-center gap-1.5 border border-slate-800 bg-darkCard text-slate-300 hover:border-brandOrange/40 hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition" type="button" data-trade="roofing" aria-pressed="false"><span>🏠</span> Roofing &amp; Siding</button>
       <button class="chip inline-flex items-center gap-1.5 border border-slate-800 bg-darkCard text-slate-300 hover:border-brandOrange/40 hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition" type="button" data-trade="remodeling" aria-pressed="false"><span>🍳</span> Kitchen &amp; Bath Remodeling</button>
       <button class="chip inline-flex items-center gap-1.5 border border-slate-800 bg-darkCard text-slate-300 hover:border-brandOrange/40 hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition" type="button" data-trade="flooring" aria-pressed="false"><span>🪵</span> Flooring</button>
@@ -2772,6 +2795,7 @@
   }
 
   var chipsEl = document.getElementById('chips');
+  var mobileSelectEl = document.getElementById('tradeSelectMobile');
   var emptyStateEl = document.getElementById('emptyState');
   var ctaBandEl = document.getElementById('ctaBand');
   var ctaCountEl = document.getElementById('ctaCount');
@@ -2786,6 +2810,7 @@
     chipsEl.querySelectorAll('.chip').forEach(function(c){
       c.setAttribute('aria-pressed', c.dataset.trade === id ? 'true' : 'false');
     });
+    if (mobileSelectEl) { mobileSelectEl.value = id; }
 
     panelsEls.forEach(function(p){ p.hidden = (p !== panel); });
     emptyStateEl.style.display = 'none';
@@ -2801,6 +2826,12 @@
   chipsEl.querySelectorAll('.chip').forEach(function(btn){
     btn.addEventListener('click', function(){ selectTrade(btn.dataset.trade); });
   });
+
+  if (mobileSelectEl) {
+    mobileSelectEl.addEventListener('change', function(){
+      if (this.value) selectTrade(this.value);
+    });
+  }
 })();
 </script>
 
@@ -2814,6 +2845,6 @@
     	}, 3500); // 3500 milliseconds = 3.5 seconds delay
 	});
 </script>
-
+	
 </body>
 </html>
