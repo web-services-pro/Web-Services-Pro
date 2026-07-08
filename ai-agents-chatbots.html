@@ -313,7 +313,7 @@
       	"@id": "https://webservicespro.co/ai-agents-chatbots.html#video1",
       	"name": "Why You Need An AI-Powered Sales Receptionist",
       	"description": "An introductory video outlining the core functions and business case configurations for deploying an AI-powered conversational sales receptionist.",
-      	"thumbnailUrl": "https://img.youtube.com/vi/RSHMtUf4-cA/maxresdefault.jpg",
+      	"thumbnailUrl": "https://img.youtube.com/vi/RSHMtUf4-cA/hqdefault.jpg",
       	"uploadDate": "2026-01-01T00:00:00Z",
       	"embedUrl": "https://www.youtube-nocookie.com/embed/RSHMtUf4-cA"
     	},
@@ -322,7 +322,7 @@
       	"@id": "https://webservicespro.co/ai-agents-chatbots.html#video2",
       	"name": "AI Sales Chatbot Interaction and Pre-Qualification Demo",
       	"description": "A live interface simulation detailing how customized automated AI sales agents interact with and qualify incoming fresh and stale records 24/7.",
-      	"thumbnailUrl": "https://img.youtube.com/vi/EQX0V9Lmw9c/maxresdefault.jpg",
+      	"thumbnailUrl": "https://img.youtube.com/vi/EQX0V9Lmw9c/hqdefault.jpg",
       	"uploadDate": "2026-01-01T00:00:00Z",
       	"embedUrl": "https://www.youtube-nocookie.com/embed/EQX0V9Lmw9c"
     	},
@@ -486,15 +486,26 @@
 	}
 	</script>
 	
-	<link rel="stylesheet" href="output.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .dot-grid {
-            background-image: radial-gradient(rgba(255, 107, 0, 0.03) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-    </style>
+  	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+  	<link rel="stylesheet" href="output.css">  
+
+  	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+  	<style>
+      body {
+      	font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .dot-grid {
+      	background-image: radial-gradient(rgba(255, 107, 0, 0.03) 1px, transparent 1px);
+      	background-size: 20px 20px;
+      }
+  	</style>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-brandOrange selection:text-white">
@@ -505,7 +516,7 @@
                 
                 <div class="flex items-center">
                     <a href="index.html" class="flex-shrink-0 flex items-center">
-                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="224" height="56" class="h-14 w-auto object-contain">
+                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="188" height="98" class="h-14 w-auto object-contain">
                     </a>
                 </div>
 
@@ -556,7 +567,7 @@
                 <a href="about-us.html" class="text-sm font-bold text-slate-300 hover:text-brandOrange transition py-1.5 border-b border-slate-900">About Us</a>
                 
                 <div class="py-2 space-y-1.5 border-b border-slate-900">
-                    <span class="block text-[10px] font-black uppercase text-slate-500 tracking-wider mb-1">Our Core Focus Areas</span>
+                    <span class="block text-[10px] font-black uppercase text-slate-300 tracking-wider mb-1">Our Core Focus Areas</span>
                     <a href="ai-agents-chatbots.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">🤖 AI Voice & Chat Agents</a>
                     <a href="gbp-optimization.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">📍 GBP Maps Optimization</a>
                     <a href="reputation-management.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">⭐ Reputation Management</a>
@@ -575,10 +586,12 @@
         </div>
     </header>
 
+	<main id="main-content">
+
     <section class="relative overflow-hidden py-24 lg:py-32 border-b border-slate-800 dot-grid">
         
         <!-- STILL IMAGE BACKGROUND (Uses pre-compiled opacity-25 from output.css) -->
-        <img src="images/plumbers-background.webp" alt="Plumbing Project Background" class="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none">
+        <img src="images/plumbers-background.webp" alt="Plumbing Project Background" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none">
         
         <!-- READABILITY MASK (Uses pre-compiled darkBg/80 overlay to secure clean text contrast) -->
         <div class="absolute inset-0 bg-darkBg/80 pointer-events-none"></div>
@@ -615,7 +628,7 @@
             </h2>
 
             <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-darkCard group hover:border-brandOrange/30 transition duration-300 flex items-center justify-center cursor-pointer relative" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/RSHMtUf4-cA?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
-  			    <img src="https://img.youtube.com/vi/RSHMtUf4-cA/maxresdefault.jpg" alt="Why You Need An AI-Powered Sales Receptionist" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
+  			    <img src="https://img.youtube.com/vi/RSHMtUf4-cA/hqdefault.jpg" alt="Why You Need An AI-Powered Sales Receptionist" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
     			<div class="w-16 h-16 rounded-full bg-brandOrange/90 group-hover:bg-brandOrange text-white flex items-center justify-center text-xl shadow-xl transition relative z-10">
     			    <i class="fa-solid fa-play ml-1"></i>
     			</div>
@@ -727,17 +740,17 @@
                     <div class="bg-darkBg/60 rounded-xl p-5 border border-slate-800/80">
                         <p class="text-slate-300 text-sm mb-2"><strong class="text-white">HVAC Company:</strong> Went from 40% missed calls to zero</p>
                         <p class="text-emerald-400 font-bold text-base sm:text-lg">→ +$47K/Month Revenue</p>
-                        <p class="text-slate-500 text-xs mt-1.5 font-medium uppercase tracking-wider">Within 60 days</p>
+                        <p class="text-slate-300 text-xs mt-1.5 font-medium uppercase tracking-wider">Within 60 days</p>
                     </div>
                     <div class="bg-darkBg/60 rounded-xl p-5 border border-slate-800/80">
                         <p class="text-slate-300 text-sm mb-2"><strong class="text-white">Plumbing Service:</strong> Reduced response time from 4hrs to 30 seconds</p>
                         <p class="text-emerald-400 font-bold text-base sm:text-lg">→ 2.3x Lead Conversion</p>
-                        <p class="text-slate-500 text-xs mt-1.5 font-medium uppercase tracking-wider">23% → 53% close rate</p>
+                        <p class="text-slate-300 text-xs mt-1.5 font-medium uppercase tracking-wider">23% → 53% close rate</p>
                     </div>
                     <div class="bg-darkBg/60 rounded-xl p-5 border border-slate-800/80">
                         <p class="text-slate-300 text-sm mb-2"><strong class="text-white">Landscaper:</strong> Eliminated after-hours leakage</p>
                         <p class="text-emerald-400 font-bold text-base sm:text-lg">→ +28 Clients/Month</p>
-                        <p class="text-slate-500 text-xs mt-1.5 font-medium uppercase tracking-wider">$84K additional revenue</p>
+                        <p class="text-slate-300 text-xs mt-1.5 font-medium uppercase tracking-wider">$84K additional revenue</p>
                     </div>
                 </div>
             </div>
@@ -782,7 +795,7 @@
             </h3>
 
             <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-darkCard group hover:border-brandOrange/30 transition duration-300 flex items-center justify-center cursor-pointer relative" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/EQX0V9Lmw9c?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
-			    <img src="https://img.youtube.com/vi/EQX0V9Lmw9c/maxresdefault.jpg" alt="AI Sales Chatbot Interaction and Pre-Qualification Demo" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
+			    <img src="https://img.youtube.com/vi/EQX0V9Lmw9c/hqdefault.jpg" alt="AI Sales Chatbot Interaction and Pre-Qualification Demo" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-300">
   			    <div class="w-16 h-16 rounded-full bg-brandOrange/90 group-hover:bg-brandOrange text-white flex items-center justify-center text-xl shadow-xl transition relative z-10">
    			    	<i class="fa-solid fa-play ml-1"></i>
    			 	</div>
@@ -844,7 +857,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item">
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Will my customers immediately know they're talking to an AI?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap">
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -856,7 +869,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item">
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">What happens if a customer interrupts the AI while it's speaking?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap">
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -868,7 +881,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item">
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Can it handle thick accents, slang, or noisy backgrounds?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap">
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -880,7 +893,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item">
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">What if it doesn't know the answer? Will it make things up?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap">
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -892,7 +905,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">What happens if a customer gets angry or frustrated?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-330 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -904,7 +917,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Can the AI actually handle sales objections — not just basic FAQs?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -916,7 +929,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">"I'm already pleased with our current system and setup, I don't want to go through the hassle of changing stuff around!"</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -928,7 +941,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Can it handle multiple callers at the same time?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -940,7 +953,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">What happens to leads that call after hours or on weekends?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -952,7 +965,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Can the AI help me recover old leads sitting unused in my database?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -968,7 +981,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">How long does it take to go live? Do I need a developer?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -980,7 +993,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Does it integrate with my existing CRM, calendar, and other tools?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -992,7 +1005,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Does it work only on my website, or across other channels too?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1004,7 +1017,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">My business is unique and complex. Can AI actually understand how we operate?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1016,7 +1029,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Does this work for everybody? Or who will this NOT work for?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30 space-y-3"> 
@@ -1038,7 +1051,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">What does the onboarding and first steps look like, what happens after we sign up?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30 space-y-4"> 
@@ -1065,7 +1078,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">I've tried marketing tools before and they didn't deliver. Why is this different?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1081,7 +1094,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Is this compliant with TCPA, GDPR, and HIPAA regulations?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1093,7 +1106,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Who owns the customer data, call recordings, and transcripts?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1105,7 +1118,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">Are payment details and sensitive customer information stored securely?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1121,7 +1134,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item">
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false">
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">How much revenue am I losing right now by missing calls?</span>
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>                     
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>                     
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30">
@@ -1133,7 +1146,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">How much cheaper is this than a human receptionist or call center?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1145,7 +1158,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">How do I know the appointments booked are actually worth my team's time?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1157,7 +1170,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">How does pricing work? Am I billed for missed calls or spam?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1169,7 +1182,7 @@
                 <div class="bg-darkCard rounded-xl border border-slate-800/80 overflow-hidden faq-item"> 
                     <button class="faq-q w-full flex items-start justify-between gap-4 p-5 text-left focus:outline-none" aria-expanded="false"> 
                         <span class="faq-q-text text-white font-bold text-sm sm:text-base leading-snug">How quickly can I expect to see results?</span> 
-                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
+                        <svg class="faq-chevron flex-shrink-0 w-5 h-5 mt-0.5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg> 
                     </button>
                     <div class="faq-answer-wrap"> 
                         <div class="px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-4 bg-darkBg/30"> 
@@ -1207,7 +1220,7 @@
                         
                         <div class="my-6">
                             <span class="text-4xl font-black text-white">$995</span>
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mt-1">Upfront Setup</span>
+                            <span class="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Upfront Setup</span>
                         </div>
                         
                         <div class="space-y-4 border-t border-slate-900/80 pt-5 text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -1261,14 +1274,14 @@
                         </p>
                         
                         <div class="my-6">
-                            <span class="text-4xl font-black text-white">$1,500</span><span class="text-slate-500 text-sm font-bold"> /mo</span>
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mt-1">Monthly Subscription</span>
+                            <span class="text-4xl font-black text-white">$1,500</span><span class="text-slate-300 text-sm font-bold"> /mo</span>
+                            <span class="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Monthly Subscription</span>
                         </div>
                         
                         <div class="space-y-4 border-t border-slate-900/80 pt-5 text-xs sm:text-sm text-slate-300 leading-relaxed">
                             <p>If you prefer not to share your back-end profits, you get the complete custom AI system setup alongside continuous, dedicated support and optimization.</p>
                             
-                            <div class="p-3.5 bg-darkBg/50 rounded-xl border border-slate-900 text-xs sm:text-sm text-slate-500 space-y-1.5">
+                            <div class="p-3.5 bg-darkBg/50 rounded-xl border border-slate-900 text-xs sm:text-sm text-slate-300 space-y-1.5">
                                 <span class="font-extrabold text-white uppercase tracking-wider block">Market Cost Comparison:</span>
                                 <p class="text-white font-medium">Full-time human receptionist: $3,500-$5,000+/mo + benefits, insurance, and payroll taxes.</p>
                                 <p class="text-white font-medium">Traditional answering service: $800-$1,200/mo (limited capabilities).</p>
@@ -1305,7 +1318,7 @@
                     
                     <div class="lg:col-span-4 bg-darkBg/80 border border-slate-800/80 p-6 rounded-2xl text-center shadow-inner">
                         <span class="block text-2xl sm:text-3xl font-mono font-black text-rose-500 tracking-tight">$100K - $1M+</span>
-                        <span class="block text-[10px] font-black uppercase text-slate-500 tracking-widest mt-1">Estimated Annual Revenue Leakage</span>
+                        <span class="block text-[10px] font-black uppercase text-slate-300 tracking-widest mt-1">Estimated Annual Revenue Leakage</span>
                         <p class="text-xs sm:text-sm text-white italic mt-3 leading-normal">
                             Ask yourself honestly: Why would leaving this money on the table for your local competitors be preferrable??
                         </p>
@@ -1408,13 +1421,15 @@
         </div>
     </section>
 
+	</main>
+
     <footer class="bg-darkCard/80 border-t border-slate-800 pt-16 pb-8 text-slate-400 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
                 
                 <div class="space-y-4">
                     <div class="mb-4">
-                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="224" height="56" class="h-14 w-auto object-contain">
+                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="188" height="98" class="h-14 w-auto object-contain">
                     </div>
                     <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
                         We serve local businesses — particularly residential and commercial contractors — by primarily generating confirmed booked appointments from motivated clients ready to pay for their most profitable services.
@@ -1468,15 +1483,15 @@
                     </h4>
                     <div class="space-y-3 text-xs sm:text-sm">
                         <p class="flex items-start gap-2.5">
-                            <span class="text-slate-500 font-medium shrink-0 w-20">Location:</span>
+                            <span class="text-slate-300 font-medium shrink-0 w-20">Location:</span>
                             <span class="text-slate-300">Herndon, VA 20170</span>
                         </p>
                         <p class="flex items-start gap-2.5">
-                            <span class="text-slate-500 font-medium shrink-0 w-20">Phone/SMS:</span>
+                            <span class="text-slate-300 font-medium shrink-0 w-20">Phone/SMS:</span>
                             <a href="sms:7036629320" class="text-brandOrange hover:underline font-semibold">(703) 662-9320</a>
                         </p>
                         <p class="flex items-start gap-2.5">
-                            <span class="text-slate-500 font-medium shrink-0 w-20">Email:</span>
+                            <span class="text-slate-300 font-medium shrink-0 w-20">Email:</span>
                             <a href="mailto:owner@webservicespro.co" class="text-slate-300 hover:text-brandOrange transition">owner@webservicespro.co</a>
                         </p>
                     </div>
@@ -1636,9 +1651,6 @@
         })();
     </script>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<script>
 	window.addEventListener('DOMContentLoaded', () => {
   	  setTimeout(() => {
