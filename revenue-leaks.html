@@ -2803,5 +2803,17 @@
   });
 })();
 </script>
+
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+  	  setTimeout(() => {
+    	    const aminosChat = document.createElement('script');
+        	aminosChat.src = "https://platform.aminos.ai/w/chat_plugin.js";
+        	aminosChat.setAttribute('data-bot-id', '10113');
+        	document.body.appendChild(aminosChat);
+    	}, 3500); // 3500 milliseconds = 3.5 seconds delay
+	});
+</script>
+
 </body>
 </html>
