@@ -15,8 +15,7 @@
 	<link rel="canonical" href="https://webservicespro.co/about-us.html" />
     <title>About Basel Hakim & The Web Services Pro Mission | Web Services Pro</title>
     
-    <link rel="stylesheet" href="output.css">
-	<script type="application/ld+json">
+    <script type="application/ld+json">
 	{
 	  "@context": "https://schema.org",
 	  "@graph": [
@@ -596,7 +595,17 @@
 	}
 	</script>
 
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+  	<link rel="stylesheet" href="output.css">  
+
+  	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
@@ -615,7 +624,7 @@
                 
                 <div class="flex items-center">
                     <a href="index.html" class="flex-shrink-0 flex items-center">
-                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="224" height="56" class="h-14 w-auto object-contain">
+                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="188" height="98" class="h-14 w-auto object-contain">
                     </a>
                 </div>
 
@@ -666,7 +675,7 @@
                 <a href="about-us.html" class="text-sm font-bold text-slate-300 hover:text-brandOrange transition py-1.5 border-b border-slate-900">About Us</a>
                 
                 <div class="py-2 space-y-1.5 border-b border-slate-900">
-                    <span class="block text-[10px] font-black uppercase text-slate-500 tracking-wider mb-1">Our Core Focus Areas</span>
+                    <span class="block text-[10px] font-black uppercase text-slate-300 tracking-wider mb-1">Our Core Focus Areas</span>
                     <a href="ai-agents-chatbots.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">🤖 AI Voice & Chat Agents</a>
                     <a href="gbp-optimization.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">📍 GBP Maps Optimization</a>
                     <a href="reputation-management.html" class="block text-xs font-bold text-slate-300 hover:text-brandOrange transition pl-2 py-1">⭐ Reputation Management</a>
@@ -685,10 +694,12 @@
         </div>
     </header>
 
+	<main id="main-content">
+
     <section class="relative overflow-hidden py-24 lg:py-32 border-b border-slate-200 bg-white">
         
         <!-- STILL IMAGE BACKGROUND (Uses pre-compiled opacity-25 to blend perfectly over the white layer) -->
-        <img src="images/gutters-background.webp" alt="Gutters Project Background" class="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none">
+        <img src="images/gutters-background.webp" alt="Gutters Project Background" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none">
         
         <!-- READABILITY MASK (Uses your pre-compiled light theme gradient stops) -->
         <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white pointer-events-none"></div>
@@ -998,13 +1009,15 @@
         </div>
     </section>
 
+	</main>
+
     <footer class="bg-darkCard/80 border-t border-slate-800 pt-16 pb-8 text-slate-400 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
                 
                 <div class="space-y-4">
                     <div class="mb-4">
-                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="224" height="56" class="h-14 w-auto object-contain">
+                        <img src="Web-Services-Pro-Logo-Black.webp" alt="Web Services Pro Logo" width="188" height="98" class="h-14 w-auto object-contain">
                     </div>
                     <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
                         We serve local businesses — particularly residential and commercial contractors — by primarily generating confirmed booked appointments from motivated clients ready to pay for their most profitable services.
@@ -1058,15 +1071,15 @@
                     </h4>
                     <div class="space-y-3 text-xs sm:text-sm">
                         <p class="flex items-start gap-2.5">
-                            <span class="text-slate-500 font-medium shrink-0 w-20">Location:</span>
+                            <span class="text-slate-300 font-medium shrink-0 w-20">Location:</span>
                             <span class="text-slate-300">Herndon, VA 20170</span>
                         </p>
                         <p class="flex items-start gap-2.5">
-                            <span class="text-slate-500 font-medium shrink-0 w-20">Phone/SMS:</span>
+                            <span class="text-slate-300 font-medium shrink-0 w-20">Phone/SMS:</span>
                             <a href="sms:7036629320" class="text-brandOrange hover:underline font-semibold">(703) 662-9320</a>
                         </p>
                         <p class="flex items-start gap-2.5">
-                            <span class="text-slate-500 font-medium shrink-0 w-20">Email:</span>
+                            <span class="text-slate-300 font-medium shrink-0 w-20">Email:</span>
                             <a href="mailto:owner@webservicespro.co" class="text-slate-300 hover:text-brandOrange transition">owner@webservicespro.co</a>
                         </p>
                     </div>
@@ -1110,8 +1123,8 @@
         // Dynamic creation of indicator tracking dots matching layout quantities
         slides.forEach((_, index) => {
             const dot = document.createElement('button');
-            dot.className = `w-2 h-2 rounded-full transition-all duration-200 focus:outline-none ${index === 0 ? 'bg-brandOrange w-5' : 'bg-slate-700 hover:bg-slate-500'}`;
-            dot.setAttribute('aria-label', `Go to testimonial slide ${index + 1}`);
+            dot.className = `w-4 h-4 p-2 rounded-full transition-all duration-200 focus:outline-none ${index === 0 ? 'bg-brandOrange w-6' : 'bg-slate-700 hover:bg-slate-500'}`;
+    		dot.setAttribute('aria-label', `Go to testimonial slide ${index + 1}`);
             dot.onclick = () => jumpToSlide(index);
             dotsContainer.appendChild(dot);
         });
@@ -1178,9 +1191,6 @@
         })();
     </script>
 	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<script>
 	window.addEventListener('DOMContentLoaded', () => {
   	  setTimeout(() => {
