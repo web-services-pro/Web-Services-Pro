@@ -1920,6 +1920,11 @@
     color: #fff;
   }
   .trade-panel[hidden] { display: none; }
+  @media (min-width: 1024px) {
+  	.grid > .card:nth-child(7):last-child {
+      grid-column-start: 2;
+  	}
+  }
   .card {
     animation: cardIn .32s ease both;
   }
