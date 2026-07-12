@@ -593,7 +593,7 @@
               <p class="text-xs text-slate-200">
                 Submit your profile analysis straight to our desk to secure your regional blueprint:
               </p>
-              <button onclick="openIntakeModal()" class="block w-full py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg transition-all text-xs uppercase tracking-widest shadow-lg shadow-brand-500/20">
+              <button onclick="scrollToWithCompany()" class="block w-full py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg transition-all text-xs uppercase tracking-widest shadow-lg shadow-brand-500/20">
                 Secure My Territory Exclusivity Blueprint
               </button>
               <button onclick="resetGrader()" class="text-xs text-slate-300 underline hover:text-slate-300 transition-colors mt-2">
@@ -1160,9 +1160,9 @@
               </li>
             </ul>
           </div>
-          <a href="#grader-section" class="mt-10 block py-4 bg-slate-900 hover:bg-slate-850 text-white font-extrabold text-center rounded-xl transition-all duration-200 uppercase tracking-widest text-xs border border-slate-800 hover:border-slate-700">
-            Secure Retainer Strategy
-          </a>
+          <button onclick="selectPricingPlan('Predictable Retainer')" class="w-full mt-10 block py-4 bg-slate-900 hover:bg-slate-850 text-white font-extrabold text-center rounded-xl transition-all duration-200 uppercase tracking-widest text-xs border border-slate-800 hover:border-slate-700">
+            Select Retainer Strategy
+          </button>
         </div>
 
         <!-- Option B Card -->
@@ -1214,9 +1214,9 @@
               </li>
             </ul>
           </div>
-          <a href="#grader-section" class="mt-10 block py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-center rounded-xl transition-all duration-200 uppercase tracking-widest text-xs shadow-lg shadow-brand-500/10 hover:shadow-brand-500/25">
-            Launch Performance Plan
-          </a>
+          <button onclick="selectPricingPlan('Hybrid Performance')" class="w-full mt-10 block py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-center rounded-xl transition-all duration-200 uppercase tracking-widest text-xs shadow-lg shadow-brand-500/10 hover:shadow-brand-500/25">
+            Select Performance Plan
+          </button>
         </div>
 
       </div>
@@ -1331,6 +1331,69 @@
     </div>
   </section>
 
+  <!-- EMBEDDED INTAKE FORM SECTION -->
+  <section id="intake-section" class="py-20 bg-slate-950 border-t border-slate-900 grid-bg scroll-mt-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-500 to-amber-500"></div>
+        
+        <div class="text-center mb-10">
+          <h3 class="text-3xl font-black text-white tracking-tight">Lock In Your Territory Exclusivity</h3>
+          <p class="text-sm text-slate-200 mt-2">Complete your intake form. We will verify your region boundaries immediately.</p>
+        </div>
+
+        <form id="webservices-intake-form" class="space-y-4 text-left">
+          <div id="form-status" class="hidden p-3 rounded-lg text-xs font-bold transition-all duration-150"></div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Company Name</label>
+              <input type="text" name="company_name" required placeholder="e.g. Apex Plumbing" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Location (City, State)</label>
+              <input type="text" name="location" required placeholder="e.g. Herndon, VA" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Owner / Manager Name</label>
+              <input type="text" name="owner_name" required placeholder="e.g. John Doe" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Selected Strategy Model</label>
+              <select name="selected_plan" required class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+                <option value="Predictable Retainer">Option A: Predictable Retainer ($1,600/mo)</option>
+                <option value="Hybrid Performance">Option B: Hybrid Performance-Based</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Direct Cell Phone</label>
+              <input type="tel" name="user_phone" required placeholder="e.g. 571-297-7559" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Direct Business Email</label>
+              <input type="email" name="user_email" required placeholder="e.g. owner@company.com" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Additional Details / Message (Optional)</label>
+            <textarea name="message" rows="3" placeholder="Tell us about any questions or concerns..." class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all resize-none"></textarea>
+          </div>
+
+          <button type="submit" id="intake-submit-btn" class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg shadow-lg shadow-brand-500/10 transition-all uppercase tracking-widest text-xs">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   </main>
   <!-- FOOTER -->
   <footer class="bg-darkCard/80 border-t border-slate-800 pt-16 pb-8 text-slate-200 text-sm">
@@ -1434,7 +1497,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+  </footer>
     
   <script>
     /* Live Grader Tool Logic */
@@ -1636,43 +1699,31 @@
       calculateROI();
     }
 
-    /* Intake Form Modal Architecture & Lead Processing Pipeline */
+    /* Static Intake Form Pipeline Configuration */
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbytG4IjNw_-N23pf-eQtGiZ7smEZH1k4qh3Vrc0uKA-AeU5Xxl5To1dM3S5Of094Bs/exec";
 
-    function openIntakeModal() {
-      const modal = document.getElementById('lead-modal');
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Stop background scrolling
-
-      // Low-friction auto-population mapping helper
+    function scrollToWithCompany() {
       const form = document.getElementById('webservices-intake-form');
       if (selectedBizName && form) {
         form.elements['company_name'].value = selectedBizName;
       }
-    }
-
-    function closeIntakeModal() {
-      const modal = document.getElementById('lead-modal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = ''; // Restore background scrolling
+      const intakeSec = document.getElementById('intake-section');
+      if (intakeSec) {
+        intakeSec.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     function selectPricingPlan(planName) {
-      // 1. Pre-select choice drop-down index option inside the modal structure fields
       const form = document.getElementById('webservices-intake-form');
       if (form) {
         form.elements['selected_plan'].value = planName;
       }
-      
-      // 2. Clear out any prior helper notice alert elements
-      const noticeEl = document.getElementById('plan-eligibility-notice');
-      if (noticeEl) noticeEl.classList.add('hidden');
-
-      // 3. Launch modal
-      openIntakeModal();
+      const intakeSec = document.getElementById('intake-section');
+      if (intakeSec) {
+        intakeSec.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
-    // Capture submission actions matching your exact script flow
     document.addEventListener("DOMContentLoaded", () => {
       const intakeForm = document.getElementById('webservices-intake-form');
       const statusText = document.getElementById('form-status');
@@ -1680,7 +1731,7 @@
 
       if (intakeForm) {
         intakeForm.addEventListener('submit', function(event) {
-          event.preventDefault(); // Stop raw refreshes
+          event.preventDefault();
           
           submitBtn.innerText = "Processing Application...";
           submitBtn.disabled = true;
@@ -1713,11 +1764,9 @@
               statusText.innerText = "✓ Application sent successfully! Check your inbox shortly.";
               intakeForm.reset();
               
-              // Smooth exit transition window
               setTimeout(() => {
-                closeIntakeModal();
                 statusText.style.display = "none";
-              }, 2500);
+              }, 4000);
             } else {
               throw new Error(data.error || "Internal processing failure.");
             }
@@ -1731,76 +1780,13 @@
             statusText.innerText = "✕ Submission error. Please try again or reach out to our desk directly via email.";
           })
           .finally(() => {
-            submitBtn.innerText = "Submit";
+            submitBtn.innerText = "Submit Application";
             submitBtn.disabled = false;
           });
         });
       }
     });
   </script>
-
-  <div id="lead-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm overflow-y-auto">
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-lg shadow-2xl relative overflow-hidden my-auto max-h-[90vh] flex flex-col">
-      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 to-amber-500"></div>
-      
-      <div class="p-6 border-b border-slate-800/60 flex items-center justify-between shrink-0">
-        <div>
-          <h3 class="text-xl font-black text-white tracking-tight">Lock In Your Territory Exclusivity</h3>
-          <p class="text-xs text-slate-200 mt-1">Complete your intake form. We will verify your region boundaries immediately.</p>
-        </div>
-        <button onclick="closeIntakeModal()" class="text-slate-300 hover:text-white transition-colors text-2xl p-1 font-bold">&times;</button>
-      </div>
-
-      <form id="webservices-intake-form" class="p-6 space-y-4 overflow-y-auto flex-1 text-left">
-        <div id="form-status" class="hidden p-3 rounded-lg text-xs font-bold transition-all duration-150"></div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Company Name</label>
-            <input type="text" name="company_name" required placeholder="e.g. Apex Plumbing" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
-          </div>
-          <div>
-            <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Location (City, State)</label>
-            <input type="text" name="location" required placeholder="e.g. Herndon, VA" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Owner / Manager Name</label>
-            <input type="text" name="owner_name" required placeholder="e.g. John Doe" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
-          </div>
-          <div>
-            <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Selected Strategy Model</label>
-            <select name="selected_plan" required class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
-              <option value="Predictable Retainer">Option A: Predictable Retainer ($1,600/mo)</option>
-              <option value="Hybrid Performance">Option B: Hybrid Performance-Based</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Direct Cell Phone</label>
-            <input type="tel" name="user_phone" required placeholder="e.g. 571-297-7559" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
-          </div>
-          <div>
-            <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Direct Business Email</label>
-            <input type="email" name="user_email" required placeholder="e.g. owner@company.com" class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-[10px] font-bold text-slate-200 uppercase tracking-wider mb-1.5">Additional Details / Message (Optional)</label>
-          <textarea name="message" rows="3" placeholder="Tell us about any questions or concerns..." class="w-full px-3 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-xs sm:text-sm text-white focus:border-brand-500 focus:outline-none transition-all resize-none"></textarea>
-        </div>
-
-        <button type="submit" id="intake-submit-btn" class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-extrabold rounded-lg shadow-lg shadow-brand-500/10 transition-all uppercase tracking-widest text-xs">
-          Submit
-        </button>
-      </form>
-    </div>
-  </div>
 
   <script>
         (function() {
