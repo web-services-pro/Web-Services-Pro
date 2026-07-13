@@ -383,10 +383,40 @@
     /* Force Google Maps modern autocomplete web component into Dark Mode */
     #autocomplete-container gmp-place-autocomplete, 
     gmp-place-autocomplete {
-      --gmp-md-sys-color-surface: #020617 !important; /* matches bg-slate-950 */
-      --gmp-md-sys-color-on-surface: #ffffff !important; /* pure white text */
-      --gmp-md-sys-color-on-surface-variant: #94a3b8 !important; /* gray placeholder */
+      /* Main input styling */
+      --gmp-md-sys-color-surface: #0b1329 !important; /* Dark input container */
+      --gmp-md-sys-color-on-surface: #ffffff !important; /* High contrast text selection */
+      --gmp-md-sys-color-on-surface-variant: #94a3b8 !important; /* Readable placeholder gray */
       color: #ffffff !important;
+    }
+
+    /* Force the shadow-root popover drop-down layer dark */
+    #autocomplete-container :span,
+    .pac-container,
+    [popover],
+    gmp-place-autocomplete::part(search-results) {
+      background-color: #0f172a !important; /* Matches slate-900 drop-down card background */
+      border: 1px solid #334155 !important; /* Slate-700 separator border */
+      color: #ffffff !important;
+    }
+
+    /* Keep the legacy maps drop-down classes dark just in case it falls back */
+    .pac-container {
+      background-color: #0f172a !important;
+      border-color: #334155 !important;
+    }
+    .pac-item {
+      color: #ffffff !important;
+      border-top: 1px solid #1e293b !important;
+    }
+    .pac-item:hover {
+      background-color: #1e293b !important;
+    }
+    .pac-item-query {
+      color: #ffffff !important;
+    }
+    .pac-matched {
+      color: #f97316 !important; /* Highlights matching query letters in brand orange */
     }
   </style>
 
