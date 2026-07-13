@@ -383,40 +383,50 @@
     /* Force Google Maps modern autocomplete web component into Dark Mode */
     #autocomplete-container gmp-place-autocomplete, 
     gmp-place-autocomplete {
-      /* Main input styling */
-      --gmp-md-sys-color-surface: #0b1329 !important; /* Dark input container */
-      --gmp-md-sys-color-on-surface: #ffffff !important; /* High contrast text selection */
-      --gmp-md-sys-color-on-surface-variant: #94a3b8 !important; /* Readable placeholder gray */
+      /* Force native browser engine to render child components in dark mode */
+      color-scheme: dark !important;
+      
+      /* Main input card variables */
+      --gmp-md-sys-color-surface: #0b1329 !important; /* Dark input box */
+      --gmp-md-sys-color-on-surface: #ffffff !important; /* White typed text */
+      --gmp-md-sys-color-on-surface-variant: #94a3b8 !important; /* Gray placeholder text */
+      
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
       color: #ffffff !important;
     }
 
-    /* Force the shadow-root popover drop-down layer dark */
-    #autocomplete-container :span,
-    .pac-container,
-    [popover],
-    gmp-place-autocomplete::part(search-results) {
-      background-color: #0f172a !important; /* Matches slate-900 drop-down card background */
-      border: 1px solid #334155 !important; /* Slate-700 separator border */
-      color: #ffffff !important;
+    /* Target the correct Shadow DOM prediction list part across Safari & Firefox */
+    gmp-place-autocomplete::part(prediction-list) {
+      background-color: #0f172a !important; /* Slate-900 dropdown background */
+      border: 1px solid #334155 !important; /* Slate-700 container outline */
+      border-radius: 0.75rem !important;
+      color: #ffffff !important; /* Forces dropdown text white */
     }
 
-    /* Keep the legacy maps drop-down classes dark just in case it falls back */
+    /* Target the internal prediction rows directly */
+    gmp-place-autocomplete::part(prediction-item) {
+      color: #ffffff !important;
+      border-bottom: 1px solid #1e293b !important;
+    }
+
+    /* Style the matching text queries inside the shadow list items */
+    gmp-place-autocomplete::part(matched-text) {
+      color: #f97316 !important; /* Brand orange highlight for matching text */
+    }
+
+    /* Fallback catch-all layers for alternative popover anchoring engines */
+    #autocomplete-container [popover],
+    #autocomplete-container .pac-container,
     .pac-container {
       background-color: #0f172a !important;
-      border-color: #334155 !important;
-    }
-    .pac-item {
+      border: 1px solid #334155 !important;
       color: #ffffff !important;
-      border-top: 1px solid #1e293b !important;
     }
-    .pac-item:hover {
-      background-color: #1e293b !important;
-    }
-    .pac-item-query {
+    .pac-item, .pac-item-query {
       color: #ffffff !important;
     }
     .pac-matched {
-      color: #f97316 !important; /* Highlights matching query letters in brand orange */
+      color: #f97316 !important;
     }
   </style>
 
