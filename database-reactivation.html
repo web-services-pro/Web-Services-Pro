@@ -645,6 +645,816 @@
         </div>
     </section>
 
+	<section class="dbrfaq" id="database-reactivation-faq" aria-label="Database Reactivation frequently asked questions">
+	  <style>
+    	#database-reactivation-faq {
+	      --dbrfaq-bg: #0b0f19;
+    	  --dbrfaq-surface: #111827;
+	      --dbrfaq-surface-hover: #161f33;
+    	  --dbrfaq-border: #1d293d;
+	      --dbrfaq-accent: #ff6b00;
+	      --dbrfaq-accent-soft: rgba(255, 107, 0, 0.10);
+    	  --dbrfaq-text: #ffffff;
+	      --dbrfaq-muted: #cad5e2;
+    	  --dbrfaq-muted-dim: #8b96a8;
+	      --dbrfaq-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", Helvetica, Arial, sans-serif;
+    	}
+
+	    #database-reactivation-faq,
+    	#database-reactivation-faq *,
+	    #database-reactivation-faq *::before,
+    	#database-reactivation-faq *::after {
+	      box-sizing: border-box;
+	    }
+
+	    #database-reactivation-faq {
+    	  background: var(--dbrfaq-bg);
+	      font-family: var(--dbrfaq-font);
+    	  padding: 88px 24px;
+      	  width: 100%;
+    	}
+
+	    .dbrfaq-container {
+    	  max-width: 840px;
+ 	   	  margin: 0 auto;
+    	}
+
+	    /* ---------- Header ---------- */
+
+	    .dbrfaq-header {
+    	  margin-bottom: 40px;
+    	}
+
+	    .dbrfaq-eyebrow {
+    	  display: inline-block;
+      	  color: var(--dbrfaq-accent);
+	      font-size: 13px;
+	      font-weight: 700;
+	      letter-spacing: 0.08em;
+	      text-transform: uppercase;
+	      margin-bottom: 14px;
+	    }
+
+	    .dbrfaq-title {
+	      display: flex;
+	      align-items: center;
+	      gap: 14px;
+	      color: var(--dbrfaq-text);
+	      font-size: 34px;
+	      font-weight: 800;
+	      line-height: 1.15;
+	      margin: 0 0 14px 0;
+	      letter-spacing: -0.01em;
+	    }
+
+ 	    .dbrfaq-title-bar {
+ 	      display: inline-block;
+	      width: 4px;
+	      height: 30px;
+	      border-radius: 2px;
+	      background: var(--dbrfaq-accent);
+	      flex-shrink: 0;
+	    }
+
+	    .dbrfaq-subtitle {
+ 	      color: var(--dbrfaq-muted);
+ 	      font-size: 16px;
+ 	      line-height: 1.6;
+ 	      margin: 0;
+ 	      max-width: 560px;
+	    }
+
+    /* ---------- Category tabs ---------- */
+
+    	.dbrfaq-tabs {
+      	  display: flex;
+ 	      flex-wrap: wrap;
+	      gap: 10px;
+	      margin-bottom: 28px;
+	    }
+
+	    .dbrfaq-tab {
+    	  display: inline-flex;
+	      align-items: center;
+	      gap: 8px;
+	      background: var(--dbrfaq-surface);
+	      border: 1px solid var(--dbrfaq-border);
+	      border-radius: 999px;
+	      color: var(--dbrfaq-muted);
+	      font-family: inherit;
+	      font-size: 14px;
+	      font-weight: 600;
+	      padding: 11px 20px;
+	      cursor: pointer;
+	      transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+	      white-space: nowrap;
+	   }
+
+   	   .dbrfaq-tab:hover {
+      	  background: var(--dbrfaq-surface-hover);
+          color: var(--dbrfaq-text);
+       }
+
+	   .dbrfaq-tab:focus-visible {
+    	  outline: 2px solid var(--dbrfaq-accent);
+      	  outline-offset: 2px;
+       }
+
+	    .dbrfaq-tab.is-active {
+    	  background: var(--dbrfaq-accent-soft);
+	      border-color: var(--dbrfaq-accent);
+	      color: var(--dbrfaq-accent);
+	    }
+
+	    .dbrfaq-tab-icon {
+    	  font-size: 15px;
+      	  line-height: 1;
+    	}
+
+    /* ---------- Panels ---------- */
+
+	    .dbrfaq-panel {
+    	  display: none;
+  	      flex-direction: column;
+      	  gap: 12px;
+    	}
+
+	    .dbrfaq-panel.is-active {
+    	  display: flex;
+    	}
+
+    /* ---------- FAQ items ---------- */
+
+	    .dbrfaq-item {
+    	  background: var(--dbrfaq-surface);
+      	  border: 1px solid var(--dbrfaq-border);
+	      border-radius: 14px;
+	      overflow: hidden;
+	    }
+
+	    .dbrfaq-question {
+    	  margin: 0;
+    	}
+
+	    .dbrfaq-question-btn {
+    	  width: 100%;
+ 	      display: flex;
+	      align-items: center;
+	      justify-content: space-between;
+	      gap: 16px;
+	      background: transparent;
+	      border: none;
+	      color: var(--dbrfaq-text);
+	      font-family: inherit;
+	      font-size: 16px;
+	      font-weight: 700;
+	      text-align: left;
+	      padding: 20px 22px;
+	      cursor: pointer;
+	      line-height: 1.4;
+	   }
+
+	   .dbrfaq-question-btn:focus-visible {
+    	  outline: 2px solid var(--dbrfaq-accent);
+	      outline-offset: -2px;
+	      border-radius: 10px;
+	   }
+
+	   .dbrfaq-question-btn:hover {
+	      background: var(--dbrfaq-surface-hover);
+	   }
+
+	   .dbrfaq-chevron {
+    	  flex-shrink: 0;
+	      width: 20px;
+	      height: 20px;
+	      color: var(--dbrfaq-muted);
+	      transition: transform 250ms ease;
+	   }
+
+	    .dbrfaq-item.is-open .dbrfaq-chevron {
+	      transform: rotate(180deg);
+	      color: var(--dbrfaq-accent);
+	    }
+
+	    .dbrfaq-answer-wrap {
+	      display: grid;
+	      grid-template-rows: 0fr;
+	      transition: grid-template-rows 280ms ease;
+	    }
+
+	    .dbrfaq-item.is-open .dbrfaq-answer-wrap {
+	      grid-template-rows: 1fr;
+	    }
+
+	    .dbrfaq-answer-inner {
+	      overflow: hidden;
+	    }
+
+	    .dbrfaq-answer {
+	      padding: 0 22px 22px 22px;
+	      color: var(--dbrfaq-muted);
+	      font-size: 15px;
+	      line-height: 1.65;
+	    }
+
+	    .dbrfaq-answer p {
+	      margin: 0 0 12px 0;
+	    }
+
+	    .dbrfaq-answer p:last-child {
+	      margin-bottom: 0;
+	    }
+
+	    .dbrfaq-answer ul {
+	      margin: 0 0 12px 0;
+	      padding-left: 20px;
+	    }
+
+	    .dbrfaq-answer ul:last-child {
+	      margin-bottom: 0;
+	    }
+
+ 	   .dbrfaq-answer li {
+ 	     margin-bottom: 6px;
+ 	   }
+
+ 	   .dbrfaq-answer li:last-child {
+ 	     margin-bottom: 0;
+ 	   }
+
+ 	   .dbrfaq-answer strong {
+  	     color: var(--dbrfaq-text);
+  	   }
+
+    /* ---------- Responsive ---------- */
+
+	    @media (max-width: 640px) {
+    	  #database-reactivation-faq {
+        	padding: 56px 16px;
+      	  }
+
+	      .dbrfaq-title {
+    	    font-size: 26px;
+      	 }
+
+	      .dbrfaq-tab {
+    	    font-size: 13px;
+        	padding: 10px 16px;
+      	 }
+
+	      .dbrfaq-question-btn {
+    	    font-size: 15px;
+        	padding: 16px 18px;
+      		}
+
+	      .dbrfaq-answer {
+    	    padding: 0 18px 18px 18px;
+        	font-size: 14.5px;
+      		}
+    	}
+
+    	@media (prefers-reduced-motion: reduce) {
+      		.dbrfaq-answer-wrap,
+      		.dbrfaq-chevron,
+      		.dbrfaq-tab {
+        	transition: none;
+      		}
+    	}
+  	  </style>
+
+	  <div class="dbrfaq-container">
+
+	    <div class="dbrfaq-header">
+    	  <span class="dbrfaq-eyebrow">FAQ</span>
+      		<h2 class="dbrfaq-title"><span class="dbrfaq-title-bar" aria-hidden="true"></span>Common Questions</h2>
+      		<p class="dbrfaq-subtitle">Everything business owners ask before saying yes — straight answers, no fluff.</p>
+    	</div>
+
+	    <div class="dbrfaq-tabs" role="tablist" aria-label="FAQ categories">
+    	  <button type="button" class="dbrfaq-tab is-active" role="tab" aria-selected="true" aria-controls="dbrfaq-panel-capabilities" id="dbrfaq-tab-capabilities" data-category="capabilities">
+        	<span class="dbrfaq-tab-icon" aria-hidden="true">🤖</span>Capabilities
+      	  </button>
+      	  <button type="button" class="dbrfaq-tab" role="tab" aria-selected="false" aria-controls="dbrfaq-panel-setup" id="dbrfaq-tab-setup" data-category="setup">
+        	<span class="dbrfaq-tab-icon" aria-hidden="true">⚙️</span>Setup &amp; Process
+      	  </button>
+	      <button type="button" class="dbrfaq-tab" role="tab" aria-selected="false" aria-controls="dbrfaq-panel-security" id="dbrfaq-tab-security" data-category="security">
+	        <span class="dbrfaq-tab-icon" aria-hidden="true">🛡️</span>Security &amp; Trust
+ 	      </button>
+  	      <button type="button" class="dbrfaq-tab" role="tab" aria-selected="false" aria-controls="dbrfaq-panel-pricing" id="dbrfaq-tab-pricing" data-category="pricing">
+  	        <span class="dbrfaq-tab-icon" aria-hidden="true">💰</span>Pricing &amp; ROI
+  	      </button>
+  	    </div>
+
+    	<div class="dbrfaq-panels">
+
+      	<!-- ================= CAPABILITIES ================= -->
+      	<div class="dbrfaq-panel is-active" id="dbrfaq-panel-capabilities" role="tabpanel" aria-labelledby="dbrfaq-tab-capabilities" data-category="capabilities">
+
+        <div class="dbrfaq-item">
+          	<h3 class="dbrfaq-question">
+            	<button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a1" id="dbrfaq-q1">
+    	          <span>What exactly is "Database Reactivation"?</span>
+        	      <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            	</button>
+    	    </h3>
+        	<div class="dbrfaq-answer-wrap" id="dbrfaq-a1" role="region" aria-labelledby="dbrfaq-q1">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Database Reactivation takes the leads and past customers already sitting cold in your CRM and re-engages them with a structured outreach sequence built to generate new set appointments and closed sales. Messaging is tailored by trade type and lifecycle stage — new prospect, dormant lead, or past customer. This isn't new list-building. It's putting the database you already paid to generate back to work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a2" id="dbrfaq-q2">
+              <span>How does the AI Agent handle conversations, and will it actually handle objections?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a2" role="region" aria-labelledby="dbrfaq-q2">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>The AI Agent manages the full conversation via SMS (calls and email can be added). It's trained on advanced sales methodology plus your specific business, trade, and offers, so it can:</p>
+                <ul>
+                  <li>Warm the lead up before the appointment — set expectations, build value</li>
+                  <li>Handle real objections in real time — price uncertainty, scheduling friction, "let me think about it," competitor comparisons</li>
+                  <li>Qualify the lead using your criteria before it ever reaches your calendar</li>
+                </ul>
+                <p>It stays inside language, offers, and positioning you've approved — it doesn't freelance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a3" id="dbrfaq-q3">
+              <span>What counts as a "set appointment"?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a3" role="region" aria-labelledby="dbrfaq-q3">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>A set appointment is one that's scheduled and confirmed by the contact for a specific service window, and meets the qualification criteria agreed before launch — correct service area, trade fit, valid contact info, etc. Appointments don't count if they're:</p>
+                <ul>
+                  <li>Cancelled before the scheduled time with no reschedule agreed</li>
+                  <li>Not a fit under your qualification rules</li>
+                  <li>Duplicates — same customer booked more than once in the same campaign window</li>
+                </ul>
+                <p>Your definition of "qualified" is the baseline we build to — not a generic standard.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a4" id="dbrfaq-q4">
+              <span>Does this only target new leads, or can it also re-engage past customers?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a4" role="region" aria-labelledby="dbrfaq-q4">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Both. The core use case is reactivating unclosed leads — booked-but-lost, non-responders, inactive leads — but the same system can message already-closed customers to request reviews and referrals, or offer maintenance packages. Database Reactivation covers your entire database, not just the leads that never converted.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a5" id="dbrfaq-q5">
+              <span>What messaging will you send, and do we get to approve it first?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a5" role="region" aria-labelledby="dbrfaq-q5">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Yes. Every message is written for your trade and reviewed by you before anything goes out. You choose the tone — professional, local, short-form, whatever fits — and every message includes compliant opt-out language. Nothing launches without your sign-off.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= SETUP & PROCESS ================= -->
+      <div class="dbrfaq-panel" id="dbrfaq-panel-setup" role="tabpanel" aria-labelledby="dbrfaq-tab-setup" data-category="setup">
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a6" id="dbrfaq-q6">
+              <span>How does the process actually work, day to day?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a6" role="region" aria-labelledby="dbrfaq-q6">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>It's fully hands-off on your end. You send an organized CSV export from your CRM, we run the campaign, and scheduled appointments land directly on your sales calendar. Every engagement also starts with an NDA, so your data is contractually protected and never shared or reused elsewhere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a7" id="dbrfaq-q7">
+              <span>Will this disrupt our existing pipeline or sales team?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a7" role="region" aria-labelledby="dbrfaq-q7">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>No — it's built to run alongside what you already do, not compete with it. The AI Agent pre-sells and warms leads up before they ever reach your team, meaning fewer cold conversations for your salespeople, not more volume they can't handle. We agree upfront on the handoff point (typically at the scheduled appointment), what the AI can discuss (pricing ranges, financing, process), and whether your team can pause or override outreach at any time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a8" id="dbrfaq-q8">
+              <span>Who handles follow-up after the appointment is booked?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a8" role="region" aria-labelledby="dbrfaq-q8">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>You choose the model:</p>
+                <ul>
+                  <li><strong>Full responsibility:</strong> we handle pre-call confirmation and reminders, you handle the close</li>
+                  <li><strong>Shared support:</strong> we handle confirmation, reminders, and reschedules — your team runs the sales conversation</li>
+                </ul>
+                <p>Either way, we align on who reaches out on appointment day, show-rate expectations, and the reschedule process. We can also layer in automated reminders to improve show-up rates, plus post-sale outreach to past customers for reviews, referrals, and maintenance offers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a9" id="dbrfaq-q9">
+              <span>Will this create low-quality leads or hurt our close rate?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a9" role="region" aria-labelledby="dbrfaq-q9">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>We optimize for qualified booking outcomes, not reply volume. Messaging is segmented so the right offer and CTA reach the right contact, using the qualification rules you set. If a segment starts producing bookings that don't fit, we adjust the messaging and targeting — we don't just push more volume through.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= SECURITY & TRUST ================= -->
+      <div class="dbrfaq-panel" id="dbrfaq-panel-security" role="tabpanel" aria-labelledby="dbrfaq-tab-security" data-category="security">
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a10" id="dbrfaq-q10">
+              <span>Is this cold outreach to homeowners who haven't opted in?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a10" role="region" aria-labelledby="dbrfaq-q10">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>No. We only contact leads and customers already in your CRM who already gave permission through your own marketing. We're not building or buying homeowner lists, and we never contact anyone outside your approved lead pool — the permission to reach out is already baked in by the time we start.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a11" id="dbrfaq-q11">
+              <span>How do you handle SMS compliance, consent, and opt-outs?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a11" role="region" aria-labelledby="dbrfaq-q11">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>We work within the consent your business already has on file and maintain:</p>
+                <ul>
+                  <li>Immediate opt-out honoring (suppression lists)</li>
+                  <li>Do-not-contact status</li>
+                  <li>Contactability rules based on your local regulations</li>
+                </ul>
+                <p>All outreach is built to align with SMS platform policies and applicable regulations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a12" id="dbrfaq-q12">
+              <span>How do you avoid getting our number flagged or hurting deliverability?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a12" role="region" aria-labelledby="dbrfaq-q12">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>We use controlled sequencing and cadence instead of blasting, keep messaging targeted to reduce spam complaints, and monitor engagement in real time — adjusting or stopping outreach the moment we see negative signals like rising opt-outs or complaints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a13" id="dbrfaq-q13">
+              <span>Will this feel like spam, or hurt our brand/reputation?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a13" role="region" aria-labelledby="dbrfaq-q13">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>This isn't spray-and-pray messaging to a purchased list. We're only reaching people already in your database who've interacted with your business before, using trade-specific, brand-approved messaging that you sign off on before it ever sends. The goal is a relevant re-engagement, not a blast.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a14" id="dbrfaq-q14">
+              <span>Who owns the data, conversation logs, and results?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a14" role="region" aria-labelledby="dbrfaq-q14">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Your database is yours — always. We don't take ownership of your list, and everything we generate from it (appointments, sales, results) ties back to you. Every conversation is logged and provided on a regular reporting cadence (typically once or twice a month). If the engagement ends, your data stays with you; the only thing carried over is any commission already owed on results generated before the stop date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= PRICING & ROI ================= -->
+      <div class="dbrfaq-panel" id="dbrfaq-panel-pricing" role="tabpanel" aria-labelledby="dbrfaq-tab-pricing" data-category="pricing">
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a15" id="dbrfaq-q15">
+              <span>How does pricing work if there's no upfront cost?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a15" role="region" aria-labelledby="dbrfaq-q15">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>You pay $0 to start. Commission only applies after we produce results, and you choose the structure:</p>
+                <ul>
+                  <li><strong>Option A — Appointment-based:</strong> a flat rate per qualified set appointment</li>
+                  <li><strong>Option B — Revenue share:</strong> 70% to you / 30% to us on qualifying net revenue from new sales</li>
+                </ul>
+                <p>You can pick the model upfront and switch by agreement after the initial test period if the other structure fits better.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a16" id="dbrfaq-q16">
+              <span>How do you define "net revenue" for the 70/30 split?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a16" role="region" aria-labelledby="dbrfaq-q16">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Net revenue = approved invoice value minus operational expenses, as defined in the agreement. Typical expenses include SMS/messaging fees, phone verification costs, and any campaign tooling we both sign off on. Refunds and chargebacks don't apply in this industry, so the math stays simple: invoice amount minus agreed costs — nothing hidden.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a17" id="dbrfaq-q17">
+              <span>What exactly counts as a "new sale"?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a17" role="region" aria-labelledby="dbrfaq-q17">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Any sale — repair or full replacement/install, whichever the customer actually needs — that's attributable to this program through your CRM tag or campaign source, whether that's a first-time customer or someone reactivated after being dormant. It does not include sales already in progress before outreach started, or sales from unrelated marketing with no link back to our outreach.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a18" id="dbrfaq-q18">
+              <span>How do you track attribution and prevent double-counting?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a18" role="region" aria-labelledby="dbrfaq-q18">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Every lead is tagged in your system (source, campaign ID, timestamp), and appointments and sales follow a shared naming convention so the same customer is never credited twice. Your reporting shows the full chain — lead → conversation → appointment → sale → net revenue — so attribution is never a guessing game.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a19" id="dbrfaq-q19">
+              <span>Can you show a real example of how the payout works?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a19" role="region" aria-labelledby="dbrfaq-q19">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Sure — here's both models in practice:</p>
+                <p><strong>Revenue Share Example:</strong> $10,000 new invoice generated, minus $500 in operational expenses = $6,500 net revenue. You keep $4,550 (70%), we earn $1,950 (30%).</p>
+                <p><strong>Appointment-Based Example:</strong> $350 per qualified set appointment. 50 qualifying appointments = $17,500 total.</p>
+                <p>You only ever pay on results you can see and verify.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a20" id="dbrfaq-q20">
+              <span>"The other AI tool only costs $99/month — why should we pay more?"</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a20" role="region" aria-labelledby="dbrfaq-q20">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>You're right, it does — and that's exactly what it's worth. A $99 tool is something you still have to manage yourself. What we're offering is a revenue partner that gets paid from money you weren't making before we started. The real question isn't whether to save $99 a month — it's whether you'd rather save $99, or make an extra five figures this month.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a21" id="dbrfaq-q21">
+              <span>We already tried rehashing our leads with email/SMS before — why would this work now?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a21" role="region" aria-labelledby="dbrfaq-q21">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Most in-house attempts fail because of inconsistent execution, not a bad list or a bad market. A one-off blast from a generic template isn't the same as an ongoing, trade-specific sequence run by an AI Agent trained on objection handling and built to warm leads up before they ever hit your calendar. Your database usually isn't "burned" — it just hasn't been worked properly yet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a22" id="dbrfaq-q22">
+              <span>What results should we expect, and how fast?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a22" role="region" aria-labelledby="dbrfaq-q22">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Most engagements see initial responses within about 7 days. Because SMS reactivation tends to come in waves — some contacts respond same-day, others days or weeks later — full results build over the first few weeks as we track reply rate, booking rate, close rate, and net revenue per contact, then iterate on segments and messaging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a23" id="dbrfaq-q23">
+              <span>Is our database too small for this to be worth it?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a23" role="region" aria-labelledby="dbrfaq-q23">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>That depends more on lead quality and dormancy than raw volume — which is exactly why we don't guess. We run an initial test on a small batch first, so you get real numbers for your specific list before deciding whether to roll it out further.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a24" id="dbrfaq-q24">
+              <span>Do you have proof this works — case studies or benchmarks?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a24" role="region" aria-labelledby="dbrfaq-q24">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>Honestly, I'd be doing you a disservice by promising a specific number upfront. Every business is different based on how leads were generated, how old they are, your sales process, your team, your local reputation, and how past customers have been treated — which is why results can swing wildly between two contractors in the exact same trade. Someone else's numbers won't tell you much about your database.</p>
+                <p>That's why we start with a test on a small sample of your own old leads. Once we have real stats from your specific setup, you decide whether to expand it, adjust it, or walk away — no guesswork required.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dbrfaq-item">
+          <h3 class="dbrfaq-question">
+            <button type="button" class="dbrfaq-question-btn" aria-expanded="false" aria-controls="dbrfaq-a25" id="dbrfaq-q25">
+              <span>What if we want to stop — are we locked into a contract?</span>
+              <svg class="dbrfaq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </h3>
+          <div class="dbrfaq-answer-wrap" id="dbrfaq-a25" role="region" aria-labelledby="dbrfaq-q25">
+            <div class="dbrfaq-answer-inner">
+              <div class="dbrfaq-answer">
+                <p>No long-term contracts. You can pause or cancel the same day, and once you do, outreach stops immediately — no lingering contact. Anything generated before the stop date still qualifies under our agreed terms, but nothing continues after that.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      	</div>
+
+      </div>
+
+	</div>
+
+	<script>
+    	(function () {
+      	var root = document.getElementById('database-reactivation-faq');
+      	if (!root) return;
+
+     	 // ---- Category tab switching ----
+     	 var tabs = root.querySelectorAll('.dbrfaq-tab');
+     	 var panels = root.querySelectorAll('.dbrfaq-panel');
+
+     	 tabs.forEach(function (tab) {
+     	   tab.addEventListener('click', function () {
+      	    var category = tab.getAttribute('data-category');
+
+      	    tabs.forEach(function (t) {
+      	      var isActive = t === tab;
+      	      t.classList.toggle('is-active', isActive);
+    	        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    	      });
+
+    	      panels.forEach(function (panel) {
+    	        panel.classList.toggle('is-active', panel.getAttribute('data-category') === category);
+    	      });
+    	    });
+    	  });
+
+    	 // ---- Accordion open/close (single item open per panel) ----
+   		 var items = root.querySelectorAll('.dbrfaq-item');
+
+     	 items.forEach(function (item) {
+     	   var btn = item.querySelector('.dbrfaq-question-btn');
+
+     	   btn.addEventListener('click', function () {
+     	     var isOpen = item.classList.contains('is-open');
+     	     var panel = item.closest('.dbrfaq-panel');
+
+     	     panel.querySelectorAll('.dbrfaq-item.is-open').forEach(function (openItem) {
+     	       if (openItem !== item) {
+     	         openItem.classList.remove('is-open');
+     	         openItem.querySelector('.dbrfaq-question-btn').setAttribute('aria-expanded', 'false');
+     	       }
+     	     });
+
+     	     item.classList.toggle('is-open', !isOpen);
+     	     btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+    	    });
+   		   });
+    	})();
+  	</script>
+
+	</section>
+
     <section id="pricing" class="py-20 border-b border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
