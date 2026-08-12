@@ -2,57 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://webservicespro.co/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/gbp-optimization.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/ai-agents-chatbots.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://webservicespro.co/b2b-market-connector.html</loc>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/database-reactivation.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/reputation-management.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/video-marketing.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/revenue-leaks.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/about-us.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/contact.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/privacy-policy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.30</priority>
   </url>
   <url>
     <loc>https://webservicespro.co/terms-of-service.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <priority>0.30</priority>
   </url>
 </urlset>
