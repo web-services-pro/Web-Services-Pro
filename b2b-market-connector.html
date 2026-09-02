@@ -1070,22 +1070,60 @@
     });
   });
 
-  // Contact form — placeholder submit handler.
-  // Wire this to your GoHighLevel webhook / Apps Script endpoint before going live.
   var form = document.getElementById('connectorForm');
   var successBox = document.getElementById('formSuccess');
-  if(form){
-    form.addEventListener('submit', function(e){
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
+
       var honeypot = form.querySelector('#companyWebsite2');
-      if(honeypot && honeypot.value){ return; } // bot trap tripped, silently drop
-      if(!form.checkValidity()){
+      if (honeypot && honeypot.value) { return; } // Spam trap triggered
+
+      if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      // TODO: replace with a real fetch() POST to your form processor / GHL webhook.
-      form.reset();
-      if(successBox){ successBox.classList.remove('hidden'); }
+
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn.innerText;
+      submitBtn.innerText = "SUBMITTING REQUEST...";
+      submitBtn.disabled = true;
+
+      var payload = {
+        companyName: document.getElementById('companyName').value,
+        contactName: document.getElementById('contactName').value,
+        marketSide: document.getElementById('marketSide').value,
+        vertical: document.getElementById('vertical').value,
+        territory: document.getElementById('territory').value,
+        website: document.getElementById('website').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        idealMatch: document.getElementById('idealMatch').value,
+        companyWebsite2: honeypot ? honeypot.value : ''
+      };
+
+      // Insert your live Apps Script Web App URL below
+      var connectorAppUrl = "https://script.google.com/macros/s/AKfycbxwU-8kfcNxUBlbNk06uKRavXHVzauqGDtzBzaxrV5NO0nwtDRM_0x-3ROKEGh7GgDQWA/exec";
+
+      fetch(connectorAppUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(payload)
+      })
+      .then(function() {
+        form.reset();
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+        if (successBox) { successBox.classList.remove('hidden'); }
+      })
+      .catch(function(err) {
+        console.error("Transmission error:", err);
+        alert("Error submitting request. Please contact us directly.");
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      });
     });
   }
 })();
